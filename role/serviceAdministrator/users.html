@@ -113,7 +113,7 @@
     </header>
     <main role="main" property="mainContentOfPage" class="container">
         <!-- InstanceBeginEditable name="Content" -->
-        <h1 property="name" id="wb-cont">Users</h1>
+        <h1 property="name" id="wb-cont"><i class="fa-solid fa-users"></i> Users</h1>
 
         <p>To add a new user, press the <strong>Add user</strong> button. To view or make changes to an existing user, select the person's name or select an action from the menu.</p>
 
@@ -122,9 +122,9 @@
             <caption class="wb-inv">List of users for Marine Inspection Tracking (MITRACK)</caption>
             <thead>
                 <tr>
-                    <th scope="col"><span class="sr-only">Select</span></th>
-                    <th scope="col" class="width40">Name</th>
-                    <th scope="col"><label for="status" class="sr-only">Status</label>
+                    <th scope="col" class="width5"><span class="sr-only">Select</span></th>
+                    <th scope="col" class="width30">Name</th>
+                    <th scope="col" class="width10"><label for="status" class="sr-only">Status</label>
                         <select name="role" id="role" class="form-control full-width">
                             <option value="" selected>&lsaquo;&lsaquo;&lsaquo;Status&rsaquo;&rsaquo;&rsaquo;</option>
                             <option>Active</option>
@@ -132,20 +132,30 @@
                             <option>Suspended</option>
                         </select>
                     </th>
-                    <th scope="col"><label for="role" class="sr-only">Role</label>
+                    <th scope="col" class="width10"><label for="role" class="sr-only">Role</label>
                         <select name="role" id="role" class="form-control full-width">
                             <option value="" selected>&lsaquo;&lsaquo;&lsaquo;Role&rsaquo;&rsaquo;&rsaquo;</option>
+                            <option value="">Clerk</option>
+                            <option value="">Inspector</option>
+                            <option value="">Manager</option>
+                            <option value="">Service Administrator</option>
+
 
                         </select>
                     </th>
-                    <th scope="col"><label for="services" class="sr-only">Service</label>
+                    <th scope="col" class="width30"><label for="services" class="sr-only">Service</label>
                         <select name="services" id="services" class="form-control full-width">
                             <option value="" selected>&lsaquo;&lsaquo;&lsaquo;Service&rsaquo;&rsaquo;&rsaquo;</option>
-
+                            <option value="">Request a prewash endorsement/exemption</option>
+                            <option value="">Request a verification of shipper’s procedures for cargoes that may liquefy</option>
+                            <option value="">Request concentrates, grains or timber cargo inspection</option>
+                            <option value="">Request for a follow-up Port State Control inspection to confirm rectification of deficiencies for foreign vessels</option>
+                            <option value="">Request for a follow-up Port State Control inspection to rescind a detention order for foreign vessels</option>
+                            <option value="">Request for inspection of a vessel loading, carrying or unloading dangerous goods (Bulk or packaged form)</option>
                         </select>
                     </th>
-                    <th scope="col"><span class="sr-only">Actions</span>
-                        <a href="#" class="btn btn-primary pull-right">Add user</a>
+                    <th scope="col" class="width20"><span class="sr-only">Actions</span>
+                        <a href="addUser-mitrack.html" class="btn btn-primary pull-right text-nowrap">Add user</a>
                     </th>
                 </tr>
             </thead>
@@ -153,7 +163,7 @@
                 <tr>
                     <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr1"></th>
                     <td><label for="usr1">Paul Davies</label></td>
-                    <td>
+                    <td class="text-center">
                         <span class="pill-green small">Active</span>
                     </td>
                     <td>Inspector</td>
@@ -163,7 +173,7 @@
                 <tr>
                     <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr2"></th>
                     <td><label for="usr2">Linda Fry</label></td>
-                    <td>
+                    <td class="text-center">
                         <span class="pill-green small">Active</span>
                     </td>
                     <td>Varies</td>
@@ -174,7 +184,7 @@
                 <tr>
                     <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr3"></th>
                     <td><label for="usr3">Norman Gregory</label></td>
-                    <td>
+                    <td class="text-center">
                         <span class="pill-green small">Active</span>
                     </td>
                     <td>Clerk</td>
@@ -236,10 +246,7 @@
 
 
         });
-
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd -->
-
-</html>
+<!-- InstanceEnd --></html>

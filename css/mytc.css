@@ -42,6 +42,8 @@ a:visited {
     color: #284162;
 }
 
+
+
 details summary {
     border: none;
     padding-left: 0px;
@@ -75,16 +77,8 @@ thead tr {
 }
 
 
-alert > :first-child:before {
-    margin-left: -1.4em;
-}
-
-alert-danger .fa-ul,
-.alert-success .fa-ul,
-.alert-warning .fa-ul,
-.alert-info .fa-ul {
-    margin-left: 1.6em;
-    margin-bottom: 0;
+.alert h2 {
+    font-size: 21px;
 }
 
 .datemod {
@@ -292,9 +286,6 @@ hr {
     border-top-color: #d5e2e9;
 }
 
-.caption h3 {
-    margin-top: 20px;
-}
 
 .field-validation-error {
     color: #d3080c;
@@ -313,10 +304,10 @@ hr {
     font-weight: normal;
 }
 
-
-.label-question {
+.label-question,
+.label-question label {
     font-weight: 700;
-    font-size: 22px;
+    font-size: 18px;
 }
 
 .label-form {
