@@ -123,7 +123,12 @@
             <thead>
                 <tr>
                     <th scope="col" class="width5"><span class="sr-only">Select</span></th>
-                    <th scope="col" class="width30">Name</th>
+                    <th scope="col" class="width30"><label for="name" class="sr-only">Name or email address</label>
+                        <div class="input-group">
+                            <input name="name" id="name" type="text" size="50" class="form-control" autocomplete="email" maxlength="150" placeholder="Search users...">
+                            <span class="input-group-addon"><i class="fas fa-search"></i></span>
+                        </div>
+                    </th>
                     <th scope="col" class="width10"><label for="status" class="sr-only">Status</label>
                         <select name="role" id="role" class="form-control full-width">
                             <option value="" selected>&lsaquo;&lsaquo;&lsaquo;Status&rsaquo;&rsaquo;&rsaquo;</option>
@@ -162,7 +167,7 @@
             <tbody>
                 <tr>
                     <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr1"></th>
-                    <td><label for="usr1">Paul Davies</label></td>
+                    <td><label for="usr1">Paul Davies <br> <span class="small">paul.davies@tc.gc.ca</span></label></td>
                     <td class="text-center">
                         <span class="pill-green small">Active</span>
                     </td>
@@ -172,7 +177,7 @@
                 </tr>
                 <tr>
                     <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr2"></th>
-                    <td><label for="usr2">Linda Fry</label></td>
+                    <td><label for="usr2">Linda Fry <br> <span class="small">lfry@gmail.com</span></label></td>
                     <td class="text-center">
                         <span class="pill-green small">Active</span>
                     </td>
@@ -183,7 +188,7 @@
                 </tr>
                 <tr>
                     <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr3"></th>
-                    <td><label for="usr3">Norman Gregory</label></td>
+                    <td><label for="usr3">Norman Gregory <br> <span class="small">norman.gregory@tc.gc.ca</span></label></td>
                     <td class="text-center">
                         <span class="pill-green small">Active</span>
                     </td>
