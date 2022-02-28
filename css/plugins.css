@@ -111,11 +111,11 @@ table.dataTable thead .sorting_desc .sorting-icons:after {
 	color: #fff;	
 } */
 
-.panel table.dataTable,
+/* .panel table.dataTable,
 .panel table.dataTable td,
 .panel table.dataTable th {
     border: 0px;
-}
+} */
 
 /*
 .panel table.dataTable td,
@@ -141,18 +141,24 @@ table.dataTable thead .sorting_desc .sorting-icons:after {
     border-bottom: 0px;
 }
 
-.panel table.dataTable thead {
-    border-bottom: 2px solid #ddd;
+.panel table.dataTable tfoot td {
+    border-top: 2px solid #ddd;
 }
 
-.panel table.dataTable tfoot td {
-    border-top: 1px solid #ddd;
+dataTables_wrapper.no-footer .dataTables_scrollBody,
+table.dataTable tfoot td,
+table.dataTable tfoot th,
+table.dataTable thead td,
+table.dataTable thead th,
+table.dataTable.no-footer {
+    border-bottom: 2px solid #ddd;
 }
 
 .panel-datatable footer.panel-footer {
     font-style: normal;
     padding-top: 10px;
     padding-bottom: 10px;
+    border-top: 2px solid #ddd;
 }
 
 /*footer.panel-footer {
