@@ -68,6 +68,16 @@ table.dataTable thead th {
     background-color: #eee;
 }
 
+table.dataTable thead {
+
+    border-bottom: 2px solid #666;
+}
+
+table.dataTable tfoot {
+
+    border-top: 2px solid #666;
+}
+
 table.dataTable thead .sorting .sorting-icons:after,
 table.dataTable thead .sorting_asc .sorting-icons:after,
 table.dataTable thead .sorting_desc .sorting-icons:after {
@@ -95,8 +105,6 @@ table.dataTable thead .sorting_desc .sorting-icons:after {
 .dataTables_wrapper .dataTables_paginate .paginate_button.current {
     background-color: #426D94;
     border-color: #2572b4;
-    padding: 6px 12px;
-    margin-top: 6px;
 }
 
 /* .dataTables_wrapper a:hover {
@@ -109,11 +117,12 @@ table.dataTable thead .sorting_desc .sorting-icons:after {
     border: 0px;
 }
 
+/*
 .panel table.dataTable td,
 .panel table.dataTable th {
     border-right: solid #ddd 1px;
     border-bottom: solid #ddd 1px;
-}
+} */
 
 .panel table.dataTable tr.even {
     background-color: #f8f8f8;
@@ -132,6 +141,10 @@ table.dataTable thead .sorting_desc .sorting-icons:after {
     border-bottom: 0px;
 }
 
+.panel table.dataTable thead {
+    border-bottom: 2px solid #ddd;
+}
+
 .panel table.dataTable tfoot td {
     border-top: 1px solid #ddd;
 }
@@ -140,6 +153,18 @@ table.dataTable thead .sorting_desc .sorting-icons:after {
     font-style: normal;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+/*footer.panel-footer {
+    border-top: 2px solid #ddd;
+}
+
+table.dataTable.no-footer {
+    border-bottom: 2px solid #ddd;
+} */
+
+.panel.panel-datatable {
+    border: 1px solid #ddd;
 }
 
 .panel-datatable footer.panel-footer .top label {
@@ -153,9 +178,10 @@ table.dataTable thead .sorting_desc .sorting-icons:after {
     border-color: #ccc;
 }
 
+
 .panel-datatable footer.panel-footer .dataTables_length label {
     margin-bottom: 0;
-    margin-top: 10px;
+    margin-top: 14px;
     font-weight: normal;
 }
 
@@ -183,13 +209,13 @@ table.dataTable thead .sorting_desc .sorting-icons:after {
 
 .panel-datatable footer.panel-footer .bottom a.paginate_button.next:after {
     content: "\f061";
-    font-family: 'Font Awesome 5 Pro';
+    font-family: 'Font Awesome 6 Pro';
     top: 0;
 }
 
 .panel-datatable footer.panel-footer .bottom a.paginate_button.previous:before {
     content: "\f060";
-    font-family: 'Font Awesome 5 Pro';
+    font-family: 'Font Awesome 6 Pro';
     top: 0;
 }
 

@@ -117,12 +117,23 @@
 
         <p>To add a new user, press the <strong>Add user</strong> button. To view or make changes to an existing user, select the person's name or select an action from the menu.</p>
 
+<section class="panel panel-datatable">
 
-        <table class="table">
+        <table id="tblUsers" class="wb-tables table table-striped mrgn-bttm-md" data-wb-tables='{"info" : false, "filter" : true, "paginate" : true, "order" : [],
+
+        "columnDefs": [{ "orderable" : false, "targets":[0,1,2,3,4,5] }],
+"language": {
+				"infoEmpty": "",
+				"zeroRecords": "No matching users found.",
+				"info": "",
+				"lengthMenu" : "Display _MENU_ per page",
+				"emptyTable" : "No users have been added yet."
+			}
+}'>
             <caption class="wb-inv">List of users for Marine Inspection Tracking (MITRACK)</caption>
             <thead>
                 <tr>
-                    <th scope="col" class="width5"><span class="sr-only">Select</span></th>
+                    <th scope="col" class="width5 text-center"><span class="sr-only">Select</span><span class="selectAll"></span></th>
                     <th scope="col" class="width30"><label for="name" class="sr-only">Name or email address</label>
                         <div class="input-group">
                             <input name="name" id="name" type="text" size="50" class="form-control" autocomplete="email" maxlength="150" placeholder="Search users...">
@@ -132,18 +143,18 @@
                     <th scope="col" class="width10"><label for="status" class="sr-only">Status</label>
                         <select name="role" id="role" class="form-control full-width">
                             <option value="" selected>&lsaquo;&lsaquo;&lsaquo;Status&rsaquo;&rsaquo;&rsaquo;</option>
-                            <option>Active</option>
-                            <option>Pending</option>
-                            <option>Suspended</option>
+                            <option value="Active">Active</option>
+                            <option value="Pending">Pending</option>
+                            <option value="Suspended">Suspended</option>
                         </select>
                     </th>
                     <th scope="col" class="width10"><label for="role" class="sr-only">Role</label>
                         <select name="role" id="role" class="form-control full-width">
                             <option value="" selected>&lsaquo;&lsaquo;&lsaquo;Role&rsaquo;&rsaquo;&rsaquo;</option>
-                            <option value="">Clerk</option>
-                            <option value="">Inspector</option>
-                            <option value="">Manager</option>
-                            <option value="">Service Administrator</option>
+                            <option value="Clerk">Clerk</option>
+                            <option value="Inspector">Inspector</option>
+                            <option value="Manager">Manager</option>
+                            <option value="Service Administrator">Service Administrator</option>
 
 
                         </select>
@@ -197,10 +208,112 @@
                     <td></td>
 
                 </tr>
+                <tr>
+                    <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr4"></th>
+                    <td><label for="usr4">Mark Hills <br> <span class="small">mhillsl@hotmail.com</span></label></td>
+                    <td class="text-center">
+                        <span class="pill-red small">Suspended</span>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                </tr>
+                <tr>
+                    <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr5"></th>
+                    <td><label for="usr5">tomz@outlook.com <br></label></td>
+                    <td class="text-center">
+                        <span class="pill-yellow small">Pending</span>
+                    </td>
+                    <td>Client</td>
+                    <td>All</td>
+                    <td></td>
+
+                </tr>
+                <tr>
+                    <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr6"></th>
+                    <td><label for="usr6">John Doe <br> <span class="small">johndoe@mail.com</span></label></td>
+                    <td class="text-center">
+                        <span class="pill-green small">Active</span>
+                    </td>
+                    <td>Clerk</td>
+                    <td>All</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr6"></th>
+                    <td><label for="usr6">John Doe <br> <span class="small">johndoe@mail.com</span></label></td>
+                    <td class="text-center">
+                        <span class="pill-green small">Active</span>
+                    </td>
+                    <td>Clerk</td>
+                    <td>All</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr6"></th>
+                    <td><label for="usr6">John Doe <br> <span class="small">johndoe@mail.com</span></label></td>
+                    <td class="text-center">
+                        <span class="pill-green small">Active</span>
+                    </td>
+                    <td>Clerk</td>
+                    <td>All</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr6"></th>
+                    <td><label for="usr6">John Doe <br> <span class="small">johndoe@mail.com</span></label></td>
+                    <td class="text-center">
+                        <span class="pill-green small">Active</span>
+                    </td>
+                    <td>Clerk</td>
+                    <td>All</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr6"></th>
+                    <td><label for="usr6">John Doe <br> <span class="small">johndoe@mail.com</span></label></td>
+                    <td class="text-center">
+                        <span class="pill-green small">Active</span>
+                    </td>
+                    <td>Clerk</td>
+                    <td>All</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr6"></th>
+                    <td><label for="usr6">John Doe <br> <span class="small">johndoe@mail.com</span></label></td>
+                    <td class="text-center">
+                        <span class="pill-green small">Active</span>
+                    </td>
+                    <td>Clerk</td>
+                    <td>All</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr6"></th>
+                    <td><label for="usr6">John Doe <br> <span class="small">johndoe@mail.com</span></label></td>
+                    <td class="text-center">
+                        <span class="pill-green small">Active</span>
+                    </td>
+                    <td>Clerk</td>
+                    <td>All</td>
+                    <td></td>
+                </tr>
             </tbody>
         </table>
+        <footer class="panel-footer mrgn-0">
+            <div class="row">
+                <div class="col-md-6 pages text-left"> </div>
+                <div class="col-md-6 text-right text-left-sm text-left-xs displayOptions"></div>
+            </div>
+        </footer>
+        </section>
 
-        <a href="#"><i class="fas fa-reply mrgn-rght-sm"></i>Return to Marine Inspection Tracking (MITRACK)</a>
+        <p class="mrgn-tp-md">
+            <a href="#"><i class="fas fa-reply mrgn-rght-sm"></i>Return to Marine Inspection Tracking (MITRACK)</a>
+        </p>
 
 
 
@@ -243,13 +356,80 @@
 		
 		<![endif]-->
     <script src="../../GCWeb/js/theme.min.js"></script>
-    <script src="../../js/tc/isotope/isotope.pkgd.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
 
     <script>
         $(document).on("wb-ready.wb", function(event) {
 
+            var oTable = $("#tblUsers").dataTable({
+                "retrieve": true
 
+            }).api();
+
+            $(window).resize(function() {
+                $("#tblUsers").dataTable().fnAdjustColumnSizing();
+            });
+
+            $(".dataTables_scrollFootInner, .dataTables_scrollFoot").hide();
+
+            $("thead input").on("keyup", function() {
+                /* Filter on the column (the index) of this element */
+                //var columnToSort = $(this).attr("data-column-position");
+                var filterText = $(this).val();
+                oTable.search(filterText).draw();
+            }).on("click", function(event) {
+                event.stopPropagation();
+            });
+
+            $("thead select").change(function() {
+                oTable.draw();
+            }).on("click", function(event) {
+                event.stopPropagation();
+            });
+
+
+            $('.dataTables_length').appendTo('footer.panel-footer .displayOptions');
+            $('.dataTables_wrapper .bottom').appendTo('footer.panel-footer .pages');
+            $('.top').remove();
+            $('.bottom, .top').addClass('dataTables_wrapper');
+
+
+            //Add the select all checkbox
+            var selectAllStr = 'Select all';
+            $(".selectAll").html("<input id='selectAll' type='checkbox' value='' title='" + selectAllStr + "'><label for='selectAll' class='wb-inv'>" + selectAllStr + "</label>");
+            $("#selectAll").click(function() {
+                if ($(this).prop("checked")) {
+                    $("th>:checkbox").each(function() {
+                        $(this).prop("checked", false);
+                        fnHighlightSelectedRow($(this));
+                    });
+
+                    $("th>:checkbox").each(function() {
+                        $(this).prop("checked", true);
+                        fnHighlightSelectedRow($(this));
+                    });
+                } else {
+                    $("th>:checkbox").each(function() {
+                        $(this).prop("checked", false);
+                        fnHighlightSelectedRow($(this));
+                    });
+                }
+
+            });
+
+            //Bind the click event handler to the checkboxes
+            $("#tblUsers tbody").on('click', "th>:checkbox", function() {
+                fnHighlightSelectedRow($(this));
+            });
+
+
+            /* Highlight the row that was checked */
+            function fnHighlightSelectedRow(checkbox) {
+                if (checkbox.prop("checked"))
+                    checkbox.parent("th").addClass("highlight-yellow").nextAll("td").addClass("highlight-yellow");
+                else
+                    checkbox.parent("th").removeClass("highlight-yellow").nextAll("td").removeClass("highlight-yellow");
+            }
         });
     </script>
     <!-- InstanceEndEditable -->
