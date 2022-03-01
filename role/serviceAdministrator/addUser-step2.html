@@ -117,20 +117,22 @@
         <h1 property="name" id="wb-cont"><i class="fa-solid fa-user-plus"></i> Add user
 
         </h1>
-
+        <form action="" method="get">
         <p>Indicate which services this person requires access to and the role this person will be performing or each service. </p>
+
+
+        <h2 class="sr-only">Services</h2>
 
         <div class="input-group">
             <label for="sch-inp-ac" class="sr-only">Enter the name of the services to filter the list:</label>
             <input type="text" id="sch-inp-ac" placeholder="Search services..." class="form-control full-width" size="35">
             <span class="input-group-addon"><i class="fas fa-search"></i></span>
         </div>
-        <h2 class="sr-only">Services</h2>
 
-        <div class="row">
-            <div class="col-md-6" id="cn-selectSummary"><strong>6 services selected</strong></div>
-            <div class="col-md-6 text-right" id="cn-selectToggle"><a href="#">Select all</a></div>
-        </div>
+        <div class="form-group mrgn-tp-md">
+                <label for="email"><span class="mandatory">*</span> Email address (username@example.com)<span class="wb-inv">(required)</span>:</label>
+                <input name="email" id="email" type="text" size="50" class="form-control" autocomplete="email" maxlength="150" value="paul.davies@tc.gc.ca">
+            </div>
         <div id="cn-services">
             <div class="row">
                 <div class="col-md-4">
@@ -138,8 +140,9 @@
 
                         <div class="caption">
                             <div class="row">
-                                <div class="col-md-1">
+                                <div class="col-md-1"><div class="checkbox">
                                     <input type="checkbox" id="service1" name="services" value="" checked/>
+                                    </div>
                                 </div>
                                 <div class="col-md-11">
                                     <h3 class="thumbnail-label mrgn-tp-0"><label for="service1">Request a prewash endorsement/exemption</label></h3>
@@ -150,7 +153,6 @@
                                             <option value="">Clerk</option>
                                             <option value="" selected>Inspector</option>
                                             <option value="">Manager</option>
-                                            <option value="">Service Administrator</option>
                                         </select>
                                     </div>
                                 </div>
@@ -174,7 +176,6 @@
                                             <option value="">Clerk</option>
                                             <option value="" selected>Inspector</option>
                                             <option value="">Manager</option>
-                                            <option value="">Service Administrator</option>
                                         </select>
                                     </div>
                                 </div>
@@ -183,7 +184,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="thumbnail opct-30">
+                    <div class="thumbnail">
 
                         <div class="caption">
                             <div class="row">
@@ -199,7 +200,6 @@
                                             <option value="">Clerk</option>
                                             <option value="" selected>Inspector</option>
                                             <option value="">Manager</option>
-                                            <option value="">Service Administrator</option>
                                         </select>
                                     </div>
                                 </div>
@@ -233,7 +233,6 @@
                                             <option value="">Clerk</option>
                                             <option value="" selected>Inspector</option>
                                             <option value="">Manager</option>
-                                            <option value="">Service Administrator</option>
                                         </select>
                                     </div>
                                 </div>
@@ -257,7 +256,6 @@
                                             <option value="">Clerk</option>
                                             <option value="" selected>Inspector</option>
                                             <option value="">Manager</option>
-                                            <option value="">Service Administrator</option>
                                         </select>
                                     </div>
                                 </div>
@@ -266,7 +264,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="thumbnail opct-30">
+                    <div class="thumbnail">
 
                         <div class="caption">
                             <div class="row">
@@ -282,7 +280,6 @@
                                             <option value="">Clerk</option>
                                             <option value="" selected>Inspector</option>
                                             <option value="">Manager</option>
-                                            <option value="">Service Administrator</option>
                                         </select>
                                     </div>
                                 </div>
@@ -311,9 +308,10 @@
 
 
             <div class="nav-button mrgn-tp-md">
-                <a href="users-addConfirmation.html" class="btn btn-primary">Submit</a>
+                <a href="addUser-step3.html" class="btn btn-primary">Continue</a>
                 <a href="addUser-step1.html" class="btn btn-link">Go back</a>
             </div>
+            </form>
 
 
 
@@ -397,9 +395,50 @@
                 }
             });
 
+            $("#srvcCount").text($("input[name=services]:checked").length);
+            $("input[name=services]").on('click', function() {
+              fnSelectService($(this));
+            });
+
+            var selectAll = "Select all";
+            var deselectAll = "Deselect all";
+            $("#lnkSelectAll").on("click", function(event) {
+                event.preventDefault();
+                if ($(this).data("toggle") == 0) {
+                    $(this).text(selectAll).data("toggle", "1");
+                    $("input[name=services]").each(function() {
+                        $(this).prop("checked", false);
+
+                        fnSelectService($(this));
+                    });
+                }
+                else {
+                    $(this).text(deselectAll).data("toggle", "0")
+                    $("input[name=services]").each(function() {
+                        $(this).prop("checked", true);
+                        fnSelectService($(this));
+                    });
+
+                }
+
+            });
+
+
 
 
         });
+
+        /* Adjust display of service and counts */
+        function fnSelectService(checkbox) {
+            if (checkbox.prop("checked")) {
+                    checkbox.closest(".thumbnail").removeClass("opct-40");
+                    $("#srvcCount").text($("input[name=services]:checked").length);
+              }
+                else {
+                    checkbox.closest(".thumbnail").addClass("opct-40");
+                    $("#srvcCount").text($("input[name=services]:checked").length);
+                }
+        }
 
         // Debounce so filtering doesn't happen every millisecond
         function debounce(fn, threshold) {
