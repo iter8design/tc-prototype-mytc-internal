@@ -115,182 +115,178 @@
     <main role="main" property="mainContentOfPage" class="container">
         <!-- InstanceBeginEditable name="Content" -->
         <h1 property="name" id="wb-cont"><i class="fa-solid fa-user-plus"></i> Add user</h1>
+        <form action="" method="get">
+            <p>Enter the following information about the user you wish to add. All fields are mandatory.</p>
 
-        <p>Enter the following information about the user you wish to add. All fields are mandatory.</p>
-
-        <div class="form-group mrgn-tp-md">
-            <label for="email"><span class="mandatory">*</span> Email address (username@example.com)<span class="wb-inv">(required)</span>: <span class="fld-example">We'll use this email address to send an email invitation to access this application.</span> </label>
-            <input name="email" id="email" type="text" size="50" class="form-control" autocomplete="email" maxlength="150">
-        </div>
-
-        <p class="label-question"><span class="mandatory" title="This field is mandatory.">*</span>What is the primary role for this person? <span class="wb-inv">(required)</span>
-
-        </p>
-        <span class="fld-example">If none of these roles describe what this person will be doing, you may <a href="#">add a new role</a>.</span>
-
-
-        <div class="wb-tabs wb-tabs-vertical mrgn-tp-md">
-            <div class="tabpanels">
-                <details id="details-panel1" open>
-                    <summary>
-                        <input type="radio" name="role" value="radio" id="r1" checked>
-                        Inspector
-
-
-                    </summary>
-
-                    <div class="row">
-                        <div class="col-md-6">
-
-                            <div class="well">
-                                <p><i class="fa-solid fa-shield-check fa-2xl text-green"></i> This role may:</p>
-                                <ul class="mrgn-lft-md">
-                                    <li>Manage service requests</li>
-                                    <li>Enter service request time</li>
-                                    <li>Backdate status changes</li>
-                                    <li>View invoices</li>
-                                    <li>Submit service requests</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="well">
-                                <p><i class="fa-solid fa-shield-xmark fa-2xl text-red"></i> This role <strong>may not</strong>:</p>
-                                <ul class="mrgn-lft-md">
-
-                                    <li>Assign service requests</li>
-                                    <li>Generate invoices</li>
-                                    <li>View remissions</li>
-                                    <li>Approve remissions</li>
-                                </ul>
-                            </div>
-                        </div>
-
-
-                    </div>
-
-                </details>
-                <details id="details-panel2">
-                    <summary>
-                        <input type="radio" name="role" value="radio" id="r2">
-                        <label for="r2">Clerk</label>
-                    </summary>
-
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="well">
-                                <p><i class="fa-solid fa-shield-check fa-2xl text-green"></i> This role may:</p>
-                                <ul class="mrgn-lft-md">
-                                    <li>Manage service requests</li>
-                                    <li>Enter service request time</li>
-                                    <li>Backdate status changes</li>
-                                    <li>View invoices</li>
-                                    <li>Generate invoices</li>
-                                    <li>Submit service requests</li>
-                                    <li>Assign service requests</li>
-                                    <li>View remissions</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="well">
-                                <p><i class="fa-solid fa-shield-xmark fa-2xl text-red"></i> This role <strong>may not</strong>:</p>
-                                <ul class="mrgn-lft-md">
-                                    <li>Approve/reject invoices</li>
-                                    <li>Approve remissions</li>
-                                    <li>View service performance</li>
-                                </ul>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </details>
-
-                <details id="details-panel3">
-                    <summary>
-                        <input type="radio" name="role" value="radio" id="r3">
-                        <label for="r3">Manager</label>
-                    </summary>
-
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="well">
-                                <p><i class="fa-solid fa-shield-check fa-2xl text-green"></i> This role may:</p>
-                                <ul class="mrgn-lft-md">
-                                    <li>Manage service requests</li>
-                                    <li>Enter service request time</li>
-                                    <li>Backdate status changes</li>
-                                    <li>View invoices</li>
-                                    <li>Generate invoices</li>
-                                    <li>Submit service requests</li>
-                                    <li>Assign service requests</li>
-                                    <li>View remissions</li>
-                                    <li>Approve/reject invoices</li>
-                                    <li>Approve remissions</li>
-                                    <li>View service performance</li>
-                                </ul>
-                            </div>
-                        </div>
-
-
-
-                    </div>
-
-                </details>
-                <details id="details-panel4">
-                    <summary>
-                        <input type="radio" name="role" value="radio" id="r4">
-                        <label for="r4">Service Administrator</label>
-                    </summary>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="well">
-                                <p><i class="fa-solid fa-shield-check fa-2xl text-green"></i> This role may:</p>
-                                <ul class="mrgn-lft-md">
-
-                                    <li>Manage service requests</li>
-                                    <li>Enter service request time</li>
-                                    <li>Backdate status changes</li>
-                                    <li>View invoices</li>
-                                    <li>Generate invoices</li>
-                                    <li>Submit service requests</li>
-                                    <li>Assign service requests</li>
-                                    <li>View remissions</li>
-                                    <li>Approve/reject invoices</li>
-                                    <li>Approve remissions</li>
-                                    <li>View service performance</li>
-                                </ul>
-
-                                <p><i class="fa-solid fa-shield-plus fa-2xl text-green"></i> For this application, this role may also:</p>
-
-                                <ul class="mrgn-lft-md">
-                                    <li>Manage email templates</li>
-                                    <li>Manage notices</li>
-                                    <li>Manage roles & permissions</li>
-                                    <li>Manage users</li>
-                                </ul>
-
-
-
-
-
-                            </div>
-                        </div>
-
-                    </div>
-
-                </details>
+            <div class="form-group mrgn-tp-md">
+                <label for="email"><span class="mandatory">*</span> Email address (username@example.com)<span class="wb-inv">(required)</span>: <span class="fld-example">We'll use this email address to send an email invitation to access this application.</span> </label>
+                <input name="email" id="email" type="text" size="50" class="form-control" autocomplete="email" maxlength="150">
             </div>
-        </div>
 
-        <div class="nav-button mrgn-tp-md">
-            <a href="addUser-step2.html" class="btn btn-primary">Continue</button>
+            <p class="label-question"><span class="mandatory" title="This field is mandatory.">*</span>What is the primary role for this person? <span class="wb-inv">(required)</span>
+
+            </p>
+            <span class="fld-example">If none of these roles describe what this person will be doing, you may <a href="#">add a new role</a>.</span>
+
+
+            <div class="wb-tabs wb-tabs-vertical mrgn-tp-md">
+                <div class="tabpanels">
+                    <details id="details-panel1" open>
+                        <summary>
+                            Inspector
+
+
+                        </summary>
+
+                        <div class="row">
+                            <div class="col-md-6">
+
+                                <div class="well">
+                                    <p><i class="fa-solid fa-shield-check fa-2xl text-green"></i> This role may:</p>
+                                    <ul class="mrgn-lft-md">
+                                        <li>Manage service requests</li>
+                                        <li>Enter service request time</li>
+                                        <li>Backdate status changes</li>
+                                        <li>View invoices</li>
+                                        <li>Submit service requests</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="well">
+                                    <p><i class="fa-solid fa-shield-xmark fa-2xl text-red"></i> This role <strong>may not</strong>:</p>
+                                    <ul class="mrgn-lft-md">
+
+                                        <li>Assign service requests</li>
+                                        <li>Generate invoices</li>
+                                        <li>View remissions</li>
+                                        <li>Approve remissions</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </details>
+                    <details id="details-panel2">
+                        <summary>
+                            Clerk
+                        </summary>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="well">
+                                    <p><i class="fa-solid fa-shield-check fa-2xl text-green"></i> This role may:</p>
+                                    <ul class="mrgn-lft-md">
+                                        <li>Manage service requests</li>
+                                        <li>Enter service request time</li>
+                                        <li>Backdate status changes</li>
+                                        <li>View invoices</li>
+                                        <li>Generate invoices</li>
+                                        <li>Submit service requests</li>
+                                        <li>Assign service requests</li>
+                                        <li>View remissions</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="well">
+                                    <p><i class="fa-solid fa-shield-xmark fa-2xl text-red"></i> This role <strong>may not</strong>:</p>
+                                    <ul class="mrgn-lft-md">
+                                        <li>Approve/reject invoices</li>
+                                        <li>Approve remissions</li>
+                                        <li>View service performance</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </details>
+
+                    <details id="details-panel3">
+                        <summary>
+                            Manager
+                        </summary>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="well">
+                                    <p><i class="fa-solid fa-shield-check fa-2xl text-green"></i> This role may:</p>
+                                    <ul class="mrgn-lft-md">
+                                        <li>Manage service requests</li>
+                                        <li>Enter service request time</li>
+                                        <li>Backdate status changes</li>
+                                        <li>View invoices</li>
+                                        <li>Generate invoices</li>
+                                        <li>Submit service requests</li>
+                                        <li>Assign service requests</li>
+                                        <li>View remissions</li>
+                                        <li>Approve/reject invoices</li>
+                                        <li>Approve remissions</li>
+                                        <li>View service performance</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+                    </details>
+                    <details id="details-panel4">
+                        <summary>
+                            Service Administrator
+                        </summary>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="well">
+                                    <p><i class="fa-solid fa-shield-check fa-2xl text-green"></i> This role may:</p>
+                                    <ul class="mrgn-lft-md">
+
+                                        <li>Manage service requests</li>
+                                        <li>Enter service request time</li>
+                                        <li>Backdate status changes</li>
+                                        <li>View invoices</li>
+                                        <li>Generate invoices</li>
+                                        <li>Submit service requests</li>
+                                        <li>Assign service requests</li>
+                                        <li>View remissions</li>
+                                        <li>Approve/reject invoices</li>
+                                        <li>Approve remissions</li>
+                                        <li>View service performance</li>
+                                    </ul>
+
+                                    <p><i class="fa-solid fa-shield-plus fa-2xl text-green"></i> For this application, this role may also:</p>
+
+                                    <ul class="mrgn-lft-md">
+                                        <li>Manage email templates</li>
+                                        <li>Manage notices</li>
+                                        <li>Manage roles & permissions</li>
+                                        <li>Manage users</li>
+                                    </ul>
+
+
+
+
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </details>
+                </div>
+            </div>
+
+            <div class="nav-button mrgn-tp-md">
+                <a href="addUser-step2.html" class="btn btn-primary">Continue</a>
                 <a href="users.html" class="btn btn-link">Cancel</a>
-        </div>
-
+            </div>
+        </form>
 
 
         <!-- InstanceEndEditable -->
@@ -340,7 +336,15 @@
 
 
         });
+
+
+        $(document).on("wb-updated.wb-tabs", ".wb-tabs", function(event, $newPanel) {
+            // Set the role of selected
+        });
+
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+
+</html>
