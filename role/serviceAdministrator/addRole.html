@@ -129,7 +129,7 @@
         </div>
 
         <h2 class="hd-section">Permissions</h2>
-        <p>Select from the following permissions. If you don't see what you're looking for, you may <a href="#dlg-addPermission" class="lbx-modal wb-lbx">add a new permission</a></p>
+        <p>Select from the following permissions. If you don't see what you're looking for, or need to remove a permission no longer in use, you may <a href="#dlg-requestPermissionChange" class="wb-lbx">request permission changes.</a></p>
         <div class="row">
             <div class="col-md-5">
                 <h3 class="mrgn-tp-md">Available</h3>
@@ -274,7 +274,7 @@
             <a href="#" class="btn btn-link mrgn-lft-md">Cancel</a>
         </div>
 
-        <section id="dlg-addPermission" class="mfp-hide modal-dialog modal-content overlay-def">
+        <!--<section id="dlg-addPermission" class="mfp-hide modal-dialog modal-content overlay-def">
             <header class="modal-header">
                 <h2 class="modal-title">Add permission</h2>
             </header>
@@ -294,6 +294,21 @@
 
                 <a href="#" class="btn btn-primary pull-left mrgn-rght-md">Add permission</a>
                 <a href="#" class="popup-modal-dismiss btn btn-default pull-left">Cancel</a>
+            </footer>
+        </section> -->
+
+        <section id="dlg-requestPermissionChange" class="mfp-hide modal-dialog modal-content overlay-def">
+            <header class="modal-header">
+                <h2 class="modal-title">Request permissions changes</h2>
+            </header>
+            <div class="modal-body">
+                <p>Because permissions changes may introduce problems in your application, a request must be submitted to <a href="../all/support.html" target="_blank">myTC Account support</a> to add or remove permissions. </p>
+
+                <p>Please include the name of the permission you wish to add or remove and a description of how the permission affects the features or functionality of the application.</p>
+
+            </div>
+            <footer class="modal-footer">
+                <a href="#" class="popup-modal-dismiss btn btn-default pull-left">Close</a>
             </footer>
         </section>
 
