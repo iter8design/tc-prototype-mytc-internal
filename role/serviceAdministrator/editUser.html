@@ -100,11 +100,11 @@
             <div class="container">
                 <div class="row">
                     <ol class="breadcrumb">
-                        <li><a href="#">Home</a></li>
+                        <li><a href="home.html">Home</a></li>
                         <!-- InstanceBeginEditable name="Breadcrumbs" -->
                         <li><a href="#">Applications</a></li>
-                        <li><a href="#">Marine Inspection Tracking (MITRACK)</a></li>
-                        <li><a href="#">Users</a></li>
+                        <li><a href="appDashboard.html">Marine Inspection Tracking (MITRACK)</a></li>
+                        <li><a href="users.html">Users</a></li>
                         <li>Paul Davies</li>
                         <!-- InstanceEndEditable -->
                     </ol>
@@ -125,7 +125,7 @@
 
 
 
-            <h2>Services</h2>
+            <h2 class="hd-section">Services</h2>
             
             <div class="row">
             <div class="col-md-12">
@@ -308,6 +308,7 @@
                                                 <option value="">Clerk</option>
                                                 <option value="" selected>Inspector</option>
                                                 <option value="">Manager</option>
+                                                <option value="">Service Administrator</option>
                                             </select>
                                         </div>
                                     </div>
@@ -349,7 +350,8 @@
                 <h2 class="modal-title">Remove access</h2>
             </header>
             <div class="modal-body">
-                <p>You are about to remove access for <strong>{First name} {Last name} (email@domain.com)</strong>.</p>
+                <p>You are about to remove access for:</p>
+                <div class="well text-center"><strong>{First name} {Last name} (email@domain.com)</strong></div>
                 <p>If you continue, an email will be sent to them to confirm their removal.</p>
 
             </div>
