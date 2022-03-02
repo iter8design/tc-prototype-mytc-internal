@@ -81,8 +81,24 @@ thead tr {
     font-size: 21px;
 }
 
+.alert-danger .fa-ul,
+.alert-success .fa-ul,
+.alert-warning .fa-ul,
+.alert-info .fa-ul {
+    margin-left: 1.0em;
+    margin-bottom: 0;
+}
+
+.alert > p {
+    margin-left: 1.6em;
+}
+
 .datemod {
     padding-left: 0px;
+}
+
+.fa-ul li i {
+    margin-right: 10px;
 }
 
 .equal {
@@ -113,6 +129,10 @@ textarea.fieldError,
     line-height: 1.5em;
     margin-top: 2px;
     margin-bottom: 3px;
+}
+
+.label {
+    font-size: 90%;
 }
 
 .highlight-yellow,
