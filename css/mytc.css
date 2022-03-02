@@ -145,6 +145,10 @@ textarea.fieldError,
     height: 100%;
 }
 
+.panel-default {
+    border-color: #ddd;
+}
+
 .panel-primary > .panel-heading {
     background-color: #335075;
     border-color: #335075;
@@ -165,6 +169,12 @@ textarea.fieldError,
 .panel-service,
 .panel-account {
     box-shadow: 1px 1px 1px #666;
+}
+
+.panel-shadow {
+    -moz-box-shadow: 5px 5px 5px #ccc;
+    -webkit-box-shadow: 5px 5px 5px #ccc;
+    box-shadow: 5px 5px 5px #ccc;
 }
 
 .panel-disabled {
@@ -302,6 +312,18 @@ hr {
     font-size: 16px;
     float: right;
     font-weight: normal;
+}
+
+.hd-section {
+    border-bottom: 1px solid #ccc;
+}
+
+h2.hd-section {
+    font-size: 24px;
+}
+
+h3.hd-section {
+    font-size: 20px;
 }
 
 .label-question,
