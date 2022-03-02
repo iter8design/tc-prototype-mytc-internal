@@ -100,11 +100,11 @@
             <div class="container">
                 <div class="row">
                     <ol class="breadcrumb">
-                        <li><a href="#">Home</a></li>
+                        <li><a href="home.html">Home</a></li>
                         <!-- InstanceBeginEditable name="Breadcrumbs" -->
                         <li><a href="#">Applications</a></li>
-                        <li><a href="#">Marine Inspection Tracking (MITRACK)</a></li>
-                        <li><a href="#">Users</a></li>
+                        <li><a href="appDashboard.html">Marine Inspection Tracking (MITRACK)</a></li>
+                        <li><a href="users.html">Users</a></li>
                         <li>Add user</li>
                         <!-- InstanceEndEditable -->
                     </ol>
@@ -120,7 +120,6 @@
         <form action="" method="get">
         <p>Indicate which services this person requires access to and the role this person will be performing or each service. </p>
 
-
         <h2 class="sr-only">Services</h2>
 
         <div class="input-group">
@@ -129,9 +128,15 @@
             <span class="input-group-addon"><i class="fas fa-search"></i></span>
         </div>
 
-        <div class="form-group mrgn-tp-md">
-                <label for="email"><span class="mandatory">*</span> Email address (username@example.com)<span class="wb-inv">(required)</span>:</label>
-                <input name="email" id="email" type="text" size="50" class="form-control" autocomplete="email" maxlength="150" value="paul.davies@tc.gc.ca">
+
+       <div class="row">
+                <div class="col-md-6">
+
+                </div>
+                <div class="col-md-6 text-right" id="cn-selectToggle">
+
+                    <div id="cn-selectSummary" class="mrgn-bttm-md" ><strong><span id="srvcCount"></span> services selected</strong></div><a href="#" id="lnkSelectAll" data-toggle="0">Deselect all</a>
+                </div>
             </div>
         <div id="cn-services">
             <div class="row">
@@ -309,7 +314,7 @@
 
             <div class="nav-button mrgn-tp-md">
                 <a href="addUser-step3.html" class="btn btn-primary">Continue</a>
-                <a href="addUser-step1.html" class="btn btn-link">Go back</a>
+                <a href="addUser-step1.html" class="btn btn-link mrgn-lft-md">Go back</a>
             </div>
             </form>
 
