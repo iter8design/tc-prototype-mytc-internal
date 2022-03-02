@@ -100,10 +100,10 @@
             <div class="container">
                 <div class="row">
                     <ol class="breadcrumb">
-                        <li><a href="#">Home</a></li>
+                        <li><a href="home.html">Home</a></li>
                         <!-- InstanceBeginEditable name="Breadcrumbs" -->
                         <li><a href="#">Applications</a></li>
-                        <li><a href="#">Marine Inspection Tracking (MITRACK)</a></li>
+                        <li><a href="appDashboard.html">Marine Inspection Tracking (MITRACK)</a></li>
                         <li>Users</li>
                         <!-- InstanceEndEditable -->
                     </ol>
@@ -125,7 +125,7 @@
 
         <section class="panel panel-datatable">
 
-        <table id="tblUsers" class="wb-tables table table-striped mrgn-bttm-md" data-wb-tables='{"info" : false, "filter" : true, "paginate" : true, "order" : [],
+            <table id="tblUsers" class="wb-tables table table-striped mrgn-bttm-md" data-wb-tables='{"info" : false, "filter" : true, "paginate" : true, "order" : [],
 
         "columnDefs": [{ "orderable" : false, "targets":[0,1,2,3,4,5] }],
 "language": {
@@ -136,190 +136,231 @@
 				"emptyTable" : "No users have been added yet."
 			}
 }'>
-            <caption class="wb-inv">List of users for Marine Inspection Tracking (MITRACK)</caption>
-            <thead>
-                <tr>
-                    <th scope="col" class="width5 text-center"><span class="sr-only">Select</span><span class="selectAll"></span></th>
-                    <th scope="col" class="width30"><label for="name" class="sr-only">Name or email address</label>
-                        <div class="input-group">
-                            <input name="name" id="name" type="text" size="50" class="form-control" autocomplete="email" maxlength="150" placeholder="Search users...">
-                            <span class="input-group-addon"><i class="fas fa-search"></i></span>
-                        </div>
-                    </th>
-                    <th scope="col" class="width10"><label for="status" class="sr-only">Status</label>
-                        <select name="role" id="role" class="form-control full-width">
-                            <option value="" selected>&lsaquo;&lsaquo;&lsaquo;Status&rsaquo;&rsaquo;&rsaquo;</option>
-                            <option value="Active">Active</option>
-                            <option value="Pending">Pending</option>
-                            <option value="Suspended">Suspended</option>
-                        </select>
-                    </th>
-                    <th scope="col" class="width10"><label for="role" class="sr-only">Role</label>
-                        <select name="role" id="role" class="form-control full-width">
-                            <option value="" selected>&lsaquo;&lsaquo;&lsaquo;Role&rsaquo;&rsaquo;&rsaquo;</option>
-                            <option value="Clerk">Clerk</option>
-                            <option value="Inspector">Inspector</option>
-                            <option value="Manager">Manager</option>
-                            <option value="Service Administrator">Service Administrator</option>
+                <caption class="wb-inv">List of users for Marine Inspection Tracking (MITRACK)</caption>
+                <thead>
+                    <tr>
+                        <th scope="col" class="width5 text-center"><span class="sr-only">Select</span><span class="selectAll"></span></th>
+                        <th scope="col" class="width30"><label for="name" class="sr-only">Name or email address</label>
+                            <div class="input-group">
+                                <input name="name" id="name" type="text" size="50" class="form-control" autocomplete="email" maxlength="150" placeholder="Search users...">
+                                <span class="input-group-addon"><i class="fas fa-search"></i></span>
+                            </div>
+                        </th>
+                        <th scope="col" class="width10"><label for="status" class="sr-only">Status</label>
+                            <select name="status" id="status" class="form-control full-width">
+                                <option value="" selected>&lsaquo;&lsaquo;&lsaquo;Status&rsaquo;&rsaquo;&rsaquo;</option>
+                                <option value="Active">Active</option>
+                                <option value="Pending">Pending</option>
+                                <option value="Suspended">Suspended</option>
+                            </select>
+                        </th>
+                        <th scope="col" class="width10"><label for="role" class="sr-only">Role</label>
+                            <select name="role" id="role" class="form-control full-width">
+                                <option value="" selected>&lsaquo;&lsaquo;&lsaquo;Role&rsaquo;&rsaquo;&rsaquo;</option>
+                                <option value="Clerk">Clerk</option>
+                                <option value="Inspector">Inspector</option>
+                                <option value="Manager">Manager</option>
+                                <option value="Service Administrator">Service Administrator</option>
 
 
-                        </select>
-                    </th>
-                    <th scope="col" class="width30"><label for="services" class="sr-only">Service</label>
-                        <select name="services" id="services" class="form-control full-width">
-                            <option value="" selected>&lsaquo;&lsaquo;&lsaquo;Service&rsaquo;&rsaquo;&rsaquo;</option>
-                            <option value="">Request a prewash endorsement/exemption</option>
-                            <option value="">Request a verification of shipper’s procedures for cargoes that may liquefy</option>
-                            <option value="">Request concentrates, grains or timber cargo inspection</option>
-                            <option value="">Request for a follow-up Port State Control inspection to confirm rectification of deficiencies for foreign vessels</option>
-                            <option value="">Request for a follow-up Port State Control inspection to rescind a detention order for foreign vessels</option>
-                            <option value="">Request for inspection of a vessel loading, carrying or unloading dangerous goods (Bulk or packaged form)</option>
-                        </select>
-                    </th>
-                    <th scope="col" class="width20"><span class="sr-only">Actions</span>
-                        <a href="addUser-step1.html" class="btn btn-primary pull-right text-nowrap">Add user</a>
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr1"></th>
-                    <td><label for="usr1">Paul Davies <br> <span class="small">paul.davies@tc.gc.ca</span></label></td>
-                    <td class="text-center">
-                        <span class="pill-green small">Active</span>
-                    </td>
-                    <td>Inspector</td>
-                    <td>All</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr2"></th>
-                    <td><label for="usr2">Linda Fry <br> <span class="small">lfry@gmail.com</span></label></td>
-                    <td class="text-center">
-                        <span class="pill-green small">Active</span>
-                    </td>
-                    <td>Varies</td>
-                    <td>Limited</td>
-                    <td></td>
+                            </select>
+                        </th>
+                        <th scope="col" class="width30"><label for="services" class="sr-only">Service</label>
+                            <select name="services" id="services" class="form-control full-width">
+                                <option value="" selected>&lsaquo;&lsaquo;&lsaquo;Service&rsaquo;&rsaquo;&rsaquo;</option>
+                                <option value="">Request a prewash endorsement/exemption</option>
+                                <option value="">Request a verification of shipper’s procedures for cargoes that may liquefy</option>
+                                <option value="">Request concentrates, grains or timber cargo inspection</option>
+                                <option value="">Request for a follow-up Port State Control inspection to confirm rectification of deficiencies for foreign vessels</option>
+                                <option value="">Request for a follow-up Port State Control inspection to rescind a detention order for foreign vessels</option>
+                                <option value="">Request for inspection of a vessel loading, carrying or unloading dangerous goods (Bulk or packaged form)</option>
+                            </select>
+                        </th>
+                        <th scope="col" class="width20"><span class="sr-only">Actions</span>
+                            <a href="addUser-step1.html" class="btn btn-primary pull-right text-nowrap"><i class="fa-solid fa-user-plus"></i> Add user</a>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr1"></th>
+                        <td><label for="usr1"><a href="editUser.html">Paul Davies</a><br> <span class="small">paul.davies@tc.gc.ca</span></label></td>
+                        <td class="text-center">
+                            <span class="pill-green small">Active</span>
+                        </td>
+                        <td>Inspector <a href="#dlg-roleHelp" class="wb-lbx" title="What can an Inspector do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
+                        <td>All</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr2"></th>
+                        <td><label for="usr2"><a href="editUser.html">Linda Fry</a> <br> <span class="small">lfry@gmail.com</span></label></td>
+                        <td class="text-center">
+                            <span class="pill-green small">Active</span>
+                        </td>
+                        <td>Varies</td>
+                        <td>Limited</td>
+                        <td></td>
 
-                </tr>
-                <tr>
-                    <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr3"></th>
-                    <td><label for="usr3">Norman Gregory <br> <span class="small">norman.gregory@tc.gc.ca</span></label></td>
-                    <td class="text-center">
-                        <span class="pill-green small">Active</span>
-                    </td>
-                    <td>Clerk</td>
-                    <td>Limited</td>
-                    <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr3"></th>
+                        <td><label for="usr3"><a href="editUser.html">Norman Gregory</a> <br> <span class="small">norman.gregory@tc.gc.ca</span></label></td>
+                        <td class="text-center">
+                            <span class="pill-green small">Active</span>
+                        </td>
+                        <td>Clerk <a href="#dlg-roleHelp" class="wb-lbx" title="What can an Inspector do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
+                        <td>Limited</td>
+                        <td></td>
 
-                </tr>
-                <tr>
-                    <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr4"></th>
-                    <td><label for="usr4">Mark Hills <br> <span class="small">mhillsl@hotmail.com</span></label></td>
-                    <td class="text-center">
-                        <span class="pill-red small">Suspended</span>
-                    </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr4"></th>
+                        <td><label for="usr4"><a href="editUser.html">Mark Hills</a> <br> <span class="small">mhillsl@hotmail.com</span></label></td>
+                        <td class="text-center">
+                            <span class="pill-red small">Suspended</span>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
 
-                </tr>
-                <tr>
-                    <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr5"></th>
-                    <td><label for="usr5">tomz@outlook.com <br></label></td>
-                    <td class="text-center">
-                        <span class="pill-yellow small">Pending</span>
-                    </td>
-                    <td>Client</td>
-                    <td>All</td>
-                    <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr5"></th>
+                        <td><label for="usr5">tomz@outlook.com <br></label></td>
+                        <td class="text-center">
+                            <span class="pill-yellow small">Pending</span>
+                        </td>
+                        <td>Client <a href="#dlg-roleHelp" class="wb-lbx" title="What can an Inspector do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
+                        <td>All</td>
+                        <td></td>
 
-                </tr>
-                <tr>
-                    <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr6"></th>
-                    <td><label for="usr6">John Doe <br> <span class="small">johndoe@mail.com</span></label></td>
-                    <td class="text-center">
-                        <span class="pill-green small">Active</span>
-                    </td>
-                    <td>Clerk</td>
-                    <td>All</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr6"></th>
-                    <td><label for="usr6">John Doe <br> <span class="small">johndoe@mail.com</span></label></td>
-                    <td class="text-center">
-                        <span class="pill-green small">Active</span>
-                    </td>
-                    <td>Clerk</td>
-                    <td>All</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr6"></th>
-                    <td><label for="usr6">John Doe <br> <span class="small">johndoe@mail.com</span></label></td>
-                    <td class="text-center">
-                        <span class="pill-green small">Active</span>
-                    </td>
-                    <td>Clerk</td>
-                    <td>All</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr6"></th>
-                    <td><label for="usr6">John Doe <br> <span class="small">johndoe@mail.com</span></label></td>
-                    <td class="text-center">
-                        <span class="pill-green small">Active</span>
-                    </td>
-                    <td>Clerk</td>
-                    <td>All</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr6"></th>
-                    <td><label for="usr6">John Doe <br> <span class="small">johndoe@mail.com</span></label></td>
-                    <td class="text-center">
-                        <span class="pill-green small">Active</span>
-                    </td>
-                    <td>Clerk</td>
-                    <td>All</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr6"></th>
-                    <td><label for="usr6">John Doe <br> <span class="small">johndoe@mail.com</span></label></td>
-                    <td class="text-center">
-                        <span class="pill-green small">Active</span>
-                    </td>
-                    <td>Clerk</td>
-                    <td>All</td>
-                    <td></td>
-                </tr>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr6"></th>
+                        <td><label for="usr6"><a href="editUser.html">John Doe</a> <br> <span class="small">johndoe@mail.com</span></label></td>
+                        <td class="text-center">
+                            <span class="pill-green small">Active</span>
+                        </td>
+                        <td>Clerk <a href="#dlg-roleHelp" class="wb-lbx" title="What can an Inspector do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
+                        <td>All</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr6"></th>
+                        <td><label for="usr6"><a href="editUser.html">John Doe</a> <br> <span class="small">johndoe@mail.com</span></label></td>
+                        <td class="text-center">
+                            <span class="pill-green small">Active</span>
+                        </td>
+                        <td>Clerk <a href="#dlg-roleHelp" class="wb-lbx" title="What can an Inspector do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
+                        <td>All</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr6"></th>
+                        <td><label for="usr6"><a href="editUser.html">John Doe</a> <br> <span class="small">johndoe@mail.com</span></label></td>
+                        <td class="text-center">
+                            <span class="pill-green small">Active</span>
+                        </td>
+                        <td>Clerk <a href="#dlg-roleHelp" class="wb-lbx" title="What can an Inspector do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
+                        <td>All</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr6"></th>
+                        <td><label for="usr6"><a href="editUser.html">John Doe</a> <br> <span class="small">johndoe@mail.com</span></label></td>
+                        <td class="text-center">
+                            <span class="pill-green small">Active</span>
+                        </td>
+                        <td>Clerk <a href="#dlg-roleHelp" class="wb-lbx" title="What can an Inspector do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
+                        <td>All</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr6"></th>
+                        <td><label for="usr6"><a href="editUser.html">John Doe</a> <br> <span class="small">johndoe@mail.com</span></label></td>
+                        <td class="text-center">
+                            <span class="pill-green small">Active</span>
+                        </td>
+                        <td>Clerk <a href="#dlg-roleHelp" class="wb-lbx" title="What can an Inspector do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
+                        <td>All</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr6"></th>
+                        <td><label for="usr6"><a href="editUser.html">John Doe</a><br> <span class="small">johndoe@mail.com</span></label></td>
+                        <td class="text-center">
+                            <span class="pill-green small">Active</span>
+                        </td>
+                        <td>Clerk </td>
+                        <td>All</td>
+                        <td></td>
+                    </tr>
 
-                <tr>
-                    <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr6"></th>
-                    <td><label for="usr6">John Doe <br> <span class="small">johndoe@mail.com</span></label></td>
-                    <td class="text-center">
-                        <span class="pill-green small">Active</span>
-                    </td>
-                    <td>Clerk</td>
-                    <td>All</td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
-        <footer class="panel-footer mrgn-0">
-            <div class="row">
-                <div class="col-md-6 pages text-left"> </div>
-                <div class="col-md-6 text-right text-left-sm text-left-xs displayOptions"></div>
-            </div>
-        </footer>
+                    <tr>
+                        <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr6"></th>
+                        <td><label for="usr6"><a href="editUser.html">John Doe</a> <br> <span class="small">johndoe@mail.com</span></label></td>
+                        <td class="text-center">
+                            <span class="pill-green small">Active</span>
+                        </td>
+                        <td>Clerk</td>
+                        <td>All</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <footer class="panel-footer mrgn-0">
+                <div class="row">
+                    <div class="col-md-6 pages text-left"> </div>
+                    <div class="col-md-6 text-right text-left-sm text-left-xs displayOptions"></div>
+                </div>
+            </footer>
         </section>
 
         <a href="#"><i class="fas fa-reply mrgn-rght-sm"></i>Return to Marine Inspection Tracking (MITRACK)</a>
 
+        <section id="dlg-roleHelp" class="mfp-hide modal-dialog modal-content overlay-def">
+            <header class="modal-header">
+                <h2 class="modal-title">What can this role do?</h2>
+            </header>
+            <div class="modal-body">
+                <h3 class="mrgn-tp-md">Inspector</h3>
+                <div class="row">
+                    <div class="col-md-6">
 
+                        <div class="well">
+                            <p><i class="fa-solid fa-shield-check fa-2xl text-green"></i> This role may:</p>
+                            <ul class="mrgn-lft-md">
+                                <li>Manage service requests</li>
+                                <li>Enter service request time</li>
+                                <li>Backdate status changes</li>
+                                <li>View invoices</li>
+                                <li>Submit service requests</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="well">
+                            <p><i class="fa-solid fa-shield-xmark fa-2xl text-red"></i> This role <strong>may not</strong>:</p>
+                            <ul class="mrgn-lft-md">
+
+                                <li>Assign service requests</li>
+                                <li>Generate invoices</li>
+                                <li>View remissions</li>
+                                <li>Approve remissions</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <footer class="modal-footer">
+                <a href="#" class="popup-modal-dismiss btn btn-default pull-left"><i class="fa-solid fa-face-smile-hearts"></i> Got it!</a>
+            </footer>
+        </section>
 
         <!-- InstanceEndEditable -->
         <div class="datemod col-xs-12 mrgn-tp-lg">
@@ -359,7 +400,8 @@
 		<script src="../wet-boew/js/ie8-wet-boew2.min.js"></script>
 		
 		<![endif]-->
-    <script src="../../GCWeb/js/theme.min.js"></script><script src="../../js/tc/isotope/isotope.pkgd.min.js"></script>
+    <script src="../../GCWeb/js/theme.min.js"></script>
+    <script src="../../js/tc/isotope/isotope.pkgd.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
 
     <script>
