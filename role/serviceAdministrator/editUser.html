@@ -146,11 +146,13 @@
                             
                             <select name="role" id="role" class="form-control full-width">
                                 <option value="">&lsaquo;&lsaquo;&lsaquo;Select&rsaquo;&rsaquo;&rsaquo;</option>
-                                <option value="">Clerk</option>
-                                <option value="">Inspector</option>
-                                <option value="">Manager</option>
+                                <option value="r1">Clerk</option>
+                                <option value="r2">Inspector</option>
+                                <option value="r3">Manager</option>
                             </select>
-                            <span class="input-group-addon">Assign</span>
+                            <span class="input-group-btn">
+                              <a href="#cn-services" class="btn btn-default" id="btnAssign">Assign</a>
+                          </span>
                         </div>
                     </div>
                 </div>
@@ -176,10 +178,10 @@
                                         <div class="thumbnail-description smaller">
 
                                             <label for="s1-rl">Role <span class="sr-only"> for {service description} </span></label>
-                                            <select name="role" id="s1-rl" class="form-control full-width">
-                                                <option value="">Clerk</option>
-                                                <option value="" selected>Inspector</option>
-                                                <option value="">Manager</option>
+                                            <select name="role-s1-rl" id="s1-rl" class="form-control full-width">
+                                                <option value="r1">Clerk</option>
+                                                <option value="r2" selected>Inspector</option>
+                                                <option value="r3">Manager</option>
 
                                             </select>
                                         </div>
@@ -200,10 +202,10 @@
                                         <div class="thumbnail-description smaller">
 
                                             <label for="s2-rl">Role <span class="sr-only"> for {service description} </span></label>
-                                            <select name="role" id="s2-rl" class="form-control full-width">
-                                                <option value="">Clerk</option>
-                                                <option value="" selected>Inspector</option>
-                                                <option value="">Manager</option>
+                                            <select name="role-s2-rl" id="s2-rl" class="form-control full-width">
+                                               <option value="r1">Clerk</option>
+                                                <option value="r2" selected>Inspector</option>
+                                                <option value="r3">Manager</option>
                                             </select>
                                         </div>
                                     </div>
@@ -224,10 +226,10 @@
                                         <div class="thumbnail-description smaller">
 
                                             <label for="s3-rl">Role <span class="sr-only"> for {service description} </span></label>
-                                            <select name="role" id="s3-rl" class="form-control full-width">
-                                                <option value="">Clerk</option>
-                                                <option value="" selected>Inspector</option>
-                                                <option value="">Manager</option>
+                                            <select name="role-s3-rl" id="s3-rl" class="form-control full-width">
+                                                <option value="r1">Clerk</option>
+                                                <option value="r2" selected>Inspector</option>
+                                                <option value="r3">Manager</option>
                                             </select>
                                         </div>
                                     </div>
@@ -257,10 +259,10 @@
                                         <div class="thumbnail-description smaller">
 
                                             <label for="s1-rl">Role <span class="sr-only"> for {service description} </span></label>
-                                            <select name="role" id="s4-rl" class="form-control full-width">
-                                                <option value="">Clerk</option>
-                                                <option value="" selected>Inspector</option>
-                                                <option value="">Manager</option>
+                                            <select name="role-s4-rl" id="s4-rl" class="form-control full-width">
+                                                <option value="r1">Clerk</option>
+                                                <option value="r2" selected>Inspector</option>
+                                                <option value="r3">Manager</option>
                                             </select>
                                         </div>
                                     </div>
@@ -280,10 +282,10 @@
                                         <div class="thumbnail-description smaller">
 
                                             <label for="s5-rl">Role <span class="sr-only"> for {service description} </span></label>
-                                            <select name="role" id="s5-rl" class="form-control full-width">
-                                                <option value="">Clerk</option>
-                                                <option value="" selected>Inspector</option>
-                                                <option value="">Manager</option>
+                                            <select name="role-s5-rl" id="s5-rl" class="form-control full-width">
+                                                <option value="r1">Clerk</option>
+                                                <option value="r2" selected>Inspector</option>
+                                                <option value="r3">Manager</option>
                                             </select>
                                         </div>
                                     </div>
@@ -304,11 +306,10 @@
                                         <div class="thumbnail-description smaller">
 
                                             <label for="s6-rl">Role <span class="sr-only"> for {service description} </span></label>
-                                            <select name="role" id="s6-rl" class="form-control full-width">
-                                                <option value="">Clerk</option>
-                                                <option value="" selected>Inspector</option>
-                                                <option value="">Manager</option>
-                                                <option value="">Service Administrator</option>
+                                            <select name="role-s6-rl" id="s6-rl" class="form-control full-width">
+                                                <option value="r1">Clerk</option>
+                                                <option value="r2" selected>Inspector</option>
+                                                <option value="r3">Manager</option>
                                             </select>
                                         </div>
                                     </div>
@@ -470,7 +471,16 @@
             });
 
 
+            $("#btnAssign").on("click", function(event) {
+                event.preventDefault();
+                var selectedRole = $("#role").val();
+                if (selectedRole != "") {
+                $("select[name^=role]").each(function() {
+                    $(this).val(selectedRole);
+                });
+                }
 
+            });
 
         });
 
