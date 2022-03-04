@@ -164,8 +164,8 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <a href="#" class="btn btn-primary"><i class="fa-regular fa-shield"></i> Edit permissions <span class="sr-only">for the Inspector role</span></a>
-                            <a href="#" class="btn btn-danger pull-right"><i class="fa-solid fa-trash-can"></i> Delete <span class="sr-only">the Inspector</span> role</a>
+                            <a href="editRole.html" class="btn btn-primary"><i class="fa-regular fa-shield"></i> Edit permissions <span class="sr-only">for the Inspector role</span></a>
+                            <a href="#dlg-deleteRole" class="btn btn-danger pull-right wb-lbx"><i class="fa-solid fa-trash-can"></i> Delete <span class="sr-only">the Inspector</span> role</a>
                         </div>
                     </div>
 
@@ -211,8 +211,8 @@
                     </div>
                     <div class="row">
 
-                        <div class="col-md-12"><a href="#" class="btn btn-primary"><i class="fa-regular fa-shield"></i> Edit permissions <span class="sr-only">for the Inspector role</span></a>
-                            <a href="#" class="btn btn-danger pull-right"><i class="fa-solid fa-trash-can"></i> Delete <span class="sr-only">the Billing Clerk</span> role</a>
+                        <div class="col-md-12"><a href="editRole.html" class="btn btn-primary"><i class="fa-regular fa-shield"></i> Edit permissions <span class="sr-only">for the Inspector role</span></a>
+                            <a href="#dlg-deleteRole" class="btn btn-danger pull-right wb-lbx"><i class="fa-solid fa-trash-can"></i> Delete <span class="sr-only">the Billing Clerk</span> role</a>
                         </div>
                     </div>
 
@@ -254,8 +254,8 @@
                     </div>
                     <div class="row">
 
-                        <div class="col-md-12"><a href="#" class="btn btn-primary"><i class="fa-regular fa-shield"></i> Edit permissions <span class="sr-only">for the Clerk role</span></a>
-                            <a href="#" class="btn btn-danger pull-right"><i class="fa-solid fa-trash-can"></i> Delete <span class="sr-only">the Clerk</span> role</a>
+                        <div class="col-md-12"><a href="editRole.html" class="btn btn-primary"><i class="fa-regular fa-shield"></i> Edit permissions <span class="sr-only">for the Clerk role</span></a>
+                            <a href="#dlg-deleteRole" class="btn btn-danger pull-right wb-lbx"><i class="fa-solid fa-trash-can"></i> Delete <span class="sr-only">the Clerk</span> role</a>
                         </div>
                     </div>
 
@@ -291,8 +291,8 @@
                     </div>
                     <div class="row">
 
-                        <div class="col-md-12"><a href="#" class="btn btn-primary"><i class="fa-regular fa-shield"></i> Edit permissions <span class="sr-only">for the Manager role</span></a>
-                            <a href="#" class="btn btn-danger pull-right"><i class="fa-solid fa-trash-can"></i> Delete <span class="sr-only">the Manager</span> role</a>
+                        <div class="col-md-12"><a href="editRole.html" class="btn btn-primary"><i class="fa-regular fa-shield"></i> Edit permissions <span class="sr-only">for the Manager role</span></a>
+                            <a href="#dlg-deleteRole" class="btn btn-danger pull-right wb-lbx"><i class="fa-solid fa-trash-can"></i> Delete <span class="sr-only">the Manager</span> role</a>
                         </div>
                     </div>
 
@@ -339,7 +339,7 @@
                     </div>
                     <div class="row">
 
-                        <div class="col-md-12"><a href="#" class="btn btn-primary"><i class="fa-regular fa-shield"></i> Edit permissions <span class="sr-only">for the Service Administrator role</span></a>
+                        <div class="col-md-12"><a href="editRole.html" class="btn btn-primary"><i class="fa-regular fa-shield"></i> Edit permissions <span class="sr-only">for the Service Administrator role</span></a>
 
 
                         </div>
@@ -355,6 +355,30 @@
             <a href="addRole.html" class="btn btn-default"><i class="fa-solid fa-user-shield"></i> Add role</a>
         </div>
 
+        <section id="dlg-deleteRole" class="mfp-hide modal-dialog modal-content overlay-def">
+            <header class="modal-header">
+                <h2 class="modal-title">Delete role</h2>
+            </header>
+            <div class="modal-body">
+                <p>There are <strong>32</strong> users assigned this role. Before this role may be deleted, a new role must be assigned to these users.</p>
+
+                <label for="role">New role to assign:</label>
+                <select name="role" id="role" class="form-control full-width">
+                    <option value="" selected>&lsaquo;&lsaquo;&lsaquo;Select&rsaquo;&rsaquo;&rsaquo;</option>
+                    <option value="Clerk">Clerk</option>
+                    <option value="Manager">Manager</option>
+                    <option value="Service Administrator">Service Administrator</option>
+
+
+                </select>
+
+            </div>
+            <footer class="modal-footer">
+
+                <a href="#" class="btn btn-primary pull-left mrgn-rght-md">Delete role</a>
+                <a href="#" class="popup-modal-dismiss btn btn-default pull-left">Cancel</a>
+            </footer>
+        </section>
 
 
 
@@ -401,17 +425,6 @@
 
     <script>
         $(document).on("wb-ready.wb", function(event) {
-            $(".showHide").hide();
-
-            $("#periodIndefinite").on("click", function() {
-
-                $("#cn-date").hide();
-            });
-
-            $("#periodSet").on("click", function() {
-
-                $("#cn-date").fadeIn(300);
-            });
 
         });
     </script>
