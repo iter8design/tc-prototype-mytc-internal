@@ -118,188 +118,189 @@
 
         </h1>
         <form action="" method="get">
-        <p>Indicate which services this person requires access to and the role this person will be performing or each service. </p>
-
-        <h2 class="sr-only">Services</h2>
-
-        <div class="input-group">
-            <label for="sch-inp-ac" class="sr-only">Enter the name of the services to filter the list:</label>
-            <input type="text" id="sch-inp-ac" placeholder="Search services..." class="form-control full-width" size="35">
-            <span class="input-group-addon"><i class="fas fa-search"></i></span>
-        </div>
 
 
-       <div class="row">
-                <div class="col-md-6">
-
-                </div>
-                <div class="col-md-6 text-right" id="cn-selectToggle">
-
-                    <div id="cn-selectSummary" class="mrgn-bttm-md" ><strong><span id="srvcCount"></span> services selected</strong></div><a href="#" id="lnkSelectAll" data-toggle="0">Deselect all</a>
-                </div>
-            </div>
-        <div id="cn-services">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="thumbnail">
-
-                        <div class="caption">
-                            <div class="row">
-                                <div class="col-md-1"><div class="checkbox">
-                                    <input type="checkbox" id="service1" name="services" value="" checked/>
-                                    </div>
-                                </div>
-                                <div class="col-md-11">
-                                    <h3 class="thumbnail-label mrgn-tp-0"><label for="service1">Request a prewash endorsement/exemption</label></h3>
-                                    <div class="thumbnail-description smaller">
-
-                                        <label for="s1-rl">Role <span class="sr-only"> for {service description} </span></label>
-                                        <select name="role" id="s1-rl" class="form-control full-width">
-                                            <option value="">Clerk</option>
-                                            <option value="" selected>Inspector</option>
-                                            <option value="">Manager</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="thumbnail">
-                        <div class="caption">
-                            <div class="row">
-                                <div class="col-md-1">
-                                    <input type="checkbox" id="service2" name="services" value="" checked/>
-                                </div>
-                                <div class="col-md-11">
-                                    <h3 class="thumbnail-label mrgn-tp-0"><label for="service2">Request a verification of shipper’s procedures for cargoes that may liquefy</label></h3>
-                                    <div class="thumbnail-description smaller">
-
-                                        <label for="s2-rl">Role <span class="sr-only"> for {service description} </span></label>
-                                        <select name="role" id="s2-rl" class="form-control full-width">
-                                            <option value="">Clerk</option>
-                                            <option value="" selected>Inspector</option>
-                                            <option value="">Manager</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="thumbnail">
-
-                        <div class="caption">
-                            <div class="row">
-                                <div class="col-md-1">
-                                    <input type="checkbox" id="service3" name="services" value="" checked/>
-                                </div>
-                                <div class="col-md-11">
-                                    <h3 class="thumbnail-label mrgn-tp-0"><label for="service3">Request concentrates, grains or timber cargo inspection</label></h3>
-                                    <div class="thumbnail-description smaller">
-
-                                        <label for="s3-rl">Role <span class="sr-only"> for {service description} </span></label>
-                                        <select name="role" id="s3-rl" class="form-control full-width">
-                                            <option value="">Clerk</option>
-                                            <option value="" selected>Inspector</option>
-                                            <option value="">Manager</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                        </div>
-
-                    </div>
-
-
-                </div>
-
-            </div>
+            <h2 class="hd-section">Services</h2>
 
             <div class="row">
-                <div class="col-md-4">
-                    <div class="thumbnail">
-
-                        <div class="caption">
-                            <div class="row">
-                                <div class="col-md-1">
-                                    <input type="checkbox" id="service4" name="services" value="" checked/>
-                                </div>
-                                <div class="col-md-11">
-                                    <h3 class="thumbnail-label mrgn-tp-0"><label for="service4">Request for a follow-up Port State Control inspection to confirm rectification of deficiencies for foreign vessels</label></h3>
-                                    <div class="thumbnail-description smaller">
-
-                                        <label for="s1-rl">Role <span class="sr-only"> for {service description} </span></label>
-                                        <select name="role" id="s4-rl" class="form-control full-width">
-                                            <option value="">Clerk</option>
-                                            <option value="" selected>Inspector</option>
-                                            <option value="">Manager</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-md-8">
+                    <p>Indicate which services this person requires access to and the role this person will be performing for each service. </p>
                 </div>
-                <div class="col-md-4">
-                    <div class="thumbnail">
-                        <div class="caption">
-                            <div class="row">
-                                <div class="col-md-1">
-                                    <input type="checkbox" id="service5" name="services" value="" checked/>
-                                </div>
-                                <div class="col-md-11">
-                                    <h3 class="thumbnail-label mrgn-tp-0"><label for="service5">Request for a follow-up Port State Control inspection to rescind a detention order for foreign vessels</label></h3>
-                                    <div class="thumbnail-description smaller">
-
-                                        <label for="s5-rl">Role <span class="sr-only"> for {service description} </span></label>
-                                        <select name="role" id="s5-rl" class="form-control full-width">
-                                            <option value="">Clerk</option>
-                                            <option value="" selected>Inspector</option>
-                                            <option value="">Manager</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="col-md-4 text-right" id="cn-selectToggle">
+                    <div class="input-group">
+                        <label for="sch-inp-ac" class="sr-only">Enter the name of the services to filter the list:</label>
+                        <input type="text" id="sch-inp-ac" placeholder="Search services..." class="form-control full-width" size="35">
+                        <span class="input-group-addon"><i class="fas fa-search"></i></span>
                     </div>
+                    <div id="cn-selectSummary" class="mrgn-bttm-md mrgn-tp-sm"><strong><span id="srvcCount"></span> services selected</strong><a href="#" id="lnkSelectAll" data-toggle="0" class="mrgn-lft-md">Deselect all</a></div>
                 </div>
-                <div class="col-md-4">
-                    <div class="thumbnail">
-
-                        <div class="caption">
-                            <div class="row">
-                                <div class="col-md-1">
-                                    <input type="checkbox" id="service6" name="services" value="" checked/>
-                                </div>
-                                <div class="col-md-11">
-                                    <h3 class="thumbnail-label mrgn-tp-0"><label for="service6">Request for inspection of a vessel loading, carrying or unloading dangerous goods (Bulk or packaged form)</label></h3>
-                                    <div class="thumbnail-description smaller">
-
-                                        <label for="s6-rl">Role <span class="sr-only"> for {service description} </span></label>
-                                        <select name="role" id="s6-rl" class="form-control full-width">
-                                            <option value="">Clerk</option>
-                                            <option value="" selected>Inspector</option>
-                                            <option value="">Manager</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                        </div>
-
-                    </div>
-
-
-                </div>
-
             </div>
-        </div>
+
+            <div id="cn-services">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+
+                            <div class="caption">
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        <div class="checkbox">
+                                            <input type="checkbox" id="service1" name="services" value="" checked />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-11">
+                                        <h3 class="thumbnail-label mrgn-tp-0"><label for="service1">Request a prewash endorsement/exemption</label></h3>
+                                        <div class="thumbnail-description smaller">
+
+                                            <label for="s1-rl">Role <span class="sr-only"> for {service description} </span></label>
+                                            <select name="role" id="s1-rl" class="form-control full-width">
+                                                <option value="">Clerk</option>
+                                                <option value="" selected>Inspector</option>
+                                                <option value="">Manager</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        <input type="checkbox" id="service2" name="services" value="" checked />
+                                    </div>
+                                    <div class="col-md-11">
+                                        <h3 class="thumbnail-label mrgn-tp-0"><label for="service2">Request a verification of shipper’s procedures for cargoes that may liquefy</label></h3>
+                                        <div class="thumbnail-description smaller">
+
+                                            <label for="s2-rl">Role <span class="sr-only"> for {service description} </span></label>
+                                            <select name="role" id="s2-rl" class="form-control full-width">
+                                                <option value="">Clerk</option>
+                                                <option value="" selected>Inspector</option>
+                                                <option value="">Manager</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+
+                            <div class="caption">
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        <input type="checkbox" id="service3" name="services" value="" checked />
+                                    </div>
+                                    <div class="col-md-11">
+                                        <h3 class="thumbnail-label mrgn-tp-0"><label for="service3">Request concentrates, grains or timber cargo inspection</label></h3>
+                                        <div class="thumbnail-description smaller">
+
+                                            <label for="s3-rl">Role <span class="sr-only"> for {service description} </span></label>
+                                            <select name="role" id="s3-rl" class="form-control full-width">
+                                                <option value="">Clerk</option>
+                                                <option value="" selected>Inspector</option>
+                                                <option value="">Manager</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+
+                            <div class="caption">
+                                <div class="row">
+                                    <div class="col-md-1">
+
+                                        <input type="checkbox" id="service4" name="services" value="" checked />
+
+                                    </div>
+                                    <div class="col-md-11">
+                                        <h3 class="thumbnail-label mrgn-tp-0"><label for="service4">Request for a follow-up Port State Control inspection to confirm rectification of deficiencies for foreign vessels</label></h3>
+                                        <div class="thumbnail-description smaller">
+
+                                            <label for="s1-rl">Role <span class="sr-only"> for {service description} </span></label>
+                                            <select name="role" id="s4-rl" class="form-control full-width">
+                                                <option value="">Clerk</option>
+                                                <option value="" selected>Inspector</option>
+                                                <option value="">Manager</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        <input type="checkbox" id="service5" name="services" value="" checked />
+                                    </div>
+                                    <div class="col-md-11">
+                                        <h3 class="thumbnail-label mrgn-tp-0"><label for="service5">Request for a follow-up Port State Control inspection to rescind a detention order for foreign vessels</label></h3>
+                                        <div class="thumbnail-description smaller">
+
+                                            <label for="s5-rl">Role <span class="sr-only"> for {service description} </span></label>
+                                            <select name="role" id="s5-rl" class="form-control full-width">
+                                                <option value="">Clerk</option>
+                                                <option value="" selected>Inspector</option>
+                                                <option value="">Manager</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+
+                            <div class="caption">
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        <input type="checkbox" id="service6" name="services" value="" checked />
+                                    </div>
+                                    <div class="col-md-11">
+                                        <h3 class="thumbnail-label mrgn-tp-0"><label for="service6">Request for inspection of a vessel loading, carrying or unloading dangerous goods (Bulk or packaged form)</label></h3>
+                                        <div class="thumbnail-description smaller">
+
+                                            <label for="s6-rl">Role <span class="sr-only"> for {service description} </span></label>
+                                            <select name="role" id="s6-rl" class="form-control full-width">
+                                                <option value="">Clerk</option>
+                                                <option value="" selected>Inspector</option>
+                                                <option value="">Manager</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
 
             <div id="cn-search-results-empty">
                 <div class="row">
@@ -316,22 +317,22 @@
                 <a href="users-addConfirmation.html" class="btn btn-primary">Submit</a>
                 <a href="addUser-step1.html" class="btn btn-link mrgn-lft-md">Go back</a>
             </div>
-            </form>
+        </form>
 
 
 
-            <!-- InstanceEndEditable -->
-            <div class="datemod col-xs-12 mrgn-tp-lg">
-                <dl id="wb-dtmd">
-                    <dt>Date modified:&#32;</dt>
-                    <dd>
-                        <time property="dateModified">
-                            <!-- #BeginDate format:IS1 -->2022-02-23
-                            <!-- #EndDate -->
-                        </time>
-                    </dd>
-                </dl>
-            </div>
+        <!-- InstanceEndEditable -->
+        <div class="datemod col-xs-12 mrgn-tp-lg">
+            <dl id="wb-dtmd">
+                <dt>Date modified:&#32;</dt>
+                <dd>
+                    <time property="dateModified">
+                        <!-- #BeginDate format:IS1 -->2022-02-23
+                        <!-- #EndDate -->
+                    </time>
+                </dd>
+            </dl>
+        </div>
     </main>
     <footer role="contentinfo" id="wb-info">
         <div class="brand">
@@ -402,7 +403,7 @@
 
             $("#srvcCount").text($("input[name=services]:checked").length);
             $("input[name=services]").on('click', function() {
-              fnSelectService($(this));
+                fnSelectService($(this));
             });
 
             var selectAll = "Select all";
@@ -416,8 +417,7 @@
 
                         fnSelectService($(this));
                     });
-                }
-                else {
+                } else {
                     $(this).text(deselectAll).data("toggle", "0")
                     $("input[name=services]").each(function() {
                         $(this).prop("checked", true);
@@ -436,13 +436,12 @@
         /* Adjust display of service and counts */
         function fnSelectService(checkbox) {
             if (checkbox.prop("checked")) {
-                    checkbox.closest(".thumbnail").removeClass("opct-40");
-                    $("#srvcCount").text($("input[name=services]:checked").length);
-              }
-                else {
-                    checkbox.closest(".thumbnail").addClass("opct-40");
-                    $("#srvcCount").text($("input[name=services]:checked").length);
-                }
+                checkbox.closest(".thumbnail").removeClass("opct-40");
+                $("#srvcCount").text($("input[name=services]:checked").length);
+            } else {
+                checkbox.closest(".thumbnail").addClass("opct-40");
+                $("#srvcCount").text($("input[name=services]:checked").length);
+            }
         }
 
         // Debounce so filtering doesn't happen every millisecond
@@ -460,7 +459,10 @@
                 timeout = setTimeout(delayed, threshold);
             };
         }
+
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+
+</html>

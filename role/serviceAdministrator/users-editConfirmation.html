@@ -139,18 +139,18 @@
                 <caption class="wb-inv">List of users for Marine Inspection Tracking (MITRACK)</caption>
                 <thead>
                     <tr>
-                        <th scope="col" class="width5 text-center"><span class="sr-only">Select</span><span class="selectAll"></span></th>
+                        <th scope="col" class="width2 text-center"><span class="sr-only">Select</span><span class="selectAll"></span></th>
                         <th scope="col" class="width30"><label for="name" class="sr-only">Name or email address</label>
                             <div class="input-group">
                                 <input name="name" id="name" type="text" size="50" class="form-control" autocomplete="email" maxlength="150" placeholder="Search users...">
                                 <span class="input-group-addon"><i class="fas fa-search"></i></span>
                             </div>
                         </th>
-                        <th scope="col" class="width10"><label for="status" class="sr-only">Status</label>
+                        <th scope="col" class="width15"><label for="status" class="sr-only">Status</label>
                             <select name="status" id="status" class="form-control full-width">
                                 <option value="" selected>&lsaquo;&lsaquo;&lsaquo;Status&rsaquo;&rsaquo;&rsaquo;</option>
                                 <option value="Active">Active</option>
-                                <option value="Pending">Pending</option>
+                                <option value="Pending registration">Pending registration</option>
                                 <option value="Suspended">Suspended</option>
                             </select>
                         </th>
@@ -199,7 +199,7 @@
                             <span class="pill-green small">Active</span>
                         </td>
                         <td>Varies</td>
-                        <td>Limited</td>
+                        <td>Limited <a href="#dlg-serviceHelp" class="wb-lbx" title="What can an Inspector do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
                         <td></td>
 
                     </tr>
@@ -210,7 +210,7 @@
                             <span class="pill-green small">Active</span>
                         </td>
                         <td>Inspector <a href="#dlg-roleHelp" class="wb-lbx" title="What can an Inspector do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
-                        <td>Limited</td>
+                        <td>Limited <a href="#dlg-serviceHelp" class="wb-lbx" title="What can an Inspector do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
                         <td></td>
 
                     </tr>
@@ -229,7 +229,7 @@
                         <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr5"></th>
                         <td><label for="usr5">tomz@outlook.com <br></label></td>
                         <td class="text-center">
-                            <span class="pill-yellow small">Pending</span>
+                            <span class="pill-yellow small">Pending registration</span>
                         </td>
                         <td>Inspector <a href="#dlg-roleHelp" class="wb-lbx" title="What can a Inspector do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
                         <td>All</td>
@@ -331,7 +331,7 @@
             </footer>
         </section>
 
-        <a href="#"><i class="fas fa-reply mrgn-rght-sm"></i>Return to Marine Inspection Tracking (MITRACK)</a>
+        <a href="appDashboard.html"><i class="fas fa-reply mrgn-rght-sm"></i>Return to Marine Inspection Tracking (MITRACK)</a>
 
         <section id="dlg-roleHelp" class="mfp-hide modal-dialog modal-content overlay-def">
             <header class="modal-header">
@@ -363,6 +363,46 @@
                                 <li>Generate invoices</li>
                                 <li>View remissions</li>
                                 <li>Approve remissions</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <footer class="modal-footer">
+                <a href="#" class="popup-modal-dismiss btn btn-default pull-left"><i class="fa-solid fa-face-smile-hearts"></i> Got it!</a>
+            </footer>
+        </section>
+
+        <section id="dlg-serviceHelp" class="mfp-hide modal-dialog modal-content overlay-def">
+            <header class="modal-header">
+                <h2 class="modal-title">What services can this person access?</h2>
+            </header>
+            <div class="modal-body">
+                <h3 class="mrgn-tp-md">{First name} {Last name}</h3>
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="well">
+                            <p><i class="fa-solid fa-square-check fa-2xl text-green"></i> Access to <strong>5</strong> services:</p>
+                            <ul class="mrgn-lft-md">
+                                <li>Request a prewash endorsement/exemption</li>
+                                <li>Request a verification of shipper’s procedures for cargoes that may liquefy</li>
+                                <li>Request concentrates, grains or timber cargo inspection</li>
+                                <li>Request for a follow-up Port State Control inspection to confirm rectification of deficiencies for foreign vessels</li>
+                                <li>Request for a follow-up Port State Control inspection to rescind a detention order for foreign vessels</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="well">
+                            <p><i class="fa-solid fa-square-xmark fa-2xl text-red"></i> <strong>Does not have access</strong> to 1 service:</p>
+                            <ul class="mrgn-lft-md">
+
+                                <li>Request for inspection of a vessel loading, carrying or unloading dangerous goods (Bulk or packaged form)</li>
                             </ul>
                         </div>
                     </div>
@@ -454,6 +494,7 @@
             $('.bottom, .top').addClass('dataTables_wrapper');
 
 
+
             //Add the select all checkbox
             var selectAllStr = 'Select all';
             $(".selectAll").html("<input id='selectAll' type='checkbox' value='' title='" + selectAllStr + "'><label for='selectAll' class='wb-inv'>" + selectAllStr + "</label>");
@@ -482,6 +523,8 @@
                 fnHighlightSelectedRow($(this));
             });
 
+            // Temporarily hiding checkboxes until bulk actions are ready
+            $("input[type=checkbox]").addClass("sr-only");
 
             /* Highlight the row that was checked */
             function fnHighlightSelectedRow(checkbox) {
@@ -491,10 +534,7 @@
                     checkbox.parent("th").removeClass("highlight-yellow").nextAll("td").removeClass("highlight-yellow");
             }
         });
-
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd -->
-
-</html>
+<!-- InstanceEnd --></html>
