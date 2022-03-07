@@ -126,39 +126,41 @@
 
 
             <h2 class="hd-section">Services</h2>
-            
-            <div class="row">
-            <div class="col-md-12">
-             <div class="input-group">
-            <label for="sch-inp-ac" class="sr-only">Enter the name of the services to filter the list:</label>
-            <input type="text" id="sch-inp-ac" placeholder="Search services..." class="form-control full-width" size="35">
-            <span class="input-group-addon"><i class="fas fa-search"></i></span>
-            </div>
-        </div>
-            </div>
 
             <div class="row">
-                <div class="col-md-6">
-                   <label for="role">Assign role to selected services:</label>
-                    <div class="form-inline">
-                       
-                        <div class="input-group">
-                            
-                            <select name="role" id="role" class="form-control full-width">
-                                <option value="">&lsaquo;&lsaquo;&lsaquo;Select&rsaquo;&rsaquo;&rsaquo;</option>
-                                <option value="r1">Clerk</option>
-                                <option value="r2">Inspector</option>
-                                <option value="r3">Manager</option>
-                            </select>
-                            <span class="input-group-btn">
-                              <a href="#cn-services" class="btn btn-default" id="btnAssign">Assign</a>
-                          </span>
-                        </div>
+                <div class="col-md-12">
+                    <div class="input-group">
+                        <label for="sch-inp-ac" class="sr-only">Enter the name of the services to filter the list:</label>
+                        <input type="text" id="sch-inp-ac" placeholder="Search services..." class="form-control full-width" size="35">
+                        <span class="input-group-addon"><i class="fas fa-search"></i></span>
                     </div>
                 </div>
-                <div class="col-md-6 text-right" id="cn-selectToggle">
+            </div>
 
-                    <div id="cn-selectSummary" class="mrgn-bttm-md" ><strong><span id="srvcCount"></span> services selected</strong></div><a href="#" id="lnkSelectAll" data-toggle="0">Deselect all</a>
+            <div class="cn-filter--grey">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="role">Assign role to selected services:</label>
+                        <div class="form-inline">
+
+                            <div class="input-group">
+
+                                <select name="role" id="role" class="form-control full-width">
+                                    <option value="">&lsaquo;&lsaquo;&lsaquo;Select&rsaquo;&rsaquo;&rsaquo;</option>
+                                    <option value="r1">Clerk</option>
+                                    <option value="r2">Inspector</option>
+                                    <option value="r3">Manager</option>
+                                </select>
+                                <span class="input-group-btn">
+                                    <a href="#cn-services" class="btn btn-default" id="btnAssign">Assign</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-right" id="cn-selectToggle">
+
+                        <div id="cn-selectSummary" class="mrgn-bttm-md"><strong><span id="srvcCount"></span> services selected</strong></div><a href="#" id="lnkSelectAll" data-toggle="0">Deselect all</a>
+                    </div>
                 </div>
             </div>
             <div id="cn-services">
@@ -203,7 +205,7 @@
 
                                             <label for="s2-rl">Role <span class="sr-only"> for {service description} </span></label>
                                             <select name="role-s2-rl" id="s2-rl" class="form-control full-width">
-                                               <option value="r1">Clerk</option>
+                                                <option value="r1">Clerk</option>
                                                 <option value="r2" selected>Inspector</option>
                                                 <option value="r3">Manager</option>
                                             </select>
@@ -341,11 +343,11 @@
                 <a href="addUser-step1.html" class="btn btn-link mrgn-lft-md">Cancel</a>
                 <a href="#dlg-confirmRemove" class="btn btn-danger pull-right lbx-modal wb-lbx">Remove</a>
                 <a href="suspend.html" class="btn btn-default pull-right mrgn-rght-lg">Suspend access</a>
-                
+
             </div>
 
         </form>
-        
+
         <section id="dlg-confirmRemove" class="mfp-hide modal-dialog modal-content overlay-def">
             <header class="modal-header">
                 <h2 class="modal-title">Remove access</h2>
@@ -362,7 +364,7 @@
                 <a href="#" class="popup-modal-dismiss btn btn-default pull-left">Cancel</a>
             </footer>
         </section>
-        
+
         <!-- InstanceEndEditable -->
         <div class="datemod col-xs-12 mrgn-tp-lg">
             <dl id="wb-dtmd">
@@ -475,9 +477,9 @@
                 event.preventDefault();
                 var selectedRole = $("#role").val();
                 if (selectedRole != "") {
-                $("select[name^=role]").each(function() {
-                    $(this).val(selectedRole);
-                });
+                    $("select[name^=role]").each(function() {
+                        $(this).val(selectedRole);
+                    });
                 }
 
             });
@@ -510,10 +512,7 @@
                 timeout = setTimeout(delayed, threshold);
             };
         }
-
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd -->
-
-</html>
+<!-- InstanceEnd --></html>
