@@ -90,7 +90,7 @@ thead tr {
 }
 
 .alert > p {
-    margin-left: 1.6em;
+    margin-left: 1.0em;
 }
 
 .datemod {
@@ -527,3 +527,9 @@ h3.hd-section {
     color: #666;
     margin-left: 5px;
 }
+
+@media (min-width: 768px) {
+.modal-dialog {
+    width: 900px;
+
+    } }
