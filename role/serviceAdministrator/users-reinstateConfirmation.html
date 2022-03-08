@@ -116,12 +116,11 @@
         <h1 property="name" id="wb-cont"><i class="fa-solid fa-users"></i> Users</h1>
 
         <section class="alert alert-success mrgn-bttm-md">
-            <h2>User updated</h2>
-            <p><strong>Jeff Smith (jeff.smith@tc.gc.ca)</strong> has been successfully updated. </p>
+            <h2>User reinstated</h2>
+            <p><strong>Mark Hills (mark.hills@tc.gc.ca)</strong>'s access has been successfully reinstated. </p>
         </section>
 
         <p>To add a new user, press the <strong>Add user</strong> button. To view or make changes to an existing user, select the person's name or select an action from the menu.</p>
-
 
         <section class="panel panel-datatable">
 
@@ -210,7 +209,7 @@
                             <div class="pill-green pill-status">Active</div>
                         </td>
                         <td>Varies</td>
-                        <td>5 of 6 <a href="#dlg-serviceHelp" class="wb-lbx" title="What services can this person access?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
+                        <td><span class="text-nowrap">5 of 6</span> <a href="#dlg-serviceHelp" class="wb-lbx" title="What services can this person access?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
                         <td>
                             <div class="btn-group pull-right">
                                 <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -233,17 +232,6 @@
                         </td>
                         <td>Inspector <a href="#dlg-roleHelp" class="wb-lbx" title="What can an Inspector do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
                         <td>3 of 6 <a href="#dlg-serviceHelp" class="wb-lbx" title="What services can this person access?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
-                        <td></td>
-
-                    </tr>
-                    <tr>
-                        <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr4"></th>
-                        <td><label for="usr4"><a href="editUser.html">Mark Hills</a> <br> <span class="small">mark.hills@tc.gc.ca</span></label></td>
-                        <td>
-                            <div class="pill-red pill-status">Suspended</div>
-                        </td>
-                        <td>Inspector <a href="#dlg-roleHelp" class="wb-lbx" title="What can an Inspector do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
-                        <td></td>
                         <td>
                             <div class="btn-group pull-right">
                                 <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -251,7 +239,29 @@
                                 <ul class="dropdown-menu">
 
                                     <li><a href="editUser.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
-                                    <li><a href="reinstate.html"><i class="fa-solid fa-user-unlock"></i> Reinstate access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="suspend.html"><i class="fa-solid fa-user-lock"></i> Suspend access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                </ul>
+                            </div>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr4"></th>
+                        <td><label for="usr4"><a href="editUser.html">Mark Hills</a> <br> <span class="small">mark.hills@tc.gc.ca</span></label></td>
+                        <td>
+                            <div class="pill-green pill-status">Active</div>
+                        </td>
+                        <td>Inspector <a href="#dlg-roleHelp" class="wb-lbx" title="What can an Inspector do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
+                        <td><span class="text-nowrap">5 of 6</span> <a href="#dlg-serviceHelp" class="wb-lbx" title="What services can this person access?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
+                        <td>
+                            <div class="btn-group pull-right">
+                                <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Actions <span class="sr-only">for {First name} {Last name}</span><span class="caret"></span> </button>
+                                <ul class="dropdown-menu">
+
+                                    <li><a href="editUser.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="suspend.html"><i class="fa-solid fa-user-lock"></i> Suspend access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                     <li><a href="remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                 </ul>
                             </div>
@@ -264,7 +274,7 @@
                         <td>
                             <div class="pill-yellow pill-status">Pending registration</div>
                         </td>
-                        <td>Inspector <a href="#dlg-roleHelp" class="wb-lbx" title="What can a Inspector do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
+                        <td>Inspector <a href="#dlg-roleHelp" class="wb-lbx" title="What can an Inspector do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
                         <td>All</td>
                         <td>
                             <div class="btn-group pull-right">
@@ -371,7 +381,7 @@
                         <td>
                             <div class="pill-green pill-status">Active</div>
                         </td>
-                        <td>Clerk <a href="#dlg-roleHelp" class="wb-lbx" title="What can a Clerk do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
+                        <td>Clerk <a href="#dlg-roleHelp" title="What can a Clerk do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
                         <td>All</td>
                         <td>
                             <div class="btn-group pull-right">
@@ -392,8 +402,7 @@
                         <td>
                             <div class="pill-green pill-status">Active</div>
                         </td>
-                        <td>Clerk <a href="#"><i class="fa-solid fa-circle-question text-blue"></i></a>
-                        </td>
+                        <td>Clerk <a href="#dlg-roleHelp"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
                         <td>All</td>
                         <td>
                             <div class="btn-group pull-right">
@@ -415,7 +424,7 @@
                         <td>
                             <div class="pill-green pill-status">Active</div>
                         </td>
-                        <td>Manager <a href="#"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
+                        <td>Inspector <a href="#dlg-roleHelp"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
                         <td>All</td>
                         <td>
                             <div class="btn-group pull-right">
@@ -431,14 +440,13 @@
                         </td>
                     </tr>
 
-
                     <tr>
-                        <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr12"></th>
-                        <td><label for="usr12"><a href="editUser.html">Paul Weston</a> <br> <span class="small">paul.weston@tc.gc.ca</span></label></td>
+                        <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr13"></th>
+                        <td><label for="usr13"><a href="editUser.html">Paul Weston</a> <br> <span class="small">paul.weston@tc.gc.ca</span></label></td>
                         <td>
                             <div class="pill-green pill-status">Active</div>
                         </td>
-                        <td>Inspector <a href="#"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
+                        <td>Inspector <a href="#dlg-roleHelp" class=""><i class="fa-solid fa-circle-question text-blue"></i></a></td>
                         <td>All</td>
                         <td>
                             <div class="btn-group pull-right">
@@ -463,7 +471,9 @@
             </footer>
         </section>
 
-        <a href="appDashboard.html"><i class="fas fa-reply mrgn-rght-sm"></i>Return to Marine Inspection Tracking (MITRACK)</a>
+        <p class="mrgn-tp-md">
+            <a href="appDashboard.html"><i class="fas fa-reply mrgn-rght-sm"></i>Return to Marine Inspection Tracking (MITRACK)</a>
+        </p>
 
         <section id="dlg-roleHelp" class="mfp-hide modal-dialog modal-content overlay-def">
             <header class="modal-header">
@@ -475,7 +485,7 @@
                     <div class="col-md-6">
 
                         <div class="well">
-                            <p><i class="fa-solid fa-shield-check fa-2xl text-green"></i> This role may:</p>
+                            <p><i class="fa-solid fa-shield-check fa-2xl text-green "></i> This role may:</p>
                             <ul class="mrgn-lft-md">
                                 <li>Manage service requests</li>
                                 <li>Enter service request time</li>
@@ -488,7 +498,7 @@
 
                     <div class="col-md-6">
                         <div class="well">
-                            <p><i class="fa-solid fa-shield-xmark fa-2xl text-red"></i> This role <strong>may not</strong>:</p>
+                            <p><i class="fa-solid fa-shield-xmark fa-2xl text-red icon-border"></i> This role <strong>may not</strong>:</p>
                             <ul class="mrgn-lft-md">
 
                                 <li>Assign service requests</li>
@@ -507,6 +517,8 @@
                 <a href="#" class="popup-modal-dismiss btn btn-default pull-left"><i class="fa-solid fa-face-smile-hearts"></i> Got it!</a>
             </footer>
         </section>
+
+
 
         <section id="dlg-serviceHelp" class="mfp-hide modal-dialog modal-content overlay-def">
             <header class="modal-header">
@@ -548,6 +560,7 @@
             </footer>
         </section>
 
+
         <!-- InstanceEndEditable -->
         <div class="datemod col-xs-12 mrgn-tp-lg">
             <dl id="wb-dtmd">
@@ -587,6 +600,7 @@
 		
 		<![endif]-->
     <script src="../../GCWeb/js/theme.min.js"></script>
+    <!-- InstanceBeginEditable name="CustomJS" -->
     <script src="../../js/tc/bootstrap/tooltip.js"></script>
     <script src="../../js/tc/bootstrap/popover.js"></script>
     <script src="../../js/tc/bootstrap/dropdown.js"></script>
@@ -598,12 +612,6 @@
                 "retrieve": true
 
             }).api();
-
-            $(window).resize(function() {
-                $("#tblUsers").dataTable().fnAdjustColumnSizing();
-            });
-
-            $(".dataTables_scrollFootInner, .dataTables_scrollFoot").hide();
 
             $("thead input").on("keyup", function() {
                 /* Filter on the column (the index) of this element */
@@ -651,6 +659,7 @@
 
             });
 
+
             //Bind the click event handler to the checkboxes
             $("#tblUsers tbody").on('click', "th>:checkbox", function() {
                 fnHighlightSelectedRow($(this));
@@ -659,6 +668,8 @@
             // Temporarily hiding checkboxes until bulk actions are ready
             $("input[type=checkbox]").addClass("sr-only");
 
+
+
             /* Highlight the row that was checked */
             function fnHighlightSelectedRow(checkbox) {
                 if (checkbox.prop("checked"))
@@ -666,8 +677,17 @@
                 else
                     checkbox.parent("th").removeClass("highlight-yellow").nextAll("td").removeClass("highlight-yellow");
             }
+
+
         });
+
+        $(".wb-tables").on("wb-updated.wb-tables", function(event, settings) {
+            $(".wb-lbx").trigger("wb-init.wb-lbx");
+        });
+
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+
+</html>

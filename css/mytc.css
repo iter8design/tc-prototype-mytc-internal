@@ -97,6 +97,15 @@ thead tr {
     padding-left: 0px;
 }
 
+
+.dropdown-menu>li {
+     padding-top: 3px;
+    padding-bottom: 3px;
+}
+.dropdown-menu>li>a {
+     text-decoration: none;
+}
+
 .fa-ul li i {
     margin-right: 10px;
 }
@@ -329,6 +338,13 @@ hr {
     border-top-color: #d5e2e9;
 }
 
+.dropdown-divider {
+    height: 0;
+    margin: .5rem 0;
+    overflow: hidden;
+    border-top: 1px solid #e9ecef;
+}
+
 
 .field-validation-error {
     color: #d3080c;
@@ -375,7 +391,7 @@ h3.hd-section {
     transition: 0.3s;
     min-width: 40%;
     border-radius: 5px;
-    background-color: #ffffff;
+    background-color: #f9fbfc;
     border-left: 5px solid #335075;
     /* #393858; */
     margin-top: 10px;
