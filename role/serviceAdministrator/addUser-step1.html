@@ -119,11 +119,11 @@
             <p>Enter the following information about the user you wish to add. All fields are mandatory.</p>
 
             <div class="form-group mrgn-tp-md">
-                <label for="email"><span class="mandatory">*</span> Email address (username@example.com)<span class="sr-only">(required)</span>: <span class="fld-example">We'll use this email address to send an email invitation to access this application.</span> </label>
+                <label for="email">Email address (username@example.com)<span class="sr-only">(required)</span>: <span class="fld-example">We'll use this email address to send an email invitation to access this application.</span> </label>
                 <input name="email" id="email" type="text" size="50" class="form-control" autocomplete="email" maxlength="150">
             </div>
 
-            <p class="label-question"><span class="mandatory" title="This field is mandatory.">*</span>What is the primary role for this person? <span class="wb-inv">(required)</span>
+            <p class="label-question">What is the primary role for this person? <span class="wb-inv">(required)</span>
 
             </p>
             <span class="fld-example">If none of these roles describe what this person will be doing, you may <a href="addRole.html">add a role</a>.</span>
@@ -132,7 +132,7 @@
             <div class="wb-tabs wb-tabs-vertical mrgn-tp-md">
                 <div class="tabpanels">
                     <details id="details-panel1" open>
-                        <summary>
+                        <summary data-flow='continue'>
                             Inspector
 
 
@@ -171,7 +171,7 @@
 
                     </details>
                     <details id="details-panel2">
-                        <summary>
+                        <summary data-flow='continue'>
                             Clerk
                         </summary>
 
@@ -208,7 +208,7 @@
                     </details>
 
                     <details id="details-panel3">
-                        <summary>
+                        <summary data-flow='continue'>
                             Manager
                         </summary>
 
@@ -238,7 +238,7 @@
 
                     </details>
                     <details id="details-panel4">
-                        <summary>
+                        <summary data-flow='end'>
                             Application Owner
                         </summary>
                         <div class="row">
@@ -283,7 +283,7 @@
             </div>
 
             <div class="nav-button mrgn-tp-md">
-                <a href="addUser-step2.html" class="btn btn-primary">Continue</a>
+                <a href="addUser-step2.html" class="btn btn-primary" id="btnContinue">Continue</a>
                 <a href="users.html" class="btn btn-link mrgn-lft-md">Cancel</a>
             </div>
         </form>
@@ -340,6 +340,12 @@
 
         $(document).on("wb-updated.wb-tabs", ".wb-tabs", function(event, $newPanel) {
             // Set the role of selected
+            var flow = $newPanel.find("summary").data("flow");
+            if (flow == "end") {
+                $("#btnContinue").attr("href", "users-addConfirmation.html").text("Submit");
+            } else {
+                $("#btnContinue").attr("href", "addUser-step2.html").text("Continue");
+            }
         });
     </script>
     <!-- InstanceEndEditable -->

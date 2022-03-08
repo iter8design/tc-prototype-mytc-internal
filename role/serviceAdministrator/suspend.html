@@ -117,7 +117,7 @@
         <!-- InstanceBeginEditable name="Content" -->
         <h1 property="name" id="wb-cont"><i class="fa-solid fa-user-lock"></i> Suspend access</h1>
 
-        <p>All fields marked with an asterisk (<span class="mandatory-instructions">*</span>) are mandatory.</p>
+        <p>All fields are mandatory.</p>
         <form action="suspend-error.html" method="get">
             <fieldset class="mrgn-tp-sm mrgn-bttm-sm">
                 <legend class="medium">How long do you wish to suspend access ? <span class="wb-inv">(required)</span>
@@ -149,11 +149,14 @@
 
 
             <div class="form-group">
-                <label for="reason">Please provide any additional information to support the suspension of access. This information will not be shared with the individual.</label>
+                <label for="reason">Please provide any additional information to support the suspension of access. This information will not be shared with the individual (optional).</label>
                 <textarea id="reason" name="reason" cols="40" class="form-control full-width" data-maxlength="500"></textarea>
                 <div id="reason-character-count" aria-live="polite" class="mytc-character-count__messages"><i class='fas fa-info-circle text-blue mrgn-rght-sm'></i> You have 500 characters remaining.</div>
             </div>
-            <p>You will need to notify the individual of the suspension along with any requirements needed to reinstate access.</p>
+
+            <section class="alert alert-info">
+                <p>You will need to notify the individual of the suspension along with any requirements needed to reinstate access.</p>
+            </section>
 
             <div class="nav-button"> <button class="btn btn-primary" type"submit">Suspend</button> <a href="#" class="btn btn-link">Cancel</a> </div>
         </form>
@@ -233,10 +236,7 @@
             });
 
         });
-
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd -->
-
-</html>
+<!-- InstanceEnd --></html>
