@@ -127,16 +127,17 @@
 
             <div class="row">
                 <div class="col-md-8">
-                    <div class="mrgn-lft-md"><label for="role">Assign role to selected services:</label>
+                    <div class="mrgn-lft-md"><label for="assignRole">Assign role to selected services:</label>
                         <div class="form-inline">
 
                             <div class="input-group">
 
-                                <select name="role" id="role" class="form-control full-width">
+                                <select name="assignRole" id="assignRole" class="form-control full-width">
                                     <option value="">&lsaquo;&lsaquo;&lsaquo;Select&rsaquo;&rsaquo;&rsaquo;</option>
                                     <option value="r1">Clerk</option>
                                     <option value="r2">Inspector</option>
                                     <option value="r3">Manager</option>
+                                    <option value="r4">Application Owner</option>
                                 </select>
                                 <span class="input-group-btn">
                                     <a href="#cn-services" class="btn btn-default" id="btnAssign">Assign</a>
@@ -175,9 +176,9 @@
 
                                             <label for="s1-rl">Role <span class="sr-only"> for {service description} </span></label>
                                             <select name="role" id="s1-rl" class="form-control full-width">
-                                                <option value="">Clerk</option>
-                                                <option value="" selected>Inspector</option>
-                                                <option value="">Manager</option>
+                                                <option value="r1">Clerk</option>
+                                                <option value="r2" selected>Inspector</option>
+                                                <option value="r3">Manager</option>
                                             </select>
                                         </div>
                                     </div>
@@ -198,9 +199,9 @@
 
                                             <label for="s2-rl">Role <span class="sr-only"> for {service description} </span></label>
                                             <select name="role" id="s2-rl" class="form-control full-width">
-                                                <option value="">Clerk</option>
-                                                <option value="" selected>Inspector</option>
-                                                <option value="">Manager</option>
+                                                <option value="r1">Clerk</option>
+                                                <option value="r2" selected>Inspector</option>
+                                                <option value="r3">Manager</option>
                                             </select>
                                         </div>
                                     </div>
@@ -222,9 +223,9 @@
 
                                             <label for="s3-rl">Role <span class="sr-only"> for {service description} </span></label>
                                             <select name="role" id="s3-rl" class="form-control full-width">
-                                                <option value="">Clerk</option>
-                                                <option value="" selected>Inspector</option>
-                                                <option value="">Manager</option>
+                                                <option value="r1">Clerk</option>
+                                                <option value="r2" selected>Inspector</option>
+                                                <option value="r3">Manager</option>
                                             </select>
                                         </div>
                                     </div>
@@ -255,9 +256,9 @@
 
                                             <label for="s1-rl">Role <span class="sr-only"> for {service description} </span></label>
                                             <select name="role" id="s4-rl" class="form-control full-width">
-                                                <option value="">Clerk</option>
-                                                <option value="" selected>Inspector</option>
-                                                <option value="">Manager</option>
+                                                <option value="r1">Clerk</option>
+                                                <option value="r2" selected>Inspector</option>
+                                                <option value="r3">Manager</option>
                                             </select>
                                         </div>
                                     </div>
@@ -278,9 +279,9 @@
 
                                             <label for="s5-rl">Role <span class="sr-only"> for {service description} </span></label>
                                             <select name="role" id="s5-rl" class="form-control full-width">
-                                                <option value="">Clerk</option>
-                                                <option value="" selected>Inspector</option>
-                                                <option value="">Manager</option>
+                                                <option value="r1">Clerk</option>
+                                                <option value="r2" selected>Inspector</option>
+                                                <option value="r3">Manager</option>
                                             </select>
                                         </div>
                                     </div>
@@ -302,9 +303,9 @@
 
                                             <label for="s6-rl">Role <span class="sr-only"> for {service description} </span></label>
                                             <select name="role" id="s6-rl" class="form-control full-width">
-                                                <option value="">Clerk</option>
-                                                <option value="" selected>Inspector</option>
-                                                <option value="">Manager</option>
+                                                <option value="r1">Clerk</option>
+                                                <option value="r2" selected>Inspector</option>
+                                                <option value="r3">Manager</option>
                                             </select>
                                         </div>
                                     </div>
@@ -467,11 +468,25 @@
 
             $("#btnAssign").on("click", function(event) {
                 event.preventDefault();
-                var selectedRole = $("#role").val();
+                var selectedRole = $("#assignRole").val();
+
                 if (selectedRole != "") {
-                    $("select[name^=role]").each(function() {
-                        $(this).val(selectedRole);
-                    });
+                    // If Application Owner, all services should be selected and no roles applied to the service level
+                    if (selectedRole == "r4") {
+                        $("select[name^=role]").each(function() {
+                            $(this).parent().fadeOut(300);
+                        });
+                        $("input[name=services]").prop("checked", "true").prop("disabled", "true");
+                        $("#lnkSelectAll").addClass("hide");
+                    } else {
+
+                        $("select[name^=role]").each(function() {
+                            $(this).val(selectedRole);
+                            $(this).parent().fadeIn(300);
+                        });
+                        $("input[name=services]").removeAttr("disabled");
+                        $("#lnkSelectAll").removeClass("hide");
+                    }
                 }
 
             });
