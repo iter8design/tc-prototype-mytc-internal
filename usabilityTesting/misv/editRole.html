@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
+<!--[if gt IE 8]>
+<!-->
+<html class="no-js" lang="en" dir="ltr">
+<!-- InstanceBegin template="/Templates/Full Page Layout.dwt" codeOutsideHTMLIsLocked="false" -->
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+    <!-- InstanceBeginEditable name="PageTitle" -->
+    <title>Edit role - myTC Account</title>
+    <!-- InstanceEndEditable -->
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <!-- Meta data -->
+    <meta name="description" content="">
+    <!-- Meta data-->
+    <!--[if gte IE 9 | !IE ]><!-->
+    <link href="../../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="../../GCWeb/css/theme.min.css">
+    <link rel="stylesheet" href="../../css/cdtsapps.css">
+    <link rel="stylesheet" href="../../css/fontawesome/css/all.css">
+    <link rel="stylesheet" href="../../css/mytc.css">
+    <link rel="stylesheet" href="../../css/utils.css">
+    <link rel="stylesheet" href="../../css/plugins.css">
+    <!--<![endif]-->
+    <!--[if lt IE 9]>
+		<link href="../GCWeb/assets/favicon.ico" rel="shortcut icon" />
+		
+		<link rel="stylesheet" href="../GCWeb/css/ie8-theme.min.css" />
+		<script src="../js/jquery/1.11.1/jquery.min.js"></script>
+		<script src="../wet-boew/js/ie8-wet-boew.min.js"></script>
+		<![endif]-->
+    <!--[if lte IE 9]>
+		
+		
+		<![endif]-->
+    <noscript>
+        <link rel="stylesheet" href="../../wet-boew/css/noscript.min.css" />
+    </noscript>
+    <!-- InstanceBeginEditable name="CustomJSLibraries" -->
+    <!-- InstanceEndEditable -->
+    <!-- InstanceBeginEditable name="CustomCSS" -->
+    <!-- InstanceEndEditable -->
+</head>
+
+<body class="secondary" vocab="http://schema.org/" typeof="WebPage">
+    <ul id="wb-tphp">
+        <li class="wb-slc"> <a class="wb-sl" href="#wb-cont">Skip to main content</a> </li>
+        <li class="wb-slc visible-sm visible-md visible-lg"> <a class="wb-sl" href="#wb-info">Skip to "About this Web application"</a> </li>
+    </ul>
+    <header role="banner">
+        <div id="wb-bnr" class="container">
+            <div class="row">
+                <div class="brand col-xs-9 col-sm-8 col-md-6">
+                    <object type="image/svg+xml" tabindex="-1" data="../../GCWeb/assets/sig-blk-en.svg">
+                    </object>
+                    <span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span>
+                </div>
+                <section id="wb-lng" class="text-right col-xs-3 col-sm-4 col-md-6">
+                    <h2 class="wb-inv">Language selection</h2>
+                    <ul class="list-inline margin-bottom-none">
+                        <li><a lang="fr" href="#">Français</a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+        <div class="app-bar">
+            <div class="container">
+                <div class="row">
+                    <section class="col-xs-12 col-sm-12">
+                        <h2 class="wb-inv">Transport Canada myTC Account</h2>
+                        <a class="app-name" href="#">Transport Canada <br>
+                            myTC Account</a>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div class="app-bar-mb">
+            <div class="container visible-xs-block hidden-print">
+                <nav role="navigation">
+                    <!-- Adjust the following depending on search and/or menu settings -->
+                    <h2 class="wb-inv">Search and menu</h2>
+                    <ul class="app-list-main list-unstyled">
+                        <li class="wb-mb-links" id="wb-glb-mn"><a href="#mb-pnl" aria-controls="mb-pnl" class="btn overlay-lnk" role="button">Menu</a>
+                            <h2>Menu</h2>
+                        </li>
+                    </ul>
+                    <div id="mb-pnl"></div>
+                </nav>
+            </div>
+        </div>
+        <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../../../../includes/menus/menu-serviceAdministrator.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
+
+
+        <nav role="navigation" id="wb-bc" property="breadcrumb">
+            <h2>You are here:</h2>
+            <div class="container">
+                <div class="row">
+                    <ol class="breadcrumb">
+                        <li><a href="home.html">Home</a></li>
+                        <!-- InstanceBeginEditable name="Breadcrumbs" -->
+                        <li><a href="#">Applications</a></li>
+                        <li><a href="appDashboard.html">Manufacturer Import of Small Vessels (MISV)</a></li>
+                        <li><a href="rolesPermissions.html">Roles & permissions</a></li>
+                        <li>Edit role</li>
+                        <!-- InstanceEndEditable -->
+                    </ol>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main role="main" property="mainContentOfPage" class="container">
+        <!-- InstanceBeginEditable name="Content" -->
+        <h1 property="name" id="wb-cont"><i class="fa-solid fa-user-shield"></i> Edit role </h1>
+
+        <p>Update the role name, indicate the permissions required and press the <strong>Submit</strong> button. All fields are mandatory.</p>
+
+        <div>Role name: <span class="sr-only">(required)</span><br />
+            <span class="small" id="nameHelp">The name of the role as it will appear for you within myTC Account.</span>
+        </div>
+        <div class="form-group">
+            <label class="sr-only" for="roleNameEng" aria-describedby="nameHelp">English role name (required)</label>
+            <input class="form-control width30" id="roleNameEng" title="English role name" name="roleNameEng" type="text" lang="en" placeholder="English role name" maxlength="100" value="Marine Inspector" />
+            <label class="sr-only" for="roleNameFra" aria-describedby="nameHelp">French role name (required)</label>
+            <input class="form-control width30 mrgn-tp-sm" id="roleNameFra" title="French role name" name="roleNameFra" type="text" lang="fr" placeholder="French role name" maxlength="100" value="Inspecteur maritime" />
+        </div>
+
+        <fieldset class="mrgn-tp-sm">
+            <legend class="medium">Is this role:</legend>
+            <div class="radio">
+                <label for="outside">
+                    <input type="radio" name="roleType" value="external" id="outside">
+                    External-facing
+                    <span class="fld-example">Only users outside Transport Canada may be assigned this role.</span>
+                </label>
+            </div>
+            <div class="radio">
+                <label for="inside">
+                    <input type="radio" name="roleType" value="internal" id="inside" checked>
+                    Internal-facing
+                    <span class="fld-example">Only Transport Canada staff may be assigned this role.</span>
+                </label>
+
+
+            </div>
+            <div class="radio">
+                <label for="both">
+                    <input type="radio" name="roleType" value="both" id="both">
+                    Both external and internal-facing.
+                    <span class="fld-example">Anyone may be assigned this role.</span>
+                </label>
+            </div>
+        </fieldset>
+
+        <h2 class="hd-section">Permissions</h2>
+        <p>Make any necessary changes from the following permissions. If you don't see what you're looking for, or need to remove a permission no longer in use, you may <a href="#dlg-requestPermissionChange" class="wb-lbx">request permission changes.</a></p>
+        <div class="row">
+            <div class="col-md-5">
+                <h3 class="mrgn-tp-md">Available</h3>
+                <section class="panel panel-default panel-shadow">
+                    <header class="panel-heading">
+                        <div class="input-group">
+                            <label for="availableFilter" class="wb-invisible">Filter list of available permissions for this role</label>
+                            <input name="availableFilter" type="text" class="form-control full-width searchable" id="availableFilter" />
+                            <span class="input-group-addon"><i class="fas fa-search"></i></span>
+                        </div>
+                    </header>
+                    <div class="panel-body cn-scrolling">
+                        <fieldset>
+                            <legend class="wb-invisible">List of available permissions for this role</legend>
+                            <ul class="cn-permissions cn-available list-unstyled small">
+
+                                <li data-roletype='internal'>
+                                    <input name="avail-s14" id="avail-s14" type="checkbox" value="">
+                                    <label for="avail-s14">Manage email templates</label>
+
+                                </li>
+
+
+                                <li data-roletype='internal'>
+                                    <input name="avail-s13" id="avail-s13" type="checkbox" value="">
+                                    <label for="avail-s13">Manage notices</label>
+
+                                </li>
+
+
+
+                                <li data-roletype='internal'>
+                                    <input name="avail-s16" id="avail-s16" type="checkbox" value="">
+                                    <label for="avail-s16">Manage roles & permissions</label>
+
+                                </li>
+
+                                <li data-roletype='external'>
+                                    <input name="avail-s1" id="avail-s1" type="checkbox" value="">
+                                    <label for="avail-s1">Manage service requests</label>
+
+                                </li>
+
+                                <li data-roletype='internal'>
+                                    <input name="avail-s15" id="avail-s15" type="checkbox" value="">
+                                    <label for="avail-s15">Manage users</label>
+
+                                </li>
+
+
+                                <li data-roletype='external'>
+                                    <input name="avail-s9" id="avail-s9" type="checkbox" value="">
+                                    <label for="avail-s9">Sign and submit service requests</label>
+                                </li>
+
+
+
+
+                            </ul>
+                        </fieldset>
+                    </div>
+                </section>
+            </div>
+            <div class="col-md-2 text-center">
+                <button class="btn btn-primary mrgn-tp-xl width70" type="submit" id="btnAdd"><i class="fa-solid fa-arrow-right"></i> Add <span class="sr-only">permission</span></button>
+
+                <br />
+                <button class="btn btn-primary mrgn-tp-xl width70" type="submit" id="btnRemove"><i class="fa-solid fa-arrow-left"></i> Remove <span class="sr-only">permission</span></button>
+
+            </div>
+            <div class="col-md-5">
+                <h3 class="mrgn-tp-md">Assigned</h3>
+                <section class="panel panel-default panel-shadow">
+                    <header class="panel-heading">
+                        <div class="input-group">
+                            <label for="assignedFilter" class="wb-invisible">Filter list of assigned permissions for this role</label>
+                            <input name="assignedFilter" type="text" class="form-control full-width searchable" id="assignedFilter" />
+                            <span class="input-group-addon"><i class="fas fa-search"></i></span>
+                        </div>
+                    </header>
+                    <div class="panel-body cn-scrolling">
+                        <fieldset>
+                            <legend class="wb-invisible">List of assigned permissions for this role</legend>
+                            <ul class="cn-permissions cn-assigned list-unstyled small box">
+                                <li data-roletype='internal'>
+                                    <input name="avail-s3" id="avail-s3" type="checkbox" value="" checked>
+                                    <label for="avail-s3">Accept/reject service requests</label>
+
+                                </li>
+                                <li data-roletype='internal'>
+                                    <input name="avail-s10" id="avail-s10" type="checkbox" value="" checked>
+                                    <label for="avail-s10">View service requests</label>
+                                </li>
+
+
+
+
+                            </ul>
+                        </fieldset>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="nav-button mrgn-tp-md">
+            <a href="rolesPermissions-editConfirmation.html" class="btn btn-primary">Submit</a>
+            <a href="rolesPermissions.html" class="btn btn-link mrgn-lft-md">Cancel</a>
+        </div>
+
+        <!--<section id="dlg-addPermission" class="mfp-hide modal-dialog modal-content overlay-def">
+            <header class="modal-header">
+                <h2 class="modal-title">Add permission</h2>
+            </header>
+            <div class="modal-body">
+                <div> <span class="mandatory">*</span>Permission name:<br />
+                    <span class="small" id="nameHelp">Use an action verb to describe the task being performed (such as Manage requests, View reports, etc...)</span>
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="permissionNameEng" aria-describedby="nameHelp">English permission name</label>
+                    <input class="form-control width100" id="permissionNameEng" title="English permission name" name="permissionNameEng" type="text" lang="en" placeholder="English permission name" maxlength="100" />
+                    <label class="sr-only" for="roleNameFra" aria-describedby="nameHelp">French permission name</label>
+                    <input class="form-control width100 mrgn-tp-sm" id="permissionNameFra" title="French permission name" name="permissionNameFra" type="text" lang="fr" placeholder="French permission name" maxlength="100" />
+                </div>
+
+            </div>
+            <footer class="modal-footer">
+
+                <a href="#" class="btn btn-primary pull-left mrgn-rght-md">Add permission</a>
+                <a href="#" class="popup-modal-dismiss btn btn-default pull-left">Cancel</a>
+            </footer>
+        </section> -->
+
+        <section id="dlg-requestPermissionChange" class="mfp-hide modal-dialog modal-content overlay-def">
+            <header class="modal-header">
+                <h2 class="modal-title">Request permissions changes</h2>
+            </header>
+            <div class="modal-body">
+                <p>Because permissions changes may introduce problems in your application, a request must be submitted to <a href="../all/support.html" target="_blank">myTC Account support</a> to add or remove permissions. </p>
+
+                <p>Please include the name of the permission you wish to add or remove and a description of how the permission affects the features or functionality of the application.</p>
+
+            </div>
+            <footer class="modal-footer">
+                <a href="#" class="popup-modal-dismiss btn btn-default pull-left">Close</a>
+            </footer>
+        </section>
+
+
+
+        <!-- InstanceEndEditable -->
+        <div class="datemod col-xs-12 mrgn-tp-lg">
+            <dl id="wb-dtmd">
+                <dt>Date modified:&#32;</dt>
+                <dd>
+                    <time property="dateModified">
+                        <!-- #BeginDate format:IS1 -->2022-03-09
+                        <!-- #EndDate -->
+                    </time>
+                </dd>
+            </dl>
+        </div>
+    </main>
+    <footer role="contentinfo" id="wb-info">
+        <div class="brand">
+            <div class="container">
+                <div class="row">
+                    <nav class="col-md-10 ftr-urlt-lnk">
+
+                    </nav>
+                    <div class="col-xs-6 visible-sm visible-xs tofpg"><a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a></div>
+                    <div class="col-xs-6 col-md-2 text-right">
+                        <object type="image/svg+xml" tabindex="-1" role="img" data="../../GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada">
+                        </object>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--[if gte IE 9 | !IE ]><!-->
+    <script src="../../js/jquery/2.2.4/jquery.js"></script>
+    <script src="../../wet-boew/js/wet-boew.min.js"></script>
+    <!--<![endif]-->
+    <!--[if lt IE 9]>
+		<script src="../wet-boew/js/ie8-wet-boew2.min.js"></script>
+		
+		<![endif]-->
+    <script src="../../GCWeb/js/theme.min.js"></script>
+    <!-- InstanceBeginEditable name="CustomJS" -->
+
+    <script>
+        $(document).on("wb-ready.wb", function(event) {
+            $('#availableFilter, #assignedFilter').on("keyup", function() {
+
+                var searchText = $(this).val().toLowerCase();
+                //If empty search criteria, reset view to all visible
+                if (searchText.length == 0) {
+                    $(this).parent().parent().parent().find("ul li").toggle(true);
+                } else {
+                    $(this).parent().parent().parent().find("ul.cn-permissions>li").each(function() {
+                        var permissionName = $(this).clone().children(":not(label)").remove().end().text().toLowerCase()
+                        showPermission = permissionName.indexOf(searchText) !== -1;
+
+                        //If no match found, hide the permission
+                        if (!showPermission) {
+                            $(this).toggle(false);
+                        } else {
+                            $(this).toggle(true);
+                        }
+                    });
+                }
+
+            });
+
+            $("#btnAdd").on('click', function() {
+                var permission = $("ul.cn-available>li input:checked").parent();
+                $(".cn-assigned").append(permission);
+            });
+
+            $("#btnRemove").on('click', function() {
+                var permission = $("ul.cn-assigned>li input:checked").prop("checked", false).parent();
+                $(".cn-available").append(permission);
+            });
+
+            var selectedRoleType = $("input[name=roleType]:checked").val();
+            console.log("UH:" + selectedRoleType);
+            $("ul.cn-permissions>li:not([data-roletype='" + selectedRoleType + "'])").hide();
+            $("ul.cn-permissions>li[data-roletype='" + selectedRoleType + "']").show();
+
+            $("input[name=roleType]").on('click', function() {
+                selectedRoleType = $(this).val();
+                console.log(selectedRoleType);
+                if (selectedRoleType != 'both') {
+                    $("ul.cn-permissions>li:not([data-roletype='" + selectedRoleType + "'])").hide();
+                    $("ul.cn-permissions>li[data-roletype='" + selectedRoleType + "']").show();
+                } else {
+                    $("ul.cn-permissions>li").show();
+                }
+
+            });
+
+
+        });
+    </script>
+    <!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd --></html>
