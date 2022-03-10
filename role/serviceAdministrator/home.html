@@ -128,7 +128,7 @@
             <input type="text" id="sch-inp-ac" placeholder="Search applications..." class="form-control full-width" size="35">
             <span class="input-group-addon"><i class="fas fa-search"></i></span>
         </div>
-        <hr>
+
         <div id="cn-applications">
             <div class="row">
                 <div class="col-md-4">
@@ -152,11 +152,11 @@
 
                         <div class="caption">
 
-                            <h3 class="thumbnail-label"><a href="#">myTC Account</a></h3>
+                            <h3 class="thumbnail-label"><a href="#">myTC Account Administration</a></h3>
 
 
 
-                            <div class="thumbnail-description smaller">Manage your applications settings on the myTC platform.</div>
+                            <div class="thumbnail-description smaller">Manage your application's settings on the myTC platform.</div>
                         </div>
 
                     </div>
@@ -172,7 +172,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <h3 class="mrgn-tp-sm">No applications found!</h3>
-                    <p>Sorry, but we couldn't find any services that match what you're looking for. Try a different keyword! </p>
+                    <p>Sorry, but we couldn't find any applications that match what you're looking for. Try a different keyword! </p>
                 </div>
             </div>
         </div>
@@ -226,13 +226,13 @@
             /* Hide the initial set of search options and display them as needed*/
             var hash = window.location.hash.substr(1);
             if (!hash) {
-                $("#cn-filters, #cn-search-results-empty").hide();
+                $("#cn-search-results-empty").hide();
             }
 
             // quick search regex
             var qsRegex;
 
-            /* Setup the challenges filter */
+            /* Setup the services filter */
             var $grid = $('#cn-applications').isotope({
                 // options
                 itemSelector: '.col-md-4',
