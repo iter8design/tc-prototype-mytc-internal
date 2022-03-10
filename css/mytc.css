@@ -54,6 +54,10 @@ details[open] > summary {
     border: none;
 }
 
+fieldset {
+    border-top: none;
+}
+
 header[role=banner] {
     z-index: 1 !important;
 }
