@@ -112,84 +112,84 @@
         <!-- InstanceBeginEditable name="Content" -->
         <h1 property="name" id="wb-cont">Welcome {Given name}</h1>
 
-<section class="alert alert-warning">
- <h3>Upcoming maintenance</h3>
- <p>Some services will be unavailable on <strong>Monday, July 8, 2022</strong> from <strong>2 a.m. <abbr title="Eastern Time">ET</abbr> to 6 a.m. <abbr title="Eastern Time">ET</abbr></strong> due to scheduled maintenance. </p>
-</section>
-        
-           
+        <section class="alert alert-warning">
+            <h3>Upcoming maintenance</h3>
+            <p>Some services will be unavailable on <strong>Monday, July 8, 2022</strong> from <strong>2 a.m. <abbr title="Eastern Time">ET</abbr> to 6 a.m. <abbr title="Eastern Time">ET</abbr></strong> due to scheduled maintenance. </p>
+        </section>
 
-               <h2>Your applications</h2>
-                <p>Select an application to view the dashboard:</p>
-                <p>
-                <label for="sch-inp-ac" class="wb-inv">Enter the name of the application to filter the list:</label>
-            </p>
-            <div class="input-group">
-                <input type="text" id="sch-inp-ac" placeholder="Search applications..." class="form-control full-width" size="35">
-                <span class="input-group-addon"><i class="fas fa-search"></i></span>
-            </div>
-                <hr>
-            <div id="cn-applications">
-                <div class="row">
-                    <div class="col-md-4 bl-aviation">
-                        <div class="thumbnail">
-                            
-                            <div class="caption">
 
-                                <h3 class="thumbnail-label"><a href="#">Marine Inspection Tracking <span class="wb-inv">(MITRACK)</span></a></h3>
 
-                                <div class="thumbnail-description smaller">Vestibulum eget facilisis neque. Aenean rutrum urna at sem hendrerit congue.</div>
+        <h2>Your applications</h2>
+        <p>Select an application to view the dashboard:</p>
+        <p>
+            <label for="sch-inp-ac" class="wb-inv">Enter the name of the application to filter the list:</label>
+        </p>
+        <div class="input-group">
+            <input type="text" id="sch-inp-ac" placeholder="Search applications..." class="form-control full-width" size="35">
+            <span class="input-group-addon"><i class="fas fa-search"></i></span>
+        </div>
+        <hr>
+        <div id="cn-applications">
+            <div class="row">
+                <div class="col-md-4 bl-aviation">
+                    <div class="thumbnail">
 
-                            </div>
+                        <div class="caption">
+
+                            <h3 class="thumbnail-label"><a href="#">Marine Inspection Tracking <span class="wb-inv">(MITRACK)</span></a></h3>
+
+                            <div class="thumbnail-description smaller">Vestibulum eget facilisis neque. Aenean rutrum urna at sem hendrerit congue.</div>
 
                         </div>
-
-
-                    </div>
-                    <div class="col-md-4 bl-aviation">
-                        <div class="thumbnail">
-                            
-                            <div class="caption">
-
-                                <h3 class="thumbnail-label"><a href="#">Manufacturer Import of Small Vessels <span class="wb-inv">(MISV)</span></a></h3>
-
-
-
-                                <div class="thumbnail-description smaller">Vestibulum eget facilisis neque. Aenean rutrum urna at sem hendrerit congue.</div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                    <div class="col-md-4 bl-corporate">
-                        <div class="thumbnail">
-                           
-                            <div class="caption">
-
-                                <h3 class="thumbnail-label"><a href="#">myTC Account</a></h3>
-
-
-
-                                <div class="thumbnail-description smaller">Manage applications hosted on the myTC platform.</div>
-                            </div>
-
-                        </div>
-
 
                     </div>
 
 
                 </div>
-            </div>
+                <div class="col-md-4 bl-aviation">
+                    <div class="thumbnail">
 
-            <div id="cn-search-results-empty">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h3 class="mrgn-tp-sm">No applications found!</h3>
-                        <p>Sorry, but we couldn't find any applications that match the filters selected. Try a different combination! </p>
+                        <div class="caption">
+
+                            <h3 class="thumbnail-label"><a href="#">Manufacturer Import of Small Vessels <span class="wb-inv">(MISV)</span></a></h3>
+
+
+
+                            <div class="thumbnail-description smaller">Vestibulum eget facilisis neque. Aenean rutrum urna at sem hendrerit congue.</div>
+                        </div>
+
                     </div>
+
+                </div>
+                <div class="col-md-4 bl-corporate">
+                    <div class="thumbnail">
+
+                        <div class="caption">
+
+                            <h3 class="thumbnail-label"><a href="#">myTC Account</a></h3>
+
+
+
+                            <div class="thumbnail-description smaller">Manage applications hosted on the myTC platform.</div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+        </div>
+
+        <div id="cn-search-results-empty">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="mrgn-tp-sm">No applications found!</h3>
+                    <p>Sorry, but we couldn't find any applications that match the filters selected. Try a different combination! </p>
                 </div>
             </div>
+        </div>
 
 
         <!-- InstanceEndEditable -->
@@ -234,19 +234,19 @@
     <script src="../../js/tc/isotope/isotope.pkgd.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
 
-<script>
-    $(document).on("wb-ready.wb", function(event) {
+    <script>
+        $(document).on("wb-ready.wb", function(event) {
 
             /* Hide the initial set of search options and display them as needed*/
             var hash = window.location.hash.substr(1);
             if (!hash) {
-                $("#cn-filters, #cn-search-results-empty").hide();
+                $("#cn-search-results-empty").hide();
             }
 
             // quick search regex
             var qsRegex;
 
-            /* Setup the challenges filter */
+            /* Setup the services filter */
             var $grid = $('#cn-applications').isotope({
                 // options
                 itemSelector: '.col-md-4',
@@ -291,7 +291,10 @@
                 timeout = setTimeout(delayed, threshold);
             };
         }
+
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+
+</html>

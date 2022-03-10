@@ -334,7 +334,7 @@
 
             <div class="nav-button mrgn-tp-md">
                 <a href="users-editConfirmation.html" class="btn btn-primary">Submit</a>
-                <a href="addUser-step1.html" class="btn btn-link mrgn-lft-md">Cancel</a>
+                <a href="users.html" class="btn btn-link mrgn-lft-md">Cancel</a>
                 <a href="remove.html" class="btn btn-danger pull-right"><i class="fa-solid fa-user-xmark"></i> Remove access</a>
                 <a href="suspend.html" class="btn btn-default pull-right mrgn-rght-lg"><i class="fa-solid fa-user-lock"></i> Suspend access</a>
 
@@ -390,13 +390,13 @@
             /* Hide the initial set of search options and display them as needed*/
             var hash = window.location.hash.substr(1);
             if (!hash) {
-                $("#cn-filters, #cn-search-results-empty").hide();
+                $("#cn-search-results-empty").hide();
             }
 
             // quick search regex
             var qsRegex;
 
-            //Setup the challenges filter
+            //Setup the services filter
             var $grid = $('#cn-services').isotope({
                 // options
                 itemSelector: '.col-md-4',
