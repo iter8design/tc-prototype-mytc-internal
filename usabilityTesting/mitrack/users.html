@@ -92,7 +92,7 @@
                 </nav>
             </div>
         </div>
-        <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../../../../includes/menus/menu-serviceAdministrator.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
+        <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../../includes/menus/menu-serviceAdministrator.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
 
 
         <nav role="navigation" id="wb-bc" property="breadcrumb">
@@ -103,7 +103,7 @@
                         <li><a href="home.html">Home</a></li>
                         <!-- InstanceBeginEditable name="Breadcrumbs" -->
                         <li><a href="#">Applications</a></li>
-                        <li><a href="appDashboard.html">Manufacturer Import of Small Vessels (MISV)</a></li>
+                        <li><a href="appDashboard.html">Marine Inspection Tracking (MITRACK)</a></li>
                         <li>Users</li>
                         <!-- InstanceEndEditable -->
                     </ol>
@@ -115,13 +115,7 @@
         <!-- InstanceBeginEditable name="Content" -->
         <h1 property="name" id="wb-cont"><i class="fa-solid fa-users"></i> Users</h1>
 
-        <section class="alert alert-success mrgn-bttm-md">
-            <h2>User updated</h2>
-            <p><strong>Sarah Lovelace (sarah.lovelace@hotmail.com)</strong> has been successfully updated. </p>
-        </section>
-
         <p>To add a new user, press the <strong>Add user</strong> button. To view or make changes to an existing user, select the person's name or select an action from the menu.</p>
-
 
         <section class="panel panel-datatable">
 
@@ -136,7 +130,7 @@
 				"emptyTable" : "No users have been added yet."
 			}
 }'>
-                <caption class="wb-inv">List of users for Manufacturer Import of Small Vessels (MISV)</caption>
+                <caption class="wb-inv">List of users for Marine Inspection Tracking (MITRACK)</caption>
                 <thead>
                     <tr>
                         <th scope="col" class="width2 text-center"><span class="sr-only">Select</span><span class="selectAll"></span></th>
@@ -154,47 +148,41 @@
                                 <option value="Suspended">Suspended</option>
                             </select>
                         </th>
-                        <th scope="col" class="width15"><label for="role" class="sr-only">Role</label>
+                        <th scope="col" class="width10"><label for="role" class="sr-only">Role</label>
                             <select name="role" id="role" class="form-control full-width">
                                 <option value="" selected>&lsaquo;&lsaquo;&lsaquo;Role&rsaquo;&rsaquo;&rsaquo;</option>
-                                <option value="r1">Agent</option>
-                                <option value="r5">Canadian Responsible Officer</option>
-                                <option value="r3">Marine Reviewer</option>
-
-                                <option value="r2">Marine Inspector</option>
-                                <option value="r4">Application Owner</option>
+                                <option value="Clerk">Clerk</option>
+                                <option value="Inspector">Inspector</option>
+                                <option value="Manager">Manager</option>
+                                <option value="Application Owner">Application Owner</option>
 
 
                             </select>
                         </th>
-                        <th scope="col" class="width25"><label for="services" class="sr-only">Service</label>
+                        <th scope="col" class="width30"><label for="services" class="sr-only">Service</label>
                             <select name="services" id="services" class="form-control full-width">
                                 <option value="" selected>&lsaquo;&lsaquo;&lsaquo;Service&rsaquo;&rsaquo;&rsaquo;</option>
-                                <optgroup label="External">
-                                    <option value="">Submit a declaration of conformity (DoC)</option>
-                                    <option value="">Submit an annual production report (APR)</option>
-                                </optgroup>
-                                <optgroup label="Internal">
-                                    <option value="">Annual production report (APR) administration</option>
-                                    <option value="">Declaration of conformity (DoC) administration</option>
-                                </optgroup>
-
-
+                                <option value="">Request a prewash endorsement/exemption</option>
+                                <option value="">Request a verification of shipper’s procedures for cargoes that may liquefy</option>
+                                <option value="">Request concentrates, grains or timber cargo inspection</option>
+                                <option value="">Request for a follow-up Port State Control inspection to confirm rectification of deficiencies for foreign vessels</option>
+                                <option value="">Request for a follow-up Port State Control inspection to rescind a detention order for foreign vessels</option>
+                                <option value="">Request for inspection of a vessel loading, carrying or unloading dangerous goods (Bulk or packaged form)</option>
                             </select>
                         </th>
                         <th scope="col" class="width20"><span class="sr-only">Actions</span>
-                            <a href="addUser-step1.html" class="btn btn-primary pull-right nowrap"><i class="fa-solid fa-user-plus"></i> Add user</a>
+                            <a href="addUser-step1.html" class="btn btn-primary pull-right text-nowrap"><i class="fa-solid fa-user-plus"></i> Add user</a>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr1"></th>
-                        <td><label for="usr1"><a href="editUser-internal.html">Paul Davies</a><br> <span class="small">paul.davies@tc.gc.ca</span></label></td>
+                        <td><label for="usr1"><a href="editUser.html">Paul Davies</a><br> <span class="small">paul.davies@tc.gc.ca</span></label></td>
                         <td>
                             <div class="pill-green pill-status">Active</div>
                         </td>
-                        <td>Marine Inspector <a href="#dlg-roleHelp" class="wb-lbx" title="What can an Marine Inspector do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
+                        <td>Inspector <a href="#dlg-roleHelp" class="wb-lbx" title="What can an Inspector do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
                         <td>All</td>
                         <td>
                             <div class="btn-group pull-right">
@@ -202,7 +190,7 @@
                                     Actions <span class="sr-only">for {First name} {Last name}</span><span class="caret"></span> </button>
                                 <ul class="dropdown-menu">
 
-                                    <li><a href="editUser-internal.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="editUser.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                     <li><a href="suspend.html"><i class="fa-solid fa-user-lock"></i> Suspend access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                     <li><a href="remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                 </ul>
@@ -211,19 +199,19 @@
                     </tr>
                     <tr>
                         <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr2"></th>
-                        <td><label for="usr2"><a href="editUser-internal.html">Linda Fry</a> <br> <span class="small">linda.fry@tc.gc.ca</span></label></td>
+                        <td><label for="usr2"><a href="editUser.html">Linda Fry</a> <br> <span class="small">linda.fry@tc.gc.ca</span></label></td>
                         <td>
                             <div class="pill-green pill-status">Active</div>
                         </td>
                         <td>Varies</td>
-                        <td><span class="text-nowrap">1 of 2</span> <a href="#dlg-serviceHelp" class="wb-lbx" title="What services can this person access?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
+                        <td><span class="text-nowrap">5 of 6</span> <a href="#dlg-serviceHelp" class="wb-lbx" title="What services can this person access?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
                         <td>
                             <div class="btn-group pull-right">
                                 <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Actions <span class="sr-only">for {First name} {Last name}</span><span class="caret"></span> </button>
                                 <ul class="dropdown-menu">
 
-                                    <li><a href="editUser-internal.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="editUser.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                     <li><a href="suspend.html"><i class="fa-solid fa-user-lock"></i> Suspend access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                     <li><a href="remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                 </ul>
@@ -233,19 +221,19 @@
                     </tr>
                     <tr>
                         <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr3"></th>
-                        <td><label for="usr3"><a href="editUser-internal.html">Norman Gregory</a> <br> <span class="small">norman.gregory@tc.gc.ca</span></label></td>
+                        <td><label for="usr3"><a href="editUser.html">Norman Gregory</a> <br> <span class="small">norman.gregory@tc.gc.ca</span></label></td>
                         <td>
                             <div class="pill-green pill-status">Active</div>
                         </td>
-                        <td>Marine Inspector <a href="#dlg-roleHelp" class="wb-lbx" title="What can an Marine Inspector do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
-                        <td>1 of 2 <a href="#dlg-serviceHelp" class="wb-lbx" title="What services can this person access?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
+                        <td>Inspector <a href="#dlg-roleHelp" class="wb-lbx" title="What can an Inspector do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
+                        <td>3 of 6 <a href="#dlg-serviceHelp" class="wb-lbx" title="What services can this person access?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
                         <td>
                             <div class="btn-group pull-right">
                                 <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Actions <span class="sr-only">for {First name} {Last name}</span><span class="caret"></span> </button>
                                 <ul class="dropdown-menu">
 
-                                    <li><a href="editUser-internal.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="editUser.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                     <li><a href="suspend.html"><i class="fa-solid fa-user-lock"></i> Suspend access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                     <li><a href="remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                 </ul>
@@ -255,11 +243,11 @@
                     </tr>
                     <tr>
                         <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr4"></th>
-                        <td><label for="usr4"><a href="editUser-internal.html">Mark Hills</a> <br> <span class="small">mark.hills@tc.gc.ca</span></label></td>
+                        <td><label for="usr4"><a href="editUser.html">Mark Hills</a> <br> <span class="small">mark.hills@tc.gc.ca</span></label></td>
                         <td>
                             <div class="pill-red pill-status">Suspended</div>
                         </td>
-                        <td>Marine Inspector <a href="#dlg-roleHelp" class="wb-lbx" title="What can an Marine Inspector do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
+                        <td>Inspector <a href="#dlg-roleHelp" class="wb-lbx" title="What can an Inspector do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
                         <td></td>
                         <td>
                             <div class="btn-group pull-right">
@@ -267,7 +255,7 @@
                                     Actions <span class="sr-only">for {First name} {Last name}</span><span class="caret"></span> </button>
                                 <ul class="dropdown-menu">
 
-                                    <li><a href="editUser-internal.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="editUser.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                     <li><a href="reinstate.html"><i class="fa-solid fa-user-unlock"></i> Reinstate access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                     <li><a href="remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                 </ul>
@@ -281,7 +269,7 @@
                         <td>
                             <div class="pill-yellow pill-status">Pending registration</div>
                         </td>
-                        <td>Agent <a href="#dlg-roleHelp" class="wb-lbx" title="What can an Marine Inspector do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
+                        <td>Inspector <a href="#dlg-roleHelp" class="wb-lbx" title="What can an Inspector do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
                         <td>All</td>
                         <td>
                             <div class="btn-group pull-right">
@@ -289,7 +277,7 @@
                                     Actions <span class="sr-only">for {First name} {Last name}</span><span class="caret"></span> </button>
                                 <ul class="dropdown-menu">
 
-                                    <li><a href="editUser-internal.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="editUser.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                     <li><a href="users-resendConfirmation.html"><i class="fa-solid fa-envelope-dot"></i> Resend invitation <span class="sr-only">for {First name} {Last name}</span></a></li>
                                     <li><a href="remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                 </ul>
@@ -299,11 +287,11 @@
                     </tr>
                     <tr>
                         <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr6"></th>
-                        <td><label for="usr6"><a href="editUser-internal.html">Mark Healey</a> <br> <span class="small">mark.healey@tc.gc.ca</span></label></td>
+                        <td><label for="usr6"><a href="editUser.html">Mark Healey</a> <br> <span class="small">mark.healey@tc.gc.ca</span></label></td>
                         <td>
                             <div class="pill-green pill-status">Active</div>
                         </td>
-                        <td>Marine Inspector <a href="#dlg-roleHelp" class="wb-lbx" title="What can an Marine Inspector do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
+                        <td>Inspector <a href="#dlg-roleHelp" class="wb-lbx" title="What can an Inspector do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
                         <td>All</td>
                         <td>
                             <div class="btn-group pull-right">
@@ -311,7 +299,7 @@
                                     Actions <span class="sr-only">for {First name} {Last name}</span><span class="caret"></span> </button>
                                 <ul class="dropdown-menu">
 
-                                    <li><a href="editUser-internal.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="editUser.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                     <li><a href="suspend.html"><i class="fa-solid fa-user-lock"></i> Suspend access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                     <li><a href="remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                 </ul>
@@ -320,11 +308,11 @@
                     </tr>
                     <tr>
                         <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr7"></th>
-                        <td><label for="usr7"><a href="editUser-internal.html">Neil Horwath</a> <br> <span class="small">neil.horwath@tc.gc.ca</span></label></td>
+                        <td><label for="usr7"><a href="editUser.html">Neil Horwath</a> <br> <span class="small">neil.horwath@tc.gc.ca</span></label></td>
                         <td>
                             <div class="pill-green pill-status">Active</div>
                         </td>
-                        <td>Marine Inspector <a href="#dlg-roleHelp" class="wb-lbx" title="What can an Marine Inspector do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
+                        <td>Inspector <a href="#dlg-roleHelp" class="wb-lbx" title="What can an Inspector do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
                         <td>All</td>
                         <td>
                             <div class="btn-group pull-right">
@@ -332,7 +320,7 @@
                                     Actions <span class="sr-only">for {First name} {Last name}</span><span class="caret"></span> </button>
                                 <ul class="dropdown-menu">
 
-                                    <li><a href="editUser-internal.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="editUser.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                     <li><a href="suspend.html"><i class="fa-solid fa-user-lock"></i> Suspend access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                     <li><a href="remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                 </ul>
@@ -341,11 +329,11 @@
                     </tr>
                     <tr>
                         <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr8"></th>
-                        <td><label for="usr8"><a href="editUser-internal.html">Thomas Jenkins</a> <br> <span class="small">thomas.jenkins@tc.gc.ca</span></label></td>
+                        <td><label for="usr8"><a href="editUser.html">Thomas Jenkins</a> <br> <span class="small">thomas.jenkins@tc.gc.ca</span></label></td>
                         <td>
                             <div class="pill-green pill-status">Active</div>
                         </td>
-                        <td>Canadian Responsible Officer <a href="#dlg-roleHelp" class="wb-lbx" title="What can a Canadian Responsible Officer do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
+                        <td>Manager <a href="#dlg-roleHelp" class="wb-lbx" title="What can a Manager do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
                         <td>All</td>
                         <td>
                             <div class="btn-group pull-right">
@@ -353,7 +341,7 @@
                                     Actions <span class="sr-only">for {First name} {Last name}</span><span class="caret"></span> </button>
                                 <ul class="dropdown-menu">
 
-                                    <li><a href="editUser-internal.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="editUser.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                     <li><a href="suspend.html"><i class="fa-solid fa-user-lock"></i> Suspend access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                     <li><a href="remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                 </ul>
@@ -363,11 +351,11 @@
 
                     <tr>
                         <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr9"></th>
-                        <td><label for="usr9"><a href="editUser-internal.html">Tammy Koury</a> <br> <span class="small">tammy.koury@tc.gc.ca</span></label></td>
+                        <td><label for="usr9"><a href="editUser.html">Tammy Koury</a> <br> <span class="small">tammy.koury@tc.gc.ca</span></label></td>
                         <td>
                             <div class="pill-green pill-status">Active</div>
                         </td>
-                        <td>Canadian Responsible Officer <a href="#dlg-roleHelp" class="wb-lbx" title="What can a Canadian Responsible Officer do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
+                        <td>Inspector <a href="#dlg-roleHelp" class="wb-lbx" title="What can an Inspector do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
                         <td>All</td>
                         <td>
                             <div class="btn-group pull-right">
@@ -375,7 +363,7 @@
                                     Actions <span class="sr-only">for {First name} {Last name}</span><span class="caret"></span> </button>
                                 <ul class="dropdown-menu">
 
-                                    <li><a href="editUser-internal.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="editUser.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                     <li><a href="suspend.html"><i class="fa-solid fa-user-lock"></i> Suspend access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                     <li><a href="remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                 </ul>
@@ -384,11 +372,11 @@
                     </tr>
                     <tr>
                         <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr10"></th>
-                        <td><label for="usr10"><a href="editUser-external.html">Sarah Lovelace</a> <br> <span class="small">sarah.lovelace@hotmail.com</span></label></td>
+                        <td><label for="usr10"><a href="editUser.html">Sarah Lovelace</a> <br> <span class="small">sarah.lovelace@tc.gc.ca</span></label></td>
                         <td>
                             <div class="pill-green pill-status">Active</div>
                         </td>
-                        <td>Canadian Responsible Officer <a href="#dlg-roleHelp" title="What can a Agent do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
+                        <td>Clerk <a href="#dlg-roleHelp" title="What can a Clerk do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
                         <td>All</td>
                         <td>
                             <div class="btn-group pull-right">
@@ -396,7 +384,7 @@
                                     Actions <span class="sr-only">for {First name} {Last name}</span><span class="caret"></span> </button>
                                 <ul class="dropdown-menu">
 
-                                    <li><a href="editUser-internal.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="editUser.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                     <li><a href="suspend.html"><i class="fa-solid fa-user-lock"></i> Suspend access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                     <li><a href="remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                 </ul>
@@ -405,11 +393,11 @@
                     </tr>
                     <tr>
                         <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr11"></th>
-                        <td><label for="usr11"><a href="editUser-internal.html">Frank O'Neil</a><br> <span class="small">frank.oneil@tc.gc.ca</span></label></td>
+                        <td><label for="usr11"><a href="editUser.html">Frank O'Neil</a><br> <span class="small">frank.oneil@tc.gc.ca</span></label></td>
                         <td>
                             <div class="pill-green pill-status">Active</div>
                         </td>
-                        <td>Agent <a href="#dlg-roleHelp"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
+                        <td>Clerk <a href="#dlg-roleHelp"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
                         <td>All</td>
                         <td>
                             <div class="btn-group pull-right">
@@ -417,7 +405,7 @@
                                     Actions <span class="sr-only">for {First name} {Last name}</span><span class="caret"></span> </button>
                                 <ul class="dropdown-menu">
 
-                                    <li><a href="editUser-internal.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="editUser.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                     <li><a href="suspend.html"><i class="fa-solid fa-user-lock"></i> Suspend access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                     <li><a href="remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                 </ul>
@@ -427,11 +415,11 @@
 
                     <tr>
                         <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr12"></th>
-                        <td><label for="usr12"><a href="editUser-internal.html">Jeff Smith</a> <br> <span class="small">jeff.smith@tc.gc.ca</span></label></td>
+                        <td><label for="usr12"><a href="editUser.html">Jeff Smith</a> <br> <span class="small">jeff.smith@tc.gc.ca</span></label></td>
                         <td>
                             <div class="pill-green pill-status">Active</div>
                         </td>
-                        <td>Marine Reviewer <a href="#dlg-roleHelp"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
+                        <td>Inspector <a href="#dlg-roleHelp"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
                         <td>All</td>
                         <td>
                             <div class="btn-group pull-right">
@@ -439,7 +427,7 @@
                                     Actions <span class="sr-only">for {First name} {Last name}</span><span class="caret"></span> </button>
                                 <ul class="dropdown-menu">
 
-                                    <li><a href="editUser-internal.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="editUser.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                     <li><a href="suspend.html"><i class="fa-solid fa-user-lock"></i> Suspend access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                     <li><a href="remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                 </ul>
@@ -449,11 +437,11 @@
 
                     <tr>
                         <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr13"></th>
-                        <td><label for="usr13"><a href="editUser-internal.html">Paul Weston</a> <br> <span class="small">paul.weston@tc.gc.ca</span></label></td>
+                        <td><label for="usr13"><a href="editUser.html">Paul Weston</a> <br> <span class="small">paul.weston@tc.gc.ca</span></label></td>
                         <td>
                             <div class="pill-green pill-status">Active</div>
                         </td>
-                        <td>Marine Inspector <a href="#dlg-roleHelp" class=""><i class="fa-solid fa-circle-question text-blue"></i></a></td>
+                        <td>Inspector <a href="#dlg-roleHelp" class=""><i class="fa-solid fa-circle-question text-blue"></i></a></td>
                         <td>All</td>
                         <td>
                             <div class="btn-group pull-right">
@@ -461,7 +449,7 @@
                                     Actions <span class="sr-only">for {First name} {Last name}</span><span class="caret"></span> </button>
                                 <ul class="dropdown-menu">
 
-                                    <li><a href="editUser-internal.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="editUser.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                     <li><a href="suspend.html"><i class="fa-solid fa-user-lock"></i> Suspend access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                     <li><a href="remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                 </ul>
@@ -478,7 +466,9 @@
             </footer>
         </section>
 
-        <a href="appDashboard.html"><i class="fas fa-reply mrgn-rght-sm"></i>Return to Manufacturer Import of Small Vessels (MISV)</a>
+        <p class="mrgn-tp-md">
+            <a href="appDashboard.html"><i class="fas fa-reply mrgn-rght-sm"></i>Return to Marine Inspection Tracking (MITRACK)</a>
+        </p>
 
         <section id="dlg-roleHelp" class="mfp-hide modal-dialog modal-content overlay-def">
             <header class="modal-header">
@@ -490,7 +480,7 @@
                     <div class="col-md-6">
 
                         <div class="well">
-                            <p><i class="fa-solid fa-shield-check fa-2xl text-green"></i> This role may:</p>
+                            <p><i class="fa-solid fa-shield-check fa-2xl text-green "></i> This role may:</p>
                             <ul class="mrgn-lft-md">
                                 <li>Manage service requests</li>
                                 <li>Enter service request time</li>
@@ -503,7 +493,7 @@
 
                     <div class="col-md-6">
                         <div class="well">
-                            <p><i class="fa-solid fa-shield-xmark fa-2xl text-red"></i> This role <strong>may not</strong>:</p>
+                            <p><i class="fa-solid fa-shield-xmark fa-2xl text-red icon-border"></i> This role <strong>may not</strong>:</p>
                             <ul class="mrgn-lft-md">
 
                                 <li>Assign service requests</li>
@@ -522,6 +512,8 @@
                 <a href="#" class="popup-modal-dismiss btn btn-default pull-left"><i class="fa-solid fa-face-smile-hearts"></i> Got it!</a>
             </footer>
         </section>
+
+
 
         <section id="dlg-serviceHelp" class="mfp-hide modal-dialog modal-content overlay-def">
             <header class="modal-header">
@@ -563,13 +555,14 @@
             </footer>
         </section>
 
+
         <!-- InstanceEndEditable -->
         <div class="datemod col-xs-12 mrgn-tp-lg">
             <dl id="wb-dtmd">
                 <dt>Date modified:&#32;</dt>
                 <dd>
                     <time property="dateModified">
-                        <!-- #BeginDate format:IS1 -->2022-03-09
+                        <!-- #BeginDate format:IS1 -->2022-02-23
                         <!-- #EndDate -->
                     </time>
                 </dd>
@@ -602,6 +595,7 @@
 		
 		<![endif]-->
     <script src="../../GCWeb/js/theme.min.js"></script>
+    <!-- InstanceBeginEditable name="CustomJS" -->
     <script src="../../js/tc/bootstrap/tooltip.js"></script>
     <script src="../../js/tc/bootstrap/popover.js"></script>
     <script src="../../js/tc/bootstrap/dropdown.js"></script>
@@ -613,12 +607,6 @@
                 "retrieve": true
 
             }).api();
-
-            $(window).resize(function() {
-                $("#tblUsers").dataTable().fnAdjustColumnSizing();
-            });
-
-            $(".dataTables_scrollFootInner, .dataTables_scrollFoot").hide();
 
             $("thead input").on("keyup", function() {
                 /* Filter on the column (the index) of this element */
@@ -666,6 +654,7 @@
 
             });
 
+
             //Bind the click event handler to the checkboxes
             $("#tblUsers tbody").on('click', "th>:checkbox", function() {
                 fnHighlightSelectedRow($(this));
@@ -674,6 +663,8 @@
             // Temporarily hiding checkboxes until bulk actions are ready
             $("input[type=checkbox]").addClass("sr-only");
 
+
+
             /* Highlight the row that was checked */
             function fnHighlightSelectedRow(checkbox) {
                 if (checkbox.prop("checked"))
@@ -681,6 +672,12 @@
                 else
                     checkbox.parent("th").removeClass("highlight-yellow").nextAll("td").removeClass("highlight-yellow");
             }
+
+
+        });
+
+        $(".wb-tables").on("wb-updated.wb-tables", function(event, settings) {
+            $(".wb-lbx").trigger("wb-init.wb-lbx");
         });
     </script>
     <!-- InstanceEndEditable -->
