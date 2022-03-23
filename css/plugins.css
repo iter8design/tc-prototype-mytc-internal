@@ -25,7 +25,7 @@ table.dataTable thead .sorting_asc .sorting-icons:before,
 table.dataTable thead .sorting_desc .sorting-icons:before {
     border: none;
     background: none;
-    font-family: 'Font Awesome 5 Pro';
+    font-family: 'Font Awesome 6 Pro';
     font-weight: 900;
     top: 0;
 }

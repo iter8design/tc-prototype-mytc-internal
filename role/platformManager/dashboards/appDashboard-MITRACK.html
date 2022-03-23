@@ -11,7 +11,7 @@
     <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
 		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
     <!-- InstanceBeginEditable name="PageTitle" -->
-    <title>myTC Account Administration (MYTCA) - myTC Account</title>
+    <title>Marine Inspection Tracking (MITRACK) - myTC Account</title>
     <!-- InstanceEndEditable -->
     <meta content="width=device-width,initial-scale=1" name="viewport">
     <!-- Meta data -->
@@ -103,7 +103,7 @@
                         <li><a href="#">Home</a></li>
                         <!-- InstanceBeginEditable name="Breadcrumbs" -->
                         <li><a href="#">Applications</a></li>
-                        <li>myTC Account Administration (MYTCAA)</li>
+                        <li>Marine Inspection Tracking (MITRACK)</li>
                         <!-- InstanceEndEditable -->
                     </ol>
                 </div>
@@ -112,7 +112,7 @@
     </header>
     <main role="main" property="mainContentOfPage" class="container">
         <!-- InstanceBeginEditable name="Content" -->
-        <h1 property="name" id="wb-cont">myTC Account Administration (MYTCAA)</h1>
+        <h1 property="name" id="wb-cont">Marine Inspection Tracking (MITRACK)</h1>
 
         <div class="row">
             <div class="col-md-12">
@@ -123,7 +123,13 @@
                     <div class="panel-body">
                         <p>The following services are available within this application:</p>
                         <ul>
-                            <li>myTC Platform Administration</li>
+                            <li>Request a prewash endorsement/exemption</li>
+                            <li>Request a verification of shipper’s procedures for cargoes that may liquefy</li>
+                            <li>Request concentrates, grains or timber cargo inspection</li>
+                            <li>Request for a follow-up Port State Control inspection to confirm rectification of deficiencies for foreign vessels</li>
+                            <li>Request for a follow-up Port State Control inspection to rescind a detention order for foreign vessels</li>
+                            <li>Request for inspection of a vessel loading, carrying or unloading dangerous goods (Bulk or packaged form)</li>
+
                         </ul>
                     </div>
 
@@ -132,53 +138,72 @@
             </div>
         </div>
 
-        <div class="row">
+
+
+        <div class="row wb-eqht-grd">
             <div class="col-md-6">
-                <div class="panel panel-default mrgn-bttm-md">
-                    <header class="panel-heading">
-                        <h2 class="panel-title">Notices</h2>
-                    </header>
-                    <div class="panel-body">
-                        <p>No active notices published at this time.</p>
-                    </div>
-                    <footer class="panel-footer">
-                        <a href="notices.html" class="btn btn-primary">Manage notices</a>
-                    </footer>
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="row">
-            <div class="col-md-6">
-                <div class="panel panel-default mrgn-bttm-md">
+                <div class="panel panel-default mrgn-bttm-md eqht-trgt">
                     <header class="panel-heading">
                         <h2 class="panel-title">Users</h2>
                     </header>
                     <div class="panel-body">
                         <p>There are:</p>
-                        <p><span class="xlarge">9</span> active users
+                        <p><span class="xlarge">13</span> active users, <span class="xlarge">1</span> user pending activation</p>
+                        <p><span class="xlarge">1</span> suspended user</p>
+
                     </div>
                     <footer class="panel-footer">
-                        <a href="users.html" class="btn btn-primary">Manage users</a>
+                        <a href="#" class="btn btn-primary"><i class="fa-solid fa-users"></i> Manage users</a>
                     </footer>
                 </div>
 
             </div>
             <div class="col-md-6">
-                <div class="panel panel-default mrgn-bttm-md">
+                <div class="panel panel-default mrgn-bttm-md eqht-trgt">
                     <header class="panel-heading">
                         <h2 class="panel-title">Roles</h2>
                     </header>
                     <div class="panel-body">
                         <p>You've setup:</p>
-                        <p><span class="xlarge">1</span> role</p>
-                        <p><span class="xlarge">3</span> permissions</p>
+                        <p><span class="xlarge">4</span> roles</p>
+                        <p><span class="xlarge">12</span> permissions</p>
                     </div>
                     <footer class="panel-footer">
-                        <a href="rolesPermissions.html" class="btn btn-primary">Manage roles & permissions</a>
+                        <a href="#" class="btn btn-primary"><i class="fa-solid fa-user-lock"></i> Manage roles & permissions</a>
+                    </footer>
+                </div>
+            </div>
+        </div>
+
+        <div class="row wb-eqht-grd">
+            <div class="col-md-6">
+                <div class="panel panel-default mrgn-bttm-md eqht-trgt">
+                    <header class="panel-heading">
+                        <h2 class="panel-title">Notices</h2>
+                    </header>
+                    <div class="panel-body">
+                        <p>There are:</p>
+                        <p><span class="xlarge">0</span> active notices</p>
+                        <p><span class="xlarge">1</span> upcoming outage</p>
+
+                    </div>
+                    <footer class="panel-footer">
+                        <a href="#" class="btn btn-primary"><i class="fa-solid fa-bells"></i> Manage notices</a>
+                    </footer>
+                </div>
+
+            </div>
+            <div class="col-md-6 ">
+                <div class="panel panel-default mrgn-bttm-md eqht-trgt">
+                    <header class="panel-heading">
+                        <h2 class="panel-title">Email templates</h2>
+                    </header>
+                    <div class="panel-body eqht-trgt">
+                        <p>You've setup:</p>
+                        <p><span class="xlarge">2</span> email templates</p>
+                    </div>
+                    <footer class="panel-footer">
+                        <a href="#" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> Manage email templates</a>
                     </footer>
                 </div>
             </div>
@@ -220,18 +245,20 @@
 
     <!--[if gte IE 9 | !IE ]><!-->
     <script src="../../../js/jquery/2.2.4/jquery.js"></script>
-    <script src="../../../wet-bo../../../wet-boew.min.js"></script>
+    <script src="../../../wet-boew/js/wet-boew.min.js"></script>
     <!--<![endif]-->
     <!--[if lt IE 9]>
-		<script src="../wet-bo../../../ie8-wet-boew2.min.js"></script>
+		<script src="../../../wet-boew/js/ie8-wet-boew2.min.js"></script>
 		
 		<![endif]-->
-    <script src="../../../GCW../../../theme.min.js"></script>
-    <script src="../../../../../../isotope/isotope.pkgd.min.js"></script>
+    <script src="../../../GCWeb/js/theme.min.js"></script>
+    <!-- InstanceBeginEditable name="CustomJS" -->
     <!-- InstanceBeginEditable name="CustomJS" -->
 
     <script>
         $(document).on("wb-ready.wb", function(event) {
+
+        });
     </script>
     <!-- InstanceEndEditable -->
 </body>
