@@ -134,8 +134,6 @@
                     <details id="details-panel1" open>
                         <summary data-flow='continue'>
                             Inspector
-
-
                         </summary>
 
                         <div class="row">
@@ -144,11 +142,12 @@
                                 <div class="well">
                                     <p><i class="fa-solid fa-shield-check fa-2xl text-green"></i> This role may:</p>
                                     <ul class="mrgn-lft-md">
-                                        <li>Manage service requests</li>
-                                        <li>Enter service request time</li>
                                         <li>Backdate status changes</li>
-                                        <li>View invoices</li>
+                                        <li>Enter service request time</li>
+                                        <li>Manage service requests</li>
                                         <li>Submit service requests</li>
+                                        <li>View invoices</li>
+
                                     </ul>
                                 </div>
                             </div>
@@ -158,10 +157,14 @@
                                     <p><i class="fa-solid fa-shield-xmark fa-2xl text-red"></i> This role <strong>may not</strong>:</p>
                                     <ul class="mrgn-lft-md">
 
+                                        <li>Approve remissions</li>
                                         <li>Assign service requests</li>
                                         <li>Generate invoices</li>
+                                        <li>Manage email templates</li>
+                                        <li>Manage notices</li>
+                                        <li>Manage roles & permissions</li>
+                                        <li>Manage users</li>
                                         <li>View remissions</li>
-                                        <li>Approve remissions</li>
                                     </ul>
                                 </div>
                             </div>
@@ -198,6 +201,10 @@
                                     <ul class="mrgn-lft-md">
                                         <li>Approve/reject invoices</li>
                                         <li>Approve remissions</li>
+                                        <li>Manage email templates</li>
+                                        <li>Manage notices</li>
+                                        <li>Manage roles & permissions</li>
+                                        <li>Manage users</li>
                                         <li>View service performance</li>
                                     </ul>
                                 </div>
@@ -213,7 +220,7 @@
                         </summary>
 
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-md-6">
                                 <div class="well">
                                     <p><i class="fa-solid fa-shield-check fa-2xl text-green"></i> This role may:</p>
                                     <ul class="mrgn-lft-md">
@@ -228,6 +235,17 @@
                                         <li>Approve/reject invoices</li>
                                         <li>Approve remissions</li>
                                         <li>View service performance</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="well">
+                                    <p><i class="fa-solid fa-shield-xmark fa-2xl text-red"></i> This role <strong>may not</strong>:</p>
+                                    <ul class="mrgn-lft-md">
+                                        <li>Manage email templates</li>
+                                        <li>Manage notices</li>
+                                        <li>Manage roles & permissions</li>
+                                        <li>Manage users</li>
                                     </ul>
                                 </div>
                             </div>
@@ -246,30 +264,22 @@
                                 <div class="well">
                                     <p><i class="fa-solid fa-shield-check fa-2xl text-green"></i> This role may:</p>
                                     <ul class="mrgn-lft-md">
-
-                                        <li>Manage service requests</li>
-                                        <li>Enter service request time</li>
                                         <li>Backdate status changes</li>
-                                        <li>View invoices</li>
-                                        <li>Generate invoices</li>
-                                        <li>Submit service requests</li>
-                                        <li>Assign service requests</li>
-                                        <li>View remissions</li>
+                                        <li>Enter service request time</li>
                                         <li>Approve/reject invoices</li>
                                         <li>Approve remissions</li>
-                                        <li>View service performance</li>
-                                    </ul>
-
-                                    <p><i class="fa-solid fa-shield-plus fa-2xl text-green"></i> For this application, this role may also:</p>
-
-                                    <ul class="mrgn-lft-md">
+                                        <li>Assign service requests</li>
+                                        <li>Generate invoices</li>
                                         <li>Manage email templates</li>
                                         <li>Manage notices</li>
                                         <li>Manage roles & permissions</li>
+                                        <li>Manage service requests</li>
                                         <li>Manage users</li>
+                                        <li>Submit service requests</li>
+                                        <li>View invoices</li>
+                                        <li>View remissions</li>
+                                        <li>View service performance</li>
                                     </ul>
-
-
 
 
 
@@ -347,7 +357,10 @@
                 $("#btnContinue").attr("href", "addUser-step2.html").text("Continue");
             }
         });
+
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+
+</html>

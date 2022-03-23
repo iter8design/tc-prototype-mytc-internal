@@ -11,7 +11,7 @@
     <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
 		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
     <!-- InstanceBeginEditable name="PageTitle" -->
-    <title>Marine Inspection Tracking (MITRACK) - myTC Account</title>
+    <title>Remove access - myTC Account</title>
     <!-- InstanceEndEditable -->
     <meta content="width=device-width,initial-scale=1" name="viewport">
     <!-- Meta data -->
@@ -30,8 +30,8 @@
 		<link href="../GCWeb/assets/favicon.ico" rel="shortcut icon" />
 		
 		<link rel="stylesheet" href="../GCWeb/css/ie8-theme.min.css" />
-		<script src="../../../jquery/1.11.1/jquery.min.js"></script>
-		<script src="../wet-bo../../../ie8-wet-boew.min.js"></script>
+		<script src="../../../js/jquery/1.11.1/jquery.min.js"></script>
+		<script src="../../../wet-boew/js/ie8-wet-boew.min.js"></script>
 		<![endif]-->
     <!--[if lte IE 9]>
 		
@@ -100,10 +100,13 @@
             <div class="container">
                 <div class="row">
                     <ol class="breadcrumb">
-                        <li><a href="#">Home</a></li>
+                        <li><a href="home.html">Home</a></li>
                         <!-- InstanceBeginEditable name="Breadcrumbs" -->
                         <li><a href="#">Applications</a></li>
-                        <li>Marine Inspection Tracking (MITRACK)</li>
+                        <li><a href="appDashboard.html">Manufacturer Import of Small Vessels (MISV)</a></li>
+                        <li><a href="users.html">Users</a></li>
+                        <li><a href="editUser-internal.html">Paul Davies</a></li>
+                        <li>Remove access</li>
                         <!-- InstanceEndEditable -->
                     </ol>
                 </div>
@@ -112,114 +115,47 @@
     </header>
     <main role="main" property="mainContentOfPage" class="container">
         <!-- InstanceBeginEditable name="Content" -->
-        <h1 property="name" id="wb-cont">Marine Inspection Tracking (MITRACK)</h1>
+        <h1 property="name" id="wb-cont"><i class="fa-solid fa-user-xmark"></i> Remove access</h1>
 
-        <div class="row">
-            <div class="col-md-12">
-                <div class="panel panel-default mrgn-bttm-md">
-                    <header class="panel-heading">
-                        <h2 class="panel-title">Services</h2>
-                    </header>
-                    <div class="panel-body">
-                        <p>The following services are available within this application:</p>
-                        <ul>
-                            <li>Request a prewash endorsement/exemption</li>
-                            <li>Request a verification of shipper’s procedures for cargoes that may liquefy</li>
-                            <li>Request concentrates, grains or timber cargo inspection</li>
-                            <li>Request for a follow-up Port State Control inspection to confirm rectification of deficiencies for foreign vessels</li>
-                            <li>Request for a follow-up Port State Control inspection to rescind a detention order for foreign vessels</li>
-                            <li>Request for inspection of a vessel loading, carrying or unloading dangerous goods (Bulk or packaged form)</li>
 
-                        </ul>
-                    </div>
+        <p>It appears that Paul Davies (paul.davies@tc.gc.ca) has access to several applications. </p>
 
+        <form action="users-suspendConfirmation.html" method="get">
+            <fieldset class="mrgn-tp-sm mrgn-bttm-sm">
+                <legend class="medium">Do you want to remove access for: <span class="wb-inv">(required)</span>
+
+                </legend>
+                <div class="radio">
+                    <label for="all">
+                        <input type="radio" name="removeScope" value="radio" checked id="singleApp">
+                        Services within Manufacturer Import of Small Vessels (MISV) only
+
+                    </label>
+                </div>
+                <div class="radio">
+                    <label for="periodSet">
+                        <input type="radio" name="removeScope" value="radio" id="multiApp">
+                        All myTC applications and services
+                    </label>
                 </div>
 
-            </div>
-        </div>
+            </fieldset>
 
 
-
-        <div class="row wb-eqht-grd">
-            <div class="col-md-6">
-                <div class="panel panel-default mrgn-bttm-md eqht-trgt">
-                    <header class="panel-heading">
-                        <h2 class="panel-title">Users</h2>
-                    </header>
-                    <div class="panel-body">
-                        <p>There are:</p>
-                        <p><span class="xlarge">13</span> active users, <span class="xlarge">1</span> user pending activation</p>
-                        <p><span class="xlarge">1</span> suspended user</p>
-
-                    </div>
-                    <footer class="panel-footer">
-                        <a href="../../../usabilityTesting/mitrack/addUser-step1.html" class="btn btn-primary"><i class="fa-solid fa-users"></i> Manage users</a>
-                    </footer>
-                </div>
-
-            </div>
-            <div class="col-md-6">
-                <div class="panel panel-default mrgn-bttm-md eqht-trgt">
-                    <header class="panel-heading">
-                        <h2 class="panel-title">Roles</h2>
-                    </header>
-                    <div class="panel-body">
-                        <p>You've setup:</p>
-                        <p><span class="xlarge">4</span> roles</p>
-                        <p><span class="xlarge">12</span> permissions</p>
-                    </div>
-                    <footer class="panel-footer">
-                        <a href="../../../usabilityTesting/mitrack/rolesPermissions.html" class="btn btn-primary"><i class="fa-solid fa-user-lock"></i> Manage roles & permissions</a>
-                    </footer>
-                </div>
-            </div>
-        </div>
-
-        <div class="row wb-eqht-grd">
-            <div class="col-md-6">
-                <div class="panel panel-default mrgn-bttm-md eqht-trgt">
-                    <header class="panel-heading">
-                        <h2 class="panel-title">Notices</h2>
-                    </header>
-                    <div class="panel-body">
-                        <p>There are:</p>
-                        <p><span class="xlarge">0</span> active notices</p>
-                        <p><span class="xlarge">1</span> upcoming outage</p>
-
-                    </div>
-                    <footer class="panel-footer">
-                        <a href="#" class="btn btn-primary"><i class="fa-solid fa-bells"></i> Manage notices</a>
-                    </footer>
-                </div>
-
-            </div>
-            <div class="col-md-6 ">
-                <div class="panel panel-default mrgn-bttm-md eqht-trgt">
-                    <header class="panel-heading">
-                        <h2 class="panel-title">Email templates</h2>
-                    </header>
-                    <div class="panel-body eqht-trgt">
-                        <p>You've setup:</p>
-                        <p><span class="xlarge">2</span> email templates</p>
-                    </div>
-                    <footer class="panel-footer">
-                        <a href="#" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> Manage email templates</a>
-                    </footer>
-                </div>
-            </div>
-        </div>
+            <p>By continuing, an email confirmation will be sent to inform this person that their access has been removed.</p>
 
 
+            <div class="nav-button"> <a class="btn btn-primary" href="users-removeConfirmation.html">Remove access</a> <a href="#" class="btn btn-link">Cancel</a> </div>
 
 
-
+        </form>
         <!-- InstanceEndEditable -->
         <div class="datemod col-xs-12 mrgn-tp-lg">
             <dl id="wb-dtmd">
                 <dt>Date modified:&#32;</dt>
                 <dd>
                     <time property="dateModified">
-                        <!-- #BeginDate format:IS1 -->2022-02-23
+                        <!-- #BeginDate format:IS1 -->2022-03-09
                         <!-- #EndDate -->
                     </time>
                 </dd>
@@ -253,10 +189,10 @@
 		<![endif]-->
     <script src="../../../GCWeb/js/theme.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
-    <!-- InstanceBeginEditable name="CustomJS" -->
 
     <script>
         $(document).on("wb-ready.wb", function(event) {
+            $(".showHide").hide();
 
         });
     </script>
