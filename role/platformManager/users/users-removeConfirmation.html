@@ -92,7 +92,7 @@
                 </nav>
             </div>
         </div>
-        <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../../includes/menus/menu-serviceAdministrator.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
+        <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../../../../includes/menus/menu-serviceAdministrator.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
 
 
         <nav role="navigation" id="wb-bc" property="breadcrumb">
@@ -100,10 +100,10 @@
             <div class="container">
                 <div class="row">
                     <ol class="breadcrumb">
-                        <li><a href="home.html">Home</a></li>
+                        <li><a href="../home.html">Home</a></li>
                         <!-- InstanceBeginEditable name="Breadcrumbs" -->
                         <li><a href="#">Applications</a></li>
-                        <li><a href="appDashboard.html">Manufacturer Import of Small Vessels (MISV)</a></li>
+                        <li><a href="../dashboards/appDashboard-MISV.html">Manufacturer Import of Small Vessels (MISV)</a></li>
                         <li>Users</li>
                         <!-- InstanceEndEditable -->
                     </ol>
@@ -115,7 +115,13 @@
         <!-- InstanceBeginEditable name="Content" -->
         <h1 property="name" id="wb-cont"><i class="fa-solid fa-users"></i> Users</h1>
 
+        <section class="alert alert-success mrgn-bttm-md">
+            <h2>User removed</h2>
+            <p><strong>Paul Davies (paul.davies@tc.gc.ca)</strong> has been successfully removed. </p>
+        </section>
+
         <p>To add a new user, press the <strong>Add user</strong> button. To view or make changes to an existing user, select the person's name or select an action from the menu.</p>
+
 
         <section class="panel panel-datatable">
 
@@ -156,8 +162,6 @@
                                 <option value="r3">Marine Reviewer</option>
 
                                 <option value="r2">Marine Inspector</option>
-                                <option value="r2">Marine Safety Inspector</option>
-
                                 <option value="r4">Application Owner</option>
 
 
@@ -184,27 +188,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr1"></th>
-                        <td><label for="usr1"><a href="editUser-internal.html">Paul Davies</a><br> <span class="small">paul.davies@tc.gc.ca</span></label></td>
-                        <td>
-                            <div class="pill-green pill-status">Active</div>
-                        </td>
-                        <td>Marine Inspector <a href="#dlg-roleHelp" class="wb-lbx" title="What can an Marine Inspector do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
-                        <td>All</td>
-                        <td>
-                            <div class="btn-group pull-right">
-                                <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Actions <span class="sr-only">for {First name} {Last name}</span><span class="caret"></span> </button>
-                                <ul class="dropdown-menu">
 
-                                    <li><a href="editUser-internal.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
-                                    <li><a href="suspend.html"><i class="fa-solid fa-user-lock"></i> Suspend access <span class="sr-only">for {First name} {Last name}</span></a></li>
-                                    <li><a href="../../role/platformManager/users/remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
-                                </ul>
-                            </div>
-                        </td>
-                    </tr>
                     <tr>
                         <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr2"></th>
                         <td><label for="usr2"><a href="editUser-internal.html">Linda Fry</a> <br> <span class="small">linda.fry@tc.gc.ca</span></label></td>
@@ -221,7 +205,7 @@
 
                                     <li><a href="editUser-internal.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                     <li><a href="suspend.html"><i class="fa-solid fa-user-lock"></i> Suspend access <span class="sr-only">for {First name} {Last name}</span></a></li>
-                                    <li><a href="../../role/platformManager/users/remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                 </ul>
                             </div>
                         </td>
@@ -243,7 +227,7 @@
 
                                     <li><a href="editUser-internal.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                     <li><a href="suspend.html"><i class="fa-solid fa-user-lock"></i> Suspend access <span class="sr-only">for {First name} {Last name}</span></a></li>
-                                    <li><a href="../../role/platformManager/users/remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                 </ul>
                             </div>
                         </td>
@@ -265,7 +249,7 @@
 
                                     <li><a href="editUser-internal.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                     <li><a href="reinstate.html"><i class="fa-solid fa-user-unlock"></i> Reinstate access <span class="sr-only">for {First name} {Last name}</span></a></li>
-                                    <li><a href="../../role/platformManager/users/remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                 </ul>
                             </div>
                         </td>
@@ -277,7 +261,7 @@
                         <td>
                             <div class="pill-yellow pill-status">Pending registration</div>
                         </td>
-                        <td>Compliance Officer <a href="#dlg-roleHelp" class="wb-lbx" title="What can an Marine Inspector do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
+                        <td>Compliance Officer <a href="#dlg-roleHelp" class="wb-lbx" title="What can an Compliance Officer do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
                         <td>All</td>
                         <td>
                             <div class="btn-group pull-right">
@@ -287,7 +271,7 @@
 
                                     <li><a href="editUser-internal.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                     <li><a href="users-resendConfirmation.html"><i class="fa-solid fa-envelope-dot"></i> Resend invitation <span class="sr-only">for {First name} {Last name}</span></a></li>
-                                    <li><a href="../../role/platformManager/users/remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                 </ul>
                             </div>
                         </td>
@@ -309,7 +293,7 @@
 
                                     <li><a href="editUser-internal.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                     <li><a href="suspend.html"><i class="fa-solid fa-user-lock"></i> Suspend access <span class="sr-only">for {First name} {Last name}</span></a></li>
-                                    <li><a href="../../role/platformManager/users/remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                 </ul>
                             </div>
                         </td>
@@ -330,7 +314,7 @@
 
                                     <li><a href="editUser-internal.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                     <li><a href="suspend.html"><i class="fa-solid fa-user-lock"></i> Suspend access <span class="sr-only">for {First name} {Last name}</span></a></li>
-                                    <li><a href="../../role/platformManager/users/remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                 </ul>
                             </div>
                         </td>
@@ -351,7 +335,7 @@
 
                                     <li><a href="editUser-internal.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                     <li><a href="suspend.html"><i class="fa-solid fa-user-lock"></i> Suspend access <span class="sr-only">for {First name} {Last name}</span></a></li>
-                                    <li><a href="../../role/platformManager/users/remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                 </ul>
                             </div>
                         </td>
@@ -373,7 +357,7 @@
 
                                     <li><a href="editUser-internal.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                     <li><a href="suspend.html"><i class="fa-solid fa-user-lock"></i> Suspend access <span class="sr-only">for {First name} {Last name}</span></a></li>
-                                    <li><a href="../../role/platformManager/users/remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                 </ul>
                             </div>
                         </td>
@@ -394,7 +378,7 @@
 
                                     <li><a href="editUser-internal.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                     <li><a href="suspend.html"><i class="fa-solid fa-user-lock"></i> Suspend access <span class="sr-only">for {First name} {Last name}</span></a></li>
-                                    <li><a href="../../role/platformManager/users/remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                 </ul>
                             </div>
                         </td>
@@ -415,7 +399,7 @@
 
                                     <li><a href="editUser-internal.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                     <li><a href="suspend.html"><i class="fa-solid fa-user-lock"></i> Suspend access <span class="sr-only">for {First name} {Last name}</span></a></li>
-                                    <li><a href="../../role/platformManager/users/remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                 </ul>
                             </div>
                         </td>
@@ -437,7 +421,7 @@
 
                                     <li><a href="editUser-internal.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                     <li><a href="suspend.html"><i class="fa-solid fa-user-lock"></i> Suspend access <span class="sr-only">for {First name} {Last name}</span></a></li>
-                                    <li><a href="../../role/platformManager/users/remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                 </ul>
                             </div>
                         </td>
@@ -459,7 +443,7 @@
 
                                     <li><a href="editUser-internal.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                     <li><a href="suspend.html"><i class="fa-solid fa-user-lock"></i> Suspend access <span class="sr-only">for {First name} {Last name}</span></a></li>
-                                    <li><a href="../../role/platformManager/users/remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
                                 </ul>
                             </div>
                         </td>
@@ -474,24 +458,38 @@
             </footer>
         </section>
 
-        <p class="mrgn-tp-md">
-            <a href="appDashboard.html"><i class="fas fa-reply mrgn-rght-sm"></i>Return to Manufacturer Import of Small Vessels (MISV)</a>
-        </p>
+        <a href="appDashboard.html"><i class="fas fa-reply mrgn-rght-sm"></i>Return to Manufacturer Import of Small Vessels (MISV)</a>
 
         <section id="dlg-roleHelp" class="mfp-hide modal-dialog modal-content overlay-def">
             <header class="modal-header">
                 <h2 class="modal-title">What can this role do?</h2>
             </header>
             <div class="modal-body">
-                <h3 class="mrgn-tp-md">Marine Inspector</h3>
+                <h3 class="mrgn-tp-md">Inspector</h3>
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-6">
 
                         <div class="well">
-                            <p><i class="fa-solid fa-shield-check fa-2xl text-green "></i> This role may:</p>
+                            <p><i class="fa-solid fa-shield-check fa-2xl text-green"></i> This role may:</p>
                             <ul class="mrgn-lft-md">
-                                <li>View service requests</li>
-                                <li>Accept/reject service requests</li>
+                                <li>Manage service requests</li>
+                                <li>Enter service request time</li>
+                                <li>Backdate status changes</li>
+                                <li>View invoices</li>
+                                <li>Submit service requests</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="well">
+                            <p><i class="fa-solid fa-shield-xmark fa-2xl text-red"></i> This role <strong>may not</strong>:</p>
+                            <ul class="mrgn-lft-md">
+
+                                <li>Assign service requests</li>
+                                <li>Generate invoices</li>
+                                <li>View remissions</li>
+                                <li>Approve remissions</li>
                             </ul>
                         </div>
                     </div>
@@ -504,8 +502,6 @@
                 <a href="#" class="popup-modal-dismiss btn btn-default pull-left"><i class="fa-solid fa-face-smile-hearts"></i> Got it!</a>
             </footer>
         </section>
-
-
 
         <section id="dlg-serviceHelp" class="mfp-hide modal-dialog modal-content overlay-def">
             <header class="modal-header">
@@ -517,11 +513,13 @@
                     <div class="col-md-6">
 
                         <div class="well">
-                            <p><i class="fa-solid fa-square-check fa-2xl text-green"></i> Access to <strong>1</strong> service:</p>
+                            <p><i class="fa-solid fa-square-check fa-2xl text-green"></i> Access to <strong>5</strong> services:</p>
                             <ul class="mrgn-lft-md">
-
-                                <li>Declaration of conformity (DoC) administration</li>
-
+                                <li>Request a prewash endorsement/exemption</li>
+                                <li>Request a verification of shipper’s procedures for cargoes that may liquefy</li>
+                                <li>Request concentrates, grains or timber cargo inspection</li>
+                                <li>Request for a follow-up Port State Control inspection to confirm rectification of deficiencies for foreign vessels</li>
+                                <li>Request for a follow-up Port State Control inspection to rescind a detention order for foreign vessels</li>
                             </ul>
                         </div>
                     </div>
@@ -531,9 +529,8 @@
                             <p><i class="fa-solid fa-square-xmark fa-2xl text-red"></i> <strong>Does not have access</strong> to 1 service:</p>
                             <ul class="mrgn-lft-md">
 
-                                <li>Annual production report (APR) administration</li>
+                                <li>Request for inspection of a vessel loading, carrying or unloading dangerous goods (Bulk or packaged form)</li>
                             </ul>
-
                         </div>
                     </div>
 
@@ -545,7 +542,6 @@
                 <a href="#" class="popup-modal-dismiss btn btn-default pull-left"><i class="fa-solid fa-face-smile-hearts"></i> Got it!</a>
             </footer>
         </section>
-
 
         <!-- InstanceEndEditable -->
         <div class="datemod col-xs-12 mrgn-tp-lg">
@@ -586,10 +582,10 @@
 		
 		<![endif]-->
     <script src="../../GCWeb/js/theme.min.js"></script>
-    <!-- InstanceBeginEditable name="CustomJS" -->
     <script src="../../js/tc/bootstrap/tooltip.js"></script>
     <script src="../../js/tc/bootstrap/popover.js"></script>
     <script src="../../js/tc/bootstrap/dropdown.js"></script>
+    <!-- InstanceBeginEditable name="CustomJS" -->
 
     <script>
         $(document).on("wb-ready.wb", function(event) {
@@ -598,6 +594,12 @@
                 "retrieve": true
 
             }).api();
+
+            $(window).resize(function() {
+                $("#tblUsers").dataTable().fnAdjustColumnSizing();
+            });
+
+            $(".dataTables_scrollFootInner, .dataTables_scrollFoot").hide();
 
             $("thead input").on("keyup", function() {
                 /* Filter on the column (the index) of this element */
@@ -645,7 +647,6 @@
 
             });
 
-
             //Bind the click event handler to the checkboxes
             $("#tblUsers tbody").on('click', "th>:checkbox", function() {
                 fnHighlightSelectedRow($(this));
@@ -654,8 +655,6 @@
             // Temporarily hiding checkboxes until bulk actions are ready
             $("input[type=checkbox]").addClass("sr-only");
 
-
-
             /* Highlight the row that was checked */
             function fnHighlightSelectedRow(checkbox) {
                 if (checkbox.prop("checked"))
@@ -663,12 +662,6 @@
                 else
                     checkbox.parent("th").removeClass("highlight-yellow").nextAll("td").removeClass("highlight-yellow");
             }
-
-
-        });
-
-        $(".wb-tables").on("wb-updated.wb-tables", function(event, settings) {
-            $(".wb-lbx").trigger("wb-init.wb-lbx");
         });
 
     </script>
