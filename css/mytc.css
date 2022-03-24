@@ -174,6 +174,18 @@ textarea.fieldError,
     margin-top: 10px;
 }
 
+.page-header {
+    margin-top: 5px;
+    margin-bottom: 16.75px;
+    padding-bottom: 4px;
+    padding-top: 0;
+    border-bottom: 1px solid #666;
+}
+
+.page-header h1 {
+    border-bottom: none;
+}
+
 .panel {
     width: 100%;
     height: 100%;
@@ -326,28 +338,38 @@ textarea.fieldError,
     /* W3C */
 }
 
-.wb-tabs {
-    margin-bottom: 15px;
-}
-
-
-
 .wb-tabs [role=tabpanel] {
     overflow-x: visible;
+}
 
+.wb-tabs [role=tablist].generated li {
+    top: 1px;
+}
+
+.wb-tabs [role=tablist] li.active a {
+    border-top-width: 0;
+    -webkit-border-top-right-radius: 4px;
+    -moz-border-radius-topright: 4px;
+    border-top-right-radius: 4px;
+    -webkit-border-top-left-radius: 4px;
+    -moz-border-radius-topleft: 4px;
+    border-top-left-radius: 4px;
+}
+
+.wb-tabs > .tabpanels {
+    overflow: visible;
 }
 
 .wb-tabs > .tabpanels > details {
-    padding-top: 15px;
+    border-top-left-radius: 0;
 }
 
-.wb-tabs [role=tablist] {
-    border-spacing: 0px 0px;
+.wb-tabs [role=tablist] li.active a:focus {
+    outline: none;
 }
 
-
-.wb-tabs [role=tablist] li {
-    margin: 0 3px 0 0;
+.wb-tabs [role=tablist] li a {
+    padding: 6px 12px 6px 12px;
 }
 
 /* myTC specific */
