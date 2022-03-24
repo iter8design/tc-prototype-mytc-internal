@@ -619,6 +619,10 @@ tr.separator-bttm th {
     color: #999;
 }
 
+.text-dark-grey {
+    color: #666;
+}
+
 .text-blue {
     color: #284162;
 }
