@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
+<!--[if gt IE 8]>
+<!-->
+<html class="no-js" lang="en" dir="ltr">
+<!-- InstanceBegin template="/Templates/Full Page Layout.dwt" codeOutsideHTMLIsLocked="false" -->
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+    <!-- InstanceBeginEditable name="PageTitle" -->
+    <title>Users - myTC Account</title>
+    <!-- InstanceEndEditable -->
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <!-- Meta data -->
+    <meta name="description" content="">
+    <!-- Meta data-->
+    <!--[if gte IE 9 | !IE ]><!-->
+    <link href="../../../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="../../../GCWeb/css/theme.min.css">
+    <link rel="stylesheet" href="../../../css/cdtsapps.css">
+    <link rel="stylesheet" href="../../../css/fontawesome/css/all.css">
+    <link rel="stylesheet" href="../../../css/mytc.css">
+    <link rel="stylesheet" href="../../../css/utils.css">
+    <link rel="stylesheet" href="../../../css/plugins.css">
+    <!--<![endif]-->
+    <!--[if lt IE 9]>
+		<link href="../GCWeb/assets/favicon.ico" rel="shortcut icon" />
+		
+		<link rel="stylesheet" href="../GCWeb/css/ie8-theme.min.css" />
+		<script src="../js/jquery/1.11.1/jquery.min.js"></script>
+		<script src="../wet-boew/js/ie8-wet-boew.min.js"></script>
+		<![endif]-->
+    <!--[if lte IE 9]>
+		
+		
+		<![endif]-->
+    <noscript>
+        <link rel="stylesheet" href="../../../wet-boew/css/noscript.min.css" />
+    </noscript>
+    <!-- InstanceBeginEditable name="CustomJSLibraries" -->
+    <!-- InstanceEndEditable -->
+    <!-- InstanceBeginEditable name="CustomCSS" -->
+    <!-- InstanceEndEditable -->
+</head>
+
+<body class="secondary" vocab="http://schema.org/" typeof="WebPage">
+    <ul id="wb-tphp">
+        <li class="wb-slc"> <a class="wb-sl" href="#wb-cont">Skip to main content</a> </li>
+        <li class="wb-slc visible-sm visible-md visible-lg"> <a class="wb-sl" href="#wb-info">Skip to "About this Web application"</a> </li>
+    </ul>
+    <header role="banner">
+        <div id="wb-bnr" class="container">
+            <div class="row">
+                <div class="brand col-xs-9 col-sm-8 col-md-6">
+                    <object type="image/svg+xml" tabindex="-1" data="../../../GCWeb/assets/sig-blk-en.svg">
+                    </object>
+                    <span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span>
+                </div>
+                <section id="wb-lng" class="text-right col-xs-3 col-sm-4 col-md-6">
+                    <h2 class="wb-inv">Language selection</h2>
+                    <ul class="list-inline margin-bottom-none">
+                        <li><a lang="fr" href="#">Français</a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+        <div class="app-bar">
+            <div class="container">
+                <div class="row">
+                    <section class="col-xs-12 col-sm-12">
+                        <h2 class="wb-inv">Transport Canada myTC Account</h2>
+                        <a class="app-name" href="#">Transport Canada <br>
+                            <em>my</em>TC Account</a>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div class="app-bar-mb">
+            <div class="container visible-xs-block hidden-print">
+                <nav role="navigation">
+                    <!-- Adjust the following depending on search and/or menu settings -->
+                    <h2 class="wb-inv">Search and menu</h2>
+                    <ul class="app-list-main list-unstyled">
+                        <li class="wb-mb-links" id="wb-glb-mn"><a href="#mb-pnl" aria-controls="mb-pnl" class="btn overlay-lnk" role="button">Menu</a>
+                            <h2>Menu</h2>
+                        </li>
+                    </ul>
+                    <div id="mb-pnl"></div>
+                </nav>
+            </div>
+        </div>
+        <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../../../includes/menus/menu-applicationOwner.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
+
+
+        <nav role="navigation" id="wb-bc" property="breadcrumb">
+            <h2>You are here:</h2>
+            <div class="container">
+                <div class="row">
+                    <ol class="breadcrumb">
+                        <li><a href="../home.html">Home</a></li>
+                        <!-- InstanceBeginEditable name="Breadcrumbs" -->
+
+                        <li><a href="../dashboards/appDashboard-MITRACK.html">Marine Inspection Tracking (MITRACK)</a></li>
+                        <li>Users</li>
+                        <!-- InstanceEndEditable -->
+                    </ol>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main role="main" property="mainContentOfPage" class="container">
+        <!-- InstanceBeginEditable name="Content" -->
+        <h1 property="name" id="wb-cont"><i class="fa-solid fa-users"></i> Users</h1>
+
+        <section class="alert alert-success mrgn-bttm-md">
+            <h2>User suspended</h2>
+            <p><strong>Paul Davies (paul.davies@tc.gc.ca)</strong>'s access has been suspended. </p>
+        </section>
+
+        <p>To add a new user, press the <strong>Add user</strong> button. To view or make changes to an existing user, select the person's name or select an action from the menu.</p>
+
+        <section class="panel panel-datatable">
+
+            <table id="tblUsers" class="wb-tables table table-striped mrgn-bttm-md" data-wb-tables='{"info" : false, "filter" : true, "paginate" : true, "order" : [],
+
+        "columnDefs": [{ "orderable" : false, "targets":[0,1,2,3,4,5] }],
+"language": {
+				"infoEmpty": "",
+				"zeroRecords": "No matching users found.",
+				"info": "",
+				"lengthMenu" : "Display _MENU_ per page",
+				"emptyTable" : "No users have been added yet."
+			}
+}'>
+                <caption class="wb-inv">List of users for Marine Inspection Tracking (MITRACK)</caption>
+                <thead>
+                    <tr>
+                        <th scope="col" class="width2 text-center"><span class="sr-only">Select</span><span class="selectAll"></span></th>
+                        <th scope="col" class="width30"><label for="name" class="sr-only">Name or email address</label>
+                            <div class="input-group">
+                                <input name="name" id="name" type="text" size="50" class="form-control" autocomplete="email" maxlength="150" placeholder="Search users...">
+                                <span class="input-group-addon"><i class="fas fa-search"></i></span>
+                            </div>
+                        </th>
+                        <th scope="col" class="width15"><label for="status" class="sr-only">Status</label>
+                            <select name="status" id="status" class="form-control full-width">
+                                <option value="" selected>&lsaquo;&lsaquo;&lsaquo;Status&rsaquo;&rsaquo;&rsaquo;</option>
+                                <option value="Active">Active</option>
+                                <option value="Pending registration">Pending registration</option>
+                                <option value="Suspended">Suspended</option>
+                            </select>
+                        </th>
+                        <th scope="col" class="width10"><label for="role" class="sr-only">Role</label>
+                            <select name="role" id="role" class="form-control full-width">
+                                <option value="" selected>&lsaquo;&lsaquo;&lsaquo;Role&rsaquo;&rsaquo;&rsaquo;</option>
+                                <option value="Clerk">Clerk</option>
+                                <option value="Inspector">Inspector</option>
+                                <option value="Manager">Manager</option>
+                                <option value="Application Owner">Application Owner</option>
+
+
+                            </select>
+                        </th>
+                        <th scope="col" class="width30"><label for="services" class="sr-only">Service</label>
+                            <select name="services" id="services" class="form-control full-width">
+                                <option value="" selected>&lsaquo;&lsaquo;&lsaquo;Service&rsaquo;&rsaquo;&rsaquo;</option>
+                                <option value="">Request a prewash endorsement/exemption</option>
+                                <option value="">Request a verification of shipper’s procedures for cargoes that may liquefy</option>
+                                <option value="">Request concentrates, grains or timber cargo inspection</option>
+                                <option value="">Request for a follow-up Port State Control inspection to confirm rectification of deficiencies for foreign vessels</option>
+                                <option value="">Request for a follow-up Port State Control inspection to rescind a detention order for foreign vessels</option>
+                                <option value="">Request for inspection of a vessel loading, carrying or unloading dangerous goods (Bulk or packaged form)</option>
+                            </select>
+                        </th>
+                        <th scope="col" class="width20"><span class="sr-only">Actions</span>
+                            <a href="addUser-step1.html" class="btn btn-primary pull-right text-nowrap"><i class="fa-solid fa-user-plus"></i> Add user</a>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr1"></th>
+                        <td><label for="usr1"><a href="editUser.html">Paul Davies</a><br> <span class="small">paul.davies@tc.gc.ca</span></label></td>
+                        <td>
+                            <div class="pill-red pill-status">Suspended</div>
+                        </td>
+                        <td>Inspector <a href="#dlg-roleHelp" class="wb-lbx" title="What can an Inspector do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
+                        <td></td>
+                        <td>
+                            <div class="btn-group pull-right">
+                                <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Actions <span class="sr-only">for {First name} {Last name}</span><span class="caret"></span> </button>
+                                <ul class="dropdown-menu">
+
+                                    <li><a href="editUser.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="reinstate.html"><i class="fa-solid fa-user-unlock"></i> Reinstate access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr2"></th>
+                        <td><label for="usr2"><a href="editUser.html">Linda Fry</a> <br> <span class="small">linda.fry@tc.gc.ca</span></label></td>
+                        <td>
+                            <div class="pill-green pill-status">Active</div>
+                        </td>
+                        <td>Varies</td>
+                        <td><span class="text-nowrap">5 of 6</span> <a href="#dlg-serviceHelp" class="wb-lbx" title="What services can this person access?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
+                        <td>
+                            <div class="btn-group pull-right">
+                                <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Actions <span class="sr-only">for {First name} {Last name}</span><span class="caret"></span> </button>
+                                <ul class="dropdown-menu">
+
+                                    <li><a href="editUser.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="suspend.html"><i class="fa-solid fa-user-lock"></i> Suspend access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                </ul>
+                            </div>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr3"></th>
+                        <td><label for="usr3"><a href="editUser.html">Norman Gregory</a> <br> <span class="small">norman.gregory@tc.gc.ca</span></label></td>
+                        <td>
+                            <div class="pill-green pill-status">Active</div>
+                        </td>
+                        <td>Inspector <a href="#dlg-roleHelp" class="wb-lbx" title="What can an Inspector do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
+                        <td>3 of 6 <a href="#dlg-serviceHelp" class="wb-lbx" title="What services can this person access?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
+                        <td>
+                            <div class="btn-group pull-right">
+                                <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Actions <span class="sr-only">for {First name} {Last name}</span><span class="caret"></span> </button>
+                                <ul class="dropdown-menu">
+
+                                    <li><a href="editUser.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="suspend.html"><i class="fa-solid fa-user-lock"></i> Suspend access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                </ul>
+                            </div>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr4"></th>
+                        <td><label for="usr4"><a href="editUser.html">Mark Hills</a> <br> <span class="small">mark.hills@tc.gc.ca</span></label></td>
+                        <td>
+                            <div class="pill-red pill-status">Suspended</div>
+                        </td>
+                        <td>Inspector <a href="#dlg-roleHelp" class="wb-lbx" title="What can an Inspector do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
+                        <td></td>
+                        <td>
+                            <div class="btn-group pull-right">
+                                <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Actions <span class="sr-only">for {First name} {Last name}</span><span class="caret"></span> </button>
+                                <ul class="dropdown-menu">
+
+                                    <li><a href="editUser.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="reinstate.html"><i class="fa-solid fa-user-unlock"></i> Reinstate access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                </ul>
+                            </div>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr5"></th>
+                        <td><label for="usr5">tomz@outlook.com <br></label></td>
+                        <td>
+                            <div class="pill-yellow pill-status">Pending registration</div>
+                        </td>
+                        <td>Inspector <a href="#dlg-roleHelp" class="wb-lbx" title="What can an Inspector do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
+                        <td>All</td>
+                        <td>
+                            <div class="btn-group pull-right">
+                                <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Actions <span class="sr-only">for {First name} {Last name}</span><span class="caret"></span> </button>
+                                <ul class="dropdown-menu">
+
+                                    <li><a href="editUser.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="users-resendConfirmation.html"><i class="fa-solid fa-envelope-dot"></i> Resend invitation <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                </ul>
+                            </div>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr6"></th>
+                        <td><label for="usr6"><a href="editUser.html">Mark Healey</a> <br> <span class="small">mark.healey@tc.gc.ca</span></label></td>
+                        <td>
+                            <div class="pill-green pill-status">Active</div>
+                        </td>
+                        <td>Inspector <a href="#dlg-roleHelp" class="wb-lbx" title="What can an Inspector do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
+                        <td>All</td>
+                        <td>
+                            <div class="btn-group pull-right">
+                                <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Actions <span class="sr-only">for {First name} {Last name}</span><span class="caret"></span> </button>
+                                <ul class="dropdown-menu">
+
+                                    <li><a href="editUser.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="suspend.html"><i class="fa-solid fa-user-lock"></i> Suspend access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr7"></th>
+                        <td><label for="usr7"><a href="editUser.html">Neil Horwath</a> <br> <span class="small">neil.horwath@tc.gc.ca</span></label></td>
+                        <td>
+                            <div class="pill-green pill-status">Active</div>
+                        </td>
+                        <td>Inspector <a href="#dlg-roleHelp" class="wb-lbx" title="What can an Inspector do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
+                        <td>All</td>
+                        <td>
+                            <div class="btn-group pull-right">
+                                <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Actions <span class="sr-only">for {First name} {Last name}</span><span class="caret"></span> </button>
+                                <ul class="dropdown-menu">
+
+                                    <li><a href="editUser.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="suspend.html"><i class="fa-solid fa-user-lock"></i> Suspend access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr8"></th>
+                        <td><label for="usr8"><a href="editUser.html">Thomas Jenkins</a> <br> <span class="small">thomas.jenkins@tc.gc.ca</span></label></td>
+                        <td>
+                            <div class="pill-green pill-status">Active</div>
+                        </td>
+                        <td>Manager <a href="#dlg-roleHelp" class="wb-lbx" title="What can a Manager do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
+                        <td>All</td>
+                        <td>
+                            <div class="btn-group pull-right">
+                                <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Actions <span class="sr-only">for {First name} {Last name}</span><span class="caret"></span> </button>
+                                <ul class="dropdown-menu">
+
+                                    <li><a href="editUser.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="suspend.html"><i class="fa-solid fa-user-lock"></i> Suspend access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr9"></th>
+                        <td><label for="usr9"><a href="editUser.html">Tammy Koury</a> <br> <span class="small">tammy.koury@tc.gc.ca</span></label></td>
+                        <td>
+                            <div class="pill-green pill-status">Active</div>
+                        </td>
+                        <td>Inspector <a href="#dlg-roleHelp" class="wb-lbx" title="What can an Inspector do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
+                        <td>All</td>
+                        <td>
+                            <div class="btn-group pull-right">
+                                <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Actions <span class="sr-only">for {First name} {Last name}</span><span class="caret"></span> </button>
+                                <ul class="dropdown-menu">
+
+                                    <li><a href="editUser.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="suspend.html"><i class="fa-solid fa-user-lock"></i> Suspend access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr10"></th>
+                        <td><label for="usr10"><a href="editUser.html">Sarah Lovelace</a> <br> <span class="small">sarah.lovelace@tc.gc.ca</span></label></td>
+                        <td>
+                            <div class="pill-green pill-status">Active</div>
+                        </td>
+                        <td>Clerk <a href="#dlg-roleHelp" title="What can a Clerk do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
+                        <td>All</td>
+                        <td>
+                            <div class="btn-group pull-right">
+                                <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Actions <span class="sr-only">for {First name} {Last name}</span><span class="caret"></span> </button>
+                                <ul class="dropdown-menu">
+
+                                    <li><a href="editUser.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="suspend.html"><i class="fa-solid fa-user-lock"></i> Suspend access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr11"></th>
+                        <td><label for="usr11"><a href="editUser.html">Frank O'Neil</a><br> <span class="small">frank.oneil@tc.gc.ca</span></label></td>
+                        <td>
+                            <div class="pill-green pill-status">Active</div>
+                        </td>
+                        <td>Clerk <a href="#dlg-roleHelp"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
+                        <td>All</td>
+                        <td>
+                            <div class="btn-group pull-right">
+                                <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Actions <span class="sr-only">for {First name} {Last name}</span><span class="caret"></span> </button>
+                                <ul class="dropdown-menu">
+
+                                    <li><a href="editUser.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="suspend.html"><i class="fa-solid fa-user-lock"></i> Suspend access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr12"></th>
+                        <td><label for="usr12"><a href="editUser.html">Jeff Smith</a> <br> <span class="small">jeff.smith@tc.gc.ca</span></label></td>
+                        <td>
+                            <div class="pill-green pill-status">Active</div>
+                        </td>
+                        <td>Inspector <a href="#dlg-roleHelp"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
+                        <td>All</td>
+                        <td>
+                            <div class="btn-group pull-right">
+                                <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Actions <span class="sr-only">for {First name} {Last name}</span><span class="caret"></span> </button>
+                                <ul class="dropdown-menu">
+
+                                    <li><a href="editUser.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="suspend.html"><i class="fa-solid fa-user-lock"></i> Suspend access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr13"></th>
+                        <td><label for="usr13"><a href="editUser.html">Paul Weston</a> <br> <span class="small">paul.weston@tc.gc.ca</span></label></td>
+                        <td>
+                            <div class="pill-green pill-status">Active</div>
+                        </td>
+                        <td>Inspector <a href="#dlg-roleHelp" class=""><i class="fa-solid fa-circle-question text-blue"></i></a></td>
+                        <td>All</td>
+                        <td>
+                            <div class="btn-group pull-right">
+                                <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Actions <span class="sr-only">for {First name} {Last name}</span><span class="caret"></span> </button>
+                                <ul class="dropdown-menu">
+
+                                    <li><a href="editUser.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="suspend.html"><i class="fa-solid fa-user-lock"></i> Suspend access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                    <li><a href="remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <footer class="panel-footer mrgn-0">
+                <div class="row">
+                    <div class="col-md-6 pages text-left"> </div>
+                    <div class="col-md-6 text-right text-left-sm text-left-xs displayOptions"></div>
+                </div>
+            </footer>
+        </section>
+
+        <p class="mrgn-tp-md">
+            <a href="appDashboard.html"><i class="fas fa-reply mrgn-rght-sm"></i>Return to Marine Inspection Tracking (MITRACK)</a>
+        </p>
+
+        <section id="dlg-roleHelp" class="mfp-hide modal-dialog modal-content overlay-def">
+            <header class="modal-header">
+                <h2 class="modal-title">What can this role do?</h2>
+            </header>
+            <div class="modal-body">
+                <h3 class="mrgn-tp-md">Inspector</h3>
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="well">
+                            <p><i class="fa-solid fa-shield-check fa-2xl text-green "></i> This role may:</p>
+                            <ul class="mrgn-lft-md">
+                                <li>Manage service requests</li>
+                                <li>Enter service request time</li>
+                                <li>Backdate status changes</li>
+                                <li>View invoices</li>
+                                <li>Submit service requests</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="well">
+                            <p><i class="fa-solid fa-shield-xmark fa-2xl text-red icon-border"></i> This role <strong>may not</strong>:</p>
+                            <ul class="mrgn-lft-md">
+
+                                <li>Assign service requests</li>
+                                <li>Generate invoices</li>
+                                <li>View remissions</li>
+                                <li>Approve remissions</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <footer class="modal-footer">
+                <a href="#" class="popup-modal-dismiss btn btn-default pull-left"><i class="fa-solid fa-face-smile-hearts"></i> Got it!</a>
+            </footer>
+        </section>
+
+
+
+        <section id="dlg-serviceHelp" class="mfp-hide modal-dialog modal-content overlay-def">
+            <header class="modal-header">
+                <h2 class="modal-title">What services can this person access?</h2>
+            </header>
+            <div class="modal-body">
+                <h3 class="mrgn-tp-md">{First name} {Last name}</h3>
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="well">
+                            <p><i class="fa-solid fa-square-check fa-2xl text-green"></i> Access to <strong>5</strong> services:</p>
+                            <ul class="mrgn-lft-md">
+                                <li>Request a prewash endorsement/exemption</li>
+                                <li>Request a verification of shipper’s procedures for cargoes that may liquefy</li>
+                                <li>Request concentrates, grains or timber cargo inspection</li>
+                                <li>Request for a follow-up Port State Control inspection to confirm rectification of deficiencies for foreign vessels</li>
+                                <li>Request for a follow-up Port State Control inspection to rescind a detention order for foreign vessels</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="well">
+                            <p><i class="fa-solid fa-square-xmark fa-2xl text-red"></i> <strong>Does not have access</strong> to 1 service:</p>
+                            <ul class="mrgn-lft-md">
+
+                                <li>Request for inspection of a vessel loading, carrying or unloading dangerous goods (Bulk or packaged form)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <footer class="modal-footer">
+                <a href="#" class="popup-modal-dismiss btn btn-default pull-left"><i class="fa-solid fa-face-smile-hearts"></i> Got it!</a>
+            </footer>
+        </section>
+
+
+        <!-- InstanceEndEditable -->
+        <div class="datemod col-xs-12 mrgn-tp-lg">
+            <dl id="wb-dtmd">
+                <dt>Date modified:&#32;</dt>
+                <dd>
+                    <time property="dateModified">
+                        <!-- #BeginDate format:IS1 -->2022-03-25
+                        <!-- #EndDate -->
+                    </time>
+                </dd>
+            </dl>
+        </div>
+    </main>
+    <footer role="contentinfo" id="wb-info">
+        <div class="brand">
+            <div class="container">
+                <div class="row">
+                    <nav class="col-md-10 ftr-urlt-lnk">
+
+                    </nav>
+                    <div class="col-xs-6 visible-sm visible-xs tofpg"><a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a></div>
+                    <div class="col-xs-6 col-md-2 text-right">
+                        <object type="image/svg+xml" tabindex="-1" role="img" data="../../../GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada">
+                        </object>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--[if gte IE 9 | !IE ]><!-->
+    <script src="../../../js/jquery/2.2.4/jquery.js"></script>
+    <script src="../../../wet-boew/js/wet-boew.min.js"></script>
+    <!--<![endif]-->
+    <!--[if lt IE 9]>
+		<script src="../wet-boew/js/ie8-wet-boew2.min.js"></script>
+		
+		<![endif]-->
+    <script src="../../../GCWeb/js/theme.min.js"></script>
+    <!-- InstanceBeginEditable name="CustomJS" -->
+    <script src="../../../js/tc/bootstrap/tooltip.js"></script>
+    <script src="../../../js/tc/bootstrap/popover.js"></script>
+    <script src="../../../js/tc/bootstrap/dropdown.js"></script>
+
+    <script>
+        $(document).on("wb-ready.wb", function(event) {
+
+            var oTable = $("#tblUsers").dataTable({
+                "retrieve": true
+
+            }).api();
+
+            $("thead input").on("keyup", function() {
+                /* Filter on the column (the index) of this element */
+                //var columnToSort = $(this).attr("data-column-position");
+                var filterText = $(this).val();
+                oTable.search(filterText).draw();
+            }).on("click", function(event) {
+                event.stopPropagation();
+            });
+
+            $("thead select").change(function() {
+                oTable.draw();
+            }).on("click", function(event) {
+                event.stopPropagation();
+            });
+
+
+            $('.dataTables_length').appendTo('footer.panel-footer .displayOptions');
+            $('.dataTables_wrapper .bottom').appendTo('footer.panel-footer .pages');
+            $('.top').remove();
+            $('.bottom, .top').addClass('dataTables_wrapper');
+
+
+
+            //Add the select all checkbox
+            var selectAllStr = 'Select all';
+            $(".selectAll").html("<input id='selectAll' type='checkbox' value='' title='" + selectAllStr + "'><label for='selectAll' class='wb-inv'>" + selectAllStr + "</label>");
+            $("#selectAll").click(function() {
+                if ($(this).prop("checked")) {
+                    $("th>:checkbox").each(function() {
+                        $(this).prop("checked", false);
+                        fnHighlightSelectedRow($(this));
+                    });
+
+                    $("th>:checkbox").each(function() {
+                        $(this).prop("checked", true);
+                        fnHighlightSelectedRow($(this));
+                    });
+                } else {
+                    $("th>:checkbox").each(function() {
+                        $(this).prop("checked", false);
+                        fnHighlightSelectedRow($(this));
+                    });
+                }
+
+            });
+
+
+            //Bind the click event handler to the checkboxes
+            $("#tblUsers tbody").on('click', "th>:checkbox", function() {
+                fnHighlightSelectedRow($(this));
+            });
+
+            // Temporarily hiding checkboxes until bulk actions are ready
+            $("input[type=checkbox]").addClass("sr-only");
+
+
+
+            /* Highlight the row that was checked */
+            function fnHighlightSelectedRow(checkbox) {
+                if (checkbox.prop("checked"))
+                    checkbox.parent("th").addClass("highlight-yellow").nextAll("td").addClass("highlight-yellow");
+                else
+                    checkbox.parent("th").removeClass("highlight-yellow").nextAll("td").removeClass("highlight-yellow");
+            }
+
+
+        });
+
+        $(".wb-tables").on("wb-updated.wb-tables", function(event, settings) {
+            $(".wb-lbx").trigger("wb-init.wb-lbx");
+        });
+    </script>
+    <!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd --></html>
