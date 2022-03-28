@@ -97,6 +97,12 @@ thead tr {
     margin-left: 1.0em;
 }
 
+.alert-danger {
+    background: #f3e9e8;
+    border-color: #d3080c;
+}
+
+
 .datemod {
     padding-left: 0px;
 }
