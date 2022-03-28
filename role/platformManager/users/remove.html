@@ -27,9 +27,9 @@
     <link rel="stylesheet" href="../../../css/plugins.css">
     <!--<![endif]-->
     <!--[if lt IE 9]>
-		<link href="../GCWeb/assets/favicon.ico" rel="shortcut icon" />
+		<link href="../../../GCWeb/assets/favicon.ico" rel="shortcut icon" />
 		
-		<link rel="stylesheet" href="../GCWeb/css/ie8-theme.min.css" />
+		<link rel="stylesheet" href="../../../GCWeb/css/ie8-theme.min.css" />
 		<script src="../../../js/jquery/1.11.1/jquery.min.js"></script>
 		<script src="../../../wet-boew/js/ie8-wet-boew.min.js"></script>
 		<![endif]-->
@@ -120,7 +120,7 @@
 
         <p>It appears that Paul Davies (paul.davies@tc.gc.ca) has access to several applications. </p>
 
-        <form action="users-suspendConfirmation.html" method="get">
+        <form action="#" method="get">
             <fieldset class="mrgn-tp-sm mrgn-bttm-sm">
                 <legend class="medium">Do you want to remove access for: <span class="wb-inv">(required)</span>
 
@@ -135,7 +135,7 @@
                 <div class="radio">
                     <label for="multiApp">
                         <input type="radio" name="removeScope" value="radio" id="multiApp">
-                        All myTC applications and services
+                        All <em>my</em>TC applications and services
                     </label>
                 </div>
 
@@ -145,7 +145,7 @@
             <p>By continuing, an email confirmation will be sent to inform this person that their access has been removed.</p>
 
 
-            <div class="nav-button"> <a class="btn btn-primary" href="users-removeConfirmation.html">Remove access</a> <a href="#" class="btn btn-link">Cancel</a> </div>
+            <div class="nav-button"> <a class="btn btn-primary" href="users-removeConfirmation.html">Remove access</a> <a href="editUser.html" class="btn btn-link">Cancel</a> </div>
 
 
         </form>
@@ -192,7 +192,6 @@
 
     <script>
         $(document).on("wb-ready.wb", function(event) {
-            $(".showHide").hide();
 
         });
 
