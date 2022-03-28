@@ -102,7 +102,7 @@
                     <ol class="breadcrumb">
                         <li><a href="home.html">Home</a></li>
                         <!-- InstanceBeginEditable name="Breadcrumbs" -->
-                        
+
                         <li><a href="appDashboard.html">Manufacturer Import of Small Vessels (MISV)</a></li>
                         <li><a href="users.html">Users</a></li>
                         <li>Jeff Smith</li>
@@ -134,8 +134,7 @@
 
                                 <select name="assignRole" id="assignRole" class="form-control full-width">
                                     <option value="">&lsaquo;&lsaquo;&lsaquo;Select&rsaquo;&rsaquo;&rsaquo;</option>
-                                    <option value="r1">Compliance Officer</option>
-                                    <option value="r2">Canadian Responsible Officer</option>
+
                                     <option value="r3">Marine Reviewer</option>
 
                                     <option value="r4" selected>Marine Inspector</option>
@@ -162,63 +161,17 @@
 
             <div id="cn-services">
                 <div class="row">
-                    <div class="col-md-4 r1 r2 r5">
-                        <div class="thumbnail">
 
-                            <div class="caption">
-                                <div class="row">
-                                    <div class="col-md-1">
-                                        <div class="checkbox">
-                                            <input type="checkbox" id="service1" name="services" value="" />
-                                        </div>
-                                    </div>
-                                    <div class="col-md-11">
-                                        <h3 class="thumbnail-label mrgn-tp-0"><label for="service1">Submit a declaration of conformity (DoC)</label></h3>
-                                        <div class="thumbnail-description smaller">
-
-                                            <label for="s1-rl">Role: <span class="sr-only"> for {service description} </span></label>
-                                            <select name="role" id="s1-rl" class="form-control full-width">
-                                                <option value="r1">Compliance Officer</option>
-                                                <option value="r2">Canadian Responsible Officer</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 r1 r2 r5">
-                        <div class="thumbnail">
-                            <div class="caption">
-                                <div class="row">
-                                    <div class="col-md-1">
-                                        <input type="checkbox" id="service2" name="services" value="" />
-                                    </div>
-                                    <div class="col-md-11">
-                                        <h3 class="thumbnail-label mrgn-tp-0"><label for="service2">Submit an annual production report (APR)</label></h3>
-                                        <div class="thumbnail-description smaller">
-
-                                            <label for="s2-rl">Role:<span class="sr-only"> for {service description} </span></label>
-                                            <select name="role" id="s2-r2" class="form-control full-width">
-                                                <option value="r1">Compliance Officer</option>
-                                                <option value="r2">Canadian Responsible Officer</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
                     <div class="col-md-4 r3 r4 r5">
                         <div class="thumbnail">
                             <div class="caption">
                                 <div class="row">
                                     <div class="col-md-1">
-                                        <input type="checkbox" id="service2" name="services" value="" checked />
+                                        <input type="checkbox" id="service1" name="services" value="" checked />
                                     </div>
                                     <div class="col-md-11">
-                                        <h3 class="thumbnail-label mrgn-tp-0"><label for="service2">Annual production report (APR) administration</label></h3>
+                                        <h3 class="thumbnail-label mrgn-tp-0"><label for="service1">Annual production report (APR) administration</label></h3>
                                         <div class="thumbnail-description smaller">
 
                                             <label for="s2-rl">Role:<span class="sr-only"> for {service description} </span></label>
@@ -338,7 +291,6 @@
 
             // quick search regex
             var qsRegex;
-            var serviceFilter = "." + $("#assignRole").children("option:selected").val();
 
             //Setup the services filter
             var $grid = $('#cn-services').isotope({
@@ -347,9 +299,8 @@
                 layoutMode: 'fitRows',
                 filter: function() {
                     var $this = $(this);
-                    var serviceResult = serviceFilter ? $this.is(serviceFilter) : true;
                     var searchResult = qsRegex ? $this.text().match(qsRegex) : true;
-                    return searchResult && serviceResult;
+                    return searchResult;
                 }
             });
 
@@ -358,46 +309,39 @@
                 $grid.isotope();
             }));
 
-            $("#assignRole").on("change", function() {
-                serviceFilter = "." + $(this).children("option:selected").val();
-                $grid.isotope();
+            /* $grid.on('arrangeComplete', function() {
+                /* Display a default message when no services match */
+            if ($('#cn-services').find("[class^='col-']:visible").length == 0) {
+                $("#cn-search-results-empty").fadeIn(300);
+            } else {
+                $("#cn-search-results-empty").fadeOut(300);
+            }
+
+            $("#srvcCount").text($("input[name=services]:checked").length);
+            $("input[name=services]").on('click', function() {
+                fnSelectService($(this));
             });
 
+            var selectAll = "Select all";
+            var deselectAll = "Deselect all";
+            $("#lnkSelectAll").on("click", function(event) {
+                event.preventDefault();
+                if ($(this).data("toggle") == 0) {
+                    $(this).text(selectAll).data("toggle", "1");
+                    $("input[name=services]").each(function() {
+                        $(this).prop("checked", false);
 
-            $grid.on('arrangeComplete', function() {
-                /* Display a default message when no services match */
-                if ($('#cn-services').find("[class^='col-']:visible").length == 0) {
-                    $("#cn-search-results-empty").fadeIn(300);
+                        fnSelectService($(this));
+                    });
                 } else {
-                    $("#cn-search-results-empty").fadeOut(300);
+                    $(this).text(deselectAll).data("toggle", "0")
+                    $("input[name=services]").each(function() {
+                        $(this).prop("checked", true);
+                        fnSelectService($(this));
+                    });
+
                 }
 
-                $("#srvcCount").text($("input:visible:checked[name=services]").length);
-                $("input[name=services]").on('click', function() {
-                    fnSelectService($(this));
-                });
-
-                var selectAll = "Select all";
-                var deselectAll = "Deselect all";
-                $("#lnkSelectAll").on("click", function(event) {
-                    event.preventDefault();
-                    if ($(this).data("toggle") == 0) {
-                        $(this).text(selectAll).data("toggle", "1");
-                        $("input[name=services]").each(function() {
-                            $(this).prop("checked", false);
-
-                            fnSelectService($(this));
-                        });
-                    } else {
-                        $(this).text(deselectAll).data("toggle", "0")
-                        $("input[name=services]").each(function() {
-                            $(this).prop("checked", true);
-                            fnSelectService($(this));
-                        });
-
-                    }
-
-                });
             });
 
 
@@ -407,12 +351,11 @@
 
                 if (selectedRole != "") {
                     // If Application Owner, all services should be selected and no roles applied to the service level
-                    if (selectedRole == "r5") {
+                    if (selectedRole == "r4") {
                         $("select[name^=role]").each(function() {
                             $(this).hide().parent().append("<div class='slctr-appOwner'>Application Owner</div>");
                         });
                         $("input[name=services]").prop("checked", "true").prop("disabled", "true");
-                        $("#srvcCount").text($("input[name=services]:visible:checked").length);
                         $("#lnkSelectAll").addClass("hide");
                     } else {
 
