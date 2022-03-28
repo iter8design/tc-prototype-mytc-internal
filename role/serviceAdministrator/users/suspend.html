@@ -11,20 +11,20 @@
     <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
 		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
     <!-- InstanceBeginEditable name="PageTitle" -->
-    <title>Add user - myTC Account</title>
+    <title>Suspend access - myTC Account</title>
     <!-- InstanceEndEditable -->
     <meta content="width=device-width,initial-scale=1" name="viewport">
     <!-- Meta data -->
     <meta name="description" content="">
     <!-- Meta data-->
     <!--[if gte IE 9 | !IE ]><!-->
-    <link href="../../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
-    <link rel="stylesheet" href="../../GCWeb/css/theme.min.css">
-    <link rel="stylesheet" href="../../css/cdtsapps.css">
-    <link rel="stylesheet" href="../../css/fontawesome/css/all.css">
-    <link rel="stylesheet" href="../../css/mytc.css">
-    <link rel="stylesheet" href="../../css/utils.css">
-    <link rel="stylesheet" href="../../css/plugins.css">
+    <link href="../../../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="../../../GCWeb/css/theme.min.css">
+    <link rel="stylesheet" href="../../../css/cdtsapps.css">
+    <link rel="stylesheet" href="../../../css/fontawesome/css/all.css">
+    <link rel="stylesheet" href="../../../css/mytc.css">
+    <link rel="stylesheet" href="../../../css/utils.css">
+    <link rel="stylesheet" href="../../../css/plugins.css">
     <!--<![endif]-->
     <!--[if lt IE 9]>
 		<link href="../GCWeb/assets/favicon.ico" rel="shortcut icon" />
@@ -38,7 +38,7 @@
 		
 		<![endif]-->
     <noscript>
-        <link rel="stylesheet" href="../../wet-boew/css/noscript.min.css" />
+        <link rel="stylesheet" href="../../../wet-boew/css/noscript.min.css" />
     </noscript>
     <!-- InstanceBeginEditable name="CustomJSLibraries" -->
     <!-- InstanceEndEditable -->
@@ -55,7 +55,7 @@
         <div id="wb-bnr" class="container">
             <div class="row">
                 <div class="brand col-xs-9 col-sm-8 col-md-6">
-                    <object type="image/svg+xml" tabindex="-1" data="../../GCWeb/assets/sig-blk-en.svg">
+                    <object type="image/svg+xml" tabindex="-1" data="../../../GCWeb/assets/sig-blk-en.svg">
                     </object>
                     <span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span>
                 </div>
@@ -92,7 +92,7 @@
                 </nav>
             </div>
         </div>
-        <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../../includes/menus/menu-serviceAdministrator.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
+        <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../../../includes/menus/menu-serviceAdministrator.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
 
 
         <nav role="navigation" id="wb-bc" property="breadcrumb">
@@ -105,7 +105,8 @@
                         <li><a href="#">Applications</a></li>
                         <li><a href="appDashboard.html">Marine Inspection Tracking (MITRACK)</a></li>
                         <li><a href="users.html">Users</a></li>
-                        <li>Add user</li>
+                        <li><a href="editUser.html">Paul Davies</a></li>
+                        <li>Suspend access</li>
                         <!-- InstanceEndEditable -->
                     </ol>
                 </div>
@@ -114,29 +115,52 @@
     </header>
     <main role="main" property="mainContentOfPage" class="container">
         <!-- InstanceBeginEditable name="Content" -->
-        <h1 property="name" id="wb-cont"><i class="fa-solid fa-user-plus"></i> Add user
+        <h1 property="name" id="wb-cont"><i class="fa-solid fa-user-lock"></i> Suspend access</h1>
 
-        </h1>
-        <form action="" method="get">
-            <p>Almost done! We need a few more details about the person you're adding. All fields are mandatory.</p>
+        <p>All fields are mandatory.</p>
+        <form action="users-suspendConfirmation.html" method="get">
+            <fieldset class="mrgn-tp-sm mrgn-bttm-sm">
+                <legend class="medium">How long do you wish to suspend access ? <span class="wb-inv">(required)</span>
 
-            <div class="row">
-                <div class="col-md-12">
-                    <p class="label-question">
-                        <label for="contactID">What is this person's contact ID within the Small Vessel Manufacturer Monitoring System (SVMMS)?
-                            <span class="fld-example">We'll use this number to link this person to the correct manufacturer(s). This can be found by selecting the button next to the contact's phone number when viewing a manufacturer identification code (MIC).</span> </label>
-                    </p>
-                    <input name="contactID" id="contactID" type="text" size="6" class="form-control" maxlength="6">
+                </legend>
+                <div class="radio">
+                    <label for="all">
+                        <input type="radio" name="suspendPeriod" value="radio" checked id="periodIndefinite">
+                        Indefinitely
+                        <span class="fld-example">An administrator will need to manually reinstate this person.</span>
+                    </label>
                 </div>
+                <div class="radio">
+                    <label for="periodSet">
+                        <input type="radio" name="suspendPeriod" value="radio" id="periodSet">
+                        For a specific period of time
+                        <span class="fld-example">This person's access will be restored on a specific date.</span></label>
+
+                </div>
+
+                <div id="cn-date" class="form-group mrgn-lft-lg showHide">
+                    <label for="startdate" clas="sr-only">Date to reinstate access: <span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
+                    <input class="form-control" type="date" id="startdate" name="startdate" min="2022-03-08" max="2023-03-01" />
+
+                </div>
+            </fieldset>
+
+
+
+
+            <div class="form-group">
+                <label for="reason">Please provide any additional information to support the suspension of access. This information will not be shared with the individual (optional).</label>
+                <textarea id="reason" name="reason" cols="40" class="form-control full-width" data-maxlength="500"></textarea>
+                <div id="reason-character-count" aria-live="polite" class="mytc-character-count__messages"><i class='fas fa-info-circle text-blue mrgn-rght-sm'></i> You have 500 characters remaining.</div>
             </div>
 
+            <section class="alert alert-info">
+                <p>You will need to notify the individual of the suspension along with any requirements needed to reinstate access.</p>
+            </section>
 
-            <div class="nav-button mrgn-tp-md">
-                <a href="users-addConfirmation.html" class="btn btn-primary">Submit</a>
-                <a href="addUser-step2.html" class="btn btn-link mrgn-lft-md">Go back</a>
-            </div>
-
+            <div class="nav-button"> <button class="btn btn-primary" type"submit">Suspend</button> <a href="#" class="btn btn-link">Cancel</a> </div>
         </form>
+
 
         <!-- InstanceEndEditable -->
         <div class="datemod col-xs-12 mrgn-tp-lg">
@@ -144,7 +168,7 @@
                 <dt>Date modified:&#32;</dt>
                 <dd>
                     <time property="dateModified">
-                        <!-- #BeginDate format:IS1 -->2022-02-23
+                        <!-- #BeginDate format:IS1 -->2022-03-25
                         <!-- #EndDate -->
                     </time>
                 </dd>
@@ -160,7 +184,7 @@
                     </nav>
                     <div class="col-xs-6 visible-sm visible-xs tofpg"><a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a></div>
                     <div class="col-xs-6 col-md-2 text-right">
-                        <object type="image/svg+xml" tabindex="-1" role="img" data="../../GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada">
+                        <object type="image/svg+xml" tabindex="-1" role="img" data="../../../GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada">
                         </object>
                     </div>
                 </div>
@@ -169,20 +193,49 @@
     </footer>
 
     <!--[if gte IE 9 | !IE ]><!-->
-    <script src="../../js/jquery/2.2.4/jquery.js"></script>
-    <script src="../../wet-boew/js/wet-boew.min.js"></script>
+    <script src="../../../js/jquery/2.2.4/jquery.js"></script>
+    <script src="../../../wet-boew/js/wet-boew.min.js"></script>
     <!--<![endif]-->
     <!--[if lt IE 9]>
 		<script src="../wet-boew/js/ie8-wet-boew2.min.js"></script>
 		
 		<![endif]-->
-    <script src="../../GCWeb/js/theme.min.js"></script>
+    <script src="../../../GCWeb/js/theme.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
 
     <script>
         $(document).on("wb-ready.wb", function(event) {
+            $(".showHide").hide();
 
+            $("#periodIndefinite").on("click", function() {
+
+                $("#cn-date").hide();
+            });
+
+            $("#periodSet").on("click", function() {
+
+                $("#cn-date").fadeIn(300);
+            });
+
+            var msgCharactersLeftStart = "You have ";
+            var msgCharactersTooMany = " characters too many.";
+            var msgCharactersRemaining = " characters remaining.";
+
+            $("#reason").on("keyup focus", function() {
+                var max = $(this).data("maxlength");
+                var len = $(this).val().length;
+                if (len > max) {
+                    var charExceeded = len - max;
+                    $(this).addClass("fieldError");
+                    $(this).next().html("<i class='fas fa-exclamation-circle text-red mrgn-rght-sm'></i>" + msgCharactersLeftStart + charExceeded + msgCharactersTooMany);
+                } else {
+                    var char = max - len;
+                    $(this).removeClass("fieldError").next().html("<i class='fas fa-info-circle text-blue mrgn-rght-sm'></i>" + msgCharactersLeftStart + char + msgCharactersRemaining);
                 }
+
+            });
+
+        });
     </script>
     <!-- InstanceEndEditable -->
 </body>

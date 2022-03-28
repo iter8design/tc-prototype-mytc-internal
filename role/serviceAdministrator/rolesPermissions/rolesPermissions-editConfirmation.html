@@ -18,13 +18,13 @@
     <meta name="description" content="">
     <!-- Meta data-->
     <!--[if gte IE 9 | !IE ]><!-->
-    <link href="../../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
-    <link rel="stylesheet" href="../../GCWeb/css/theme.min.css">
-    <link rel="stylesheet" href="../../css/cdtsapps.css">
-    <link rel="stylesheet" href="../../css/fontawesome/css/all.css">
-    <link rel="stylesheet" href="../../css/mytc.css">
-    <link rel="stylesheet" href="../../css/utils.css">
-    <link rel="stylesheet" href="../../css/plugins.css">
+    <link href="../../../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="../../../GCWeb/css/theme.min.css">
+    <link rel="stylesheet" href="../../../css/cdtsapps.css">
+    <link rel="stylesheet" href="../../../css/fontawesome/css/all.css">
+    <link rel="stylesheet" href="../../../css/mytc.css">
+    <link rel="stylesheet" href="../../../css/utils.css">
+    <link rel="stylesheet" href="../../../css/plugins.css">
     <!--<![endif]-->
     <!--[if lt IE 9]>
 		<link href="../GCWeb/assets/favicon.ico" rel="shortcut icon" />
@@ -38,7 +38,7 @@
 		
 		<![endif]-->
     <noscript>
-        <link rel="stylesheet" href="../../wet-boew/css/noscript.min.css" />
+        <link rel="stylesheet" href="../../../wet-boew/css/noscript.min.css" />
     </noscript>
     <!-- InstanceBeginEditable name="CustomJSLibraries" -->
     <!-- InstanceEndEditable -->
@@ -55,7 +55,7 @@
         <div id="wb-bnr" class="container">
             <div class="row">
                 <div class="brand col-xs-9 col-sm-8 col-md-6">
-                    <object type="image/svg+xml" tabindex="-1" data="../../GCWeb/assets/sig-blk-en.svg">
+                    <object type="image/svg+xml" tabindex="-1" data="../../../GCWeb/assets/sig-blk-en.svg">
                     </object>
                     <span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span>
                 </div>
@@ -92,7 +92,7 @@
                 </nav>
             </div>
         </div>
-        <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../../includes/menus/menu-serviceAdministrator.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
+        <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../../../includes/menus/menu-serviceAdministrator.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
 
 
         <nav role="navigation" id="wb-bc" property="breadcrumb">
@@ -115,11 +115,16 @@
         <!-- InstanceBeginEditable name="Content" -->
         <h1 property="name" id="wb-cont"><i class="fa-solid fa-user-lock"></i> Roles and permissions</h1>
 
+        <section class="alert alert-success mrgn-bttm-md">
+            <h2>Role updated</h2>
+            <p><strong>Billing Clerk</strong> has been successfully updated. </p>
+        </section>
+
         <p>The following roles are in place for this application. To add a new role, press the <strong>Add role</strong> button, or to modify the permissions for a given role, select the role and press the <strong>Edit role</strong> button.</p>
 
         <div class="wb-tabs wb-tabs-vertical mrgn-tp-md">
             <div class="tabpanels">
-                <details id="details-panel1" open>
+                <details id="details-panel1">
                     <summary>
                         Inspector
 
@@ -133,11 +138,12 @@
                                 <p><i class="fa-solid fa-shield-check fa-2xl text-green"></i> This role may:</p>
                                 <ul class="mrgn-lft-md">
                                     <li>Backdate status changes</li>
+
                                     <li>Enter service request time</li>
                                     <li>Manage service requests</li>
+
                                     <li>Submit service requests</li>
                                     <li>View invoices</li>
-
                                 </ul>
                             </div>
                         </div>
@@ -146,7 +152,6 @@
                             <div class="well">
                                 <p><i class="fa-solid fa-shield-xmark fa-2xl text-red"></i> This role <strong>may not</strong>:</p>
                                 <ul class="mrgn-lft-md">
-
                                     <li>Approve remissions</li>
                                     <li>Assign service requests</li>
                                     <li>Generate invoices</li>
@@ -160,10 +165,59 @@
 
                     </div>
                     <div class="row">
+                        <div class="col-md-12">
+                            <a href="editRole.html" class="btn btn-primary"><i class="fa-regular fa-shield"></i> Edit role <span class="sr-only">for the Inspector role</span></a>
+                            <a href="#dlg-deleteRole" class="btn btn-danger pull-right wb-lbx"><i class="fa-solid fa-trash-can"></i> Delete <span class="sr-only">the Inspector</span> role</a>
+                        </div>
+                    </div>
+
+                </details>
+                <details id="details-panel5" open>
+                    <summary>
+                        Billing Clerk
+
+
+                    </summary>
+
+                    <div class="row">
+                        <div class="col-md-6">
+
+                            <div class="well">
+                                <p><i class="fa-solid fa-shield-check fa-2xl text-green"></i> This role may:</p>
+                                <ul class="mrgn-lft-md">
+                                    <li>Backdate status changes</li>
+                                    <li>Enter service request time</li>
+                                    <li>Generate invoices</li>
+                                    <li>Manage service requests</li>
+
+                                    <li>Submit service requests</li>
+                                    <li>View invoices</li>
+
+
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="well">
+                                <p><i class="fa-solid fa-shield-xmark fa-2xl text-red"></i> This role <strong>may not</strong>:</p>
+                                <ul class="mrgn-lft-md">
+                                    <li>Approve remissions</li>
+                                    <li>Assign service requests</li>
+
+                                    <li>View remissions</li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <div class="row">
 
                         <div class="col-md-12"><a href="editRole.html" class="btn btn-primary"><i class="fa-regular fa-shield"></i> Edit role <span class="sr-only">for the Inspector role</span></a>
-
-                            <a href="#dlg-deleteRole" class="btn btn-danger pull-right wb-lbx"><i class="fa-solid fa-trash-can"></i> Delete <span class="sr-only">the Inspector</span> role</a>
+                            <a href="#dlg-deleteRole" class="btn btn-danger pull-right wb-lbx"><i class="fa-solid fa-trash-can"></i> Delete <span class="sr-only">the Billing Clerk</span> role</a>
                         </div>
                     </div>
 
@@ -173,20 +227,22 @@
                         Clerk
                     </summary>
 
-
                     <div class="row">
-
                         <div class="col-md-6">
                             <div class="well">
                                 <p><i class="fa-solid fa-shield-check fa-2xl text-green"></i> This role may:</p>
                                 <ul class="mrgn-lft-md">
                                     <li>Assign service requests</li>
                                     <li>Backdate status changes</li>
+
                                     <li>Enter service request time</li>
                                     <li>Generate invoices</li>
                                     <li>Manage service requests</li>
                                     <li>Submit service requests</li>
                                     <li>View invoices</li>
+
+
+
                                     <li>View remissions</li>
                                 </ul>
                             </div>
@@ -209,7 +265,6 @@
                     <div class="row">
 
                         <div class="col-md-12"><a href="editRole.html" class="btn btn-primary"><i class="fa-regular fa-shield"></i> Edit role <span class="sr-only">for the Clerk role</span></a>
-
                             <a href="#dlg-deleteRole" class="btn btn-danger pull-right wb-lbx"><i class="fa-solid fa-trash-can"></i> Delete <span class="sr-only">the Clerk</span> role</a>
                         </div>
                     </div>
@@ -226,17 +281,22 @@
                             <div class="well">
                                 <p><i class="fa-solid fa-shield-check fa-2xl text-green"></i> This role may:</p>
                                 <ul class="mrgn-lft-md">
-
+                                    <li>Assign service requests</li>
                                     <li>Approve remissions</li>
                                     <li>Approve/reject invoices</li>
-                                    <li>Assign service requests</li>
                                     <li>Backdate status changes</li>
                                     <li>Enter service request time</li>
                                     <li>Generate invoices</li>
                                     <li>Manage service requests</li>
                                     <li>Submit service requests</li>
+
                                     <li>View invoices</li>
+
+
+
                                     <li>View remissions</li>
+
+
                                     <li>View service performance</li>
                                 </ul>
                             </div>
@@ -247,8 +307,7 @@
                     </div>
                     <div class="row">
 
-                        <div class="col-md-12"><a href="#" class="btn btn-primary"><i class="fa-regular fa-shield"></i> Edit role <span class="sr-only">for the Manager role</span></a>
-
+                        <div class="col-md-12"><a href="editRole.html" class="btn btn-primary"><i class="fa-regular fa-shield"></i> Edit role <span class="sr-only">for the Manager role</span></a>
                             <a href="#dlg-deleteRole" class="btn btn-danger pull-right wb-lbx"><i class="fa-solid fa-trash-can"></i> Delete <span class="sr-only">the Manager</span> role</a>
                         </div>
                     </div>
@@ -263,7 +322,6 @@
                             <div class="well">
                                 <p><i class="fa-solid fa-shield-check fa-2xl text-green"></i> This role may:</p>
                                 <ul class="mrgn-lft-md">
-
                                     <li>Approve remissions</li>
                                     <li>Approve/reject invoices</li>
                                     <li>Assign service requests</li>
@@ -271,14 +329,9 @@
                                     <li>Enter service request time</li>
                                     <li>Generate invoices</li>
                                     <li>Manage service requests</li>
-
                                     <li>Submit service requests</li>
                                     <li>View invoices</li>
-
-
-
                                     <li>View remissions</li>
-
                                     <li>View service performance</li>
                                 </ul>
 
@@ -301,7 +354,10 @@
                     </div>
                     <div class="row">
 
-                        <div class="col-md-12"><a href="#dlg-deleteRole" class="btn btn-primary"><i class="fa-regular fa-shield"></i> Edit role <span class="sr-only">for the Application Owner role</span></a></div>
+                        <div class="col-md-12"><a href="editRole.html" class="btn btn-primary"><i class="fa-regular fa-shield"></i> Edit role <span class="sr-only">for the Application Owner role</span></a>
+
+
+                        </div>
                     </div>
 
                 </details>
@@ -334,10 +390,11 @@
             </div>
             <footer class="modal-footer">
 
-                <a href="#" class="btn btn-primary pull-left mrgn-rght-md">Delete role</a>
+                <a href="rolesPermissions-deleteConfirmation.html" class="btn btn-primary pull-left mrgn-rght-md">Delete role</a>
                 <a href="#" class="popup-modal-dismiss btn btn-default pull-left">Cancel</a>
             </footer>
         </section>
+
 
 
 
@@ -347,7 +404,7 @@
                 <dt>Date modified:&#32;</dt>
                 <dd>
                     <time property="dateModified">
-                        <!-- #BeginDate format:IS1 -->2022-02-23
+                        <!-- #BeginDate format:IS1 -->2022-03-25
                         <!-- #EndDate -->
                     </time>
                 </dd>
@@ -363,7 +420,7 @@
                     </nav>
                     <div class="col-xs-6 visible-sm visible-xs tofpg"><a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a></div>
                     <div class="col-xs-6 col-md-2 text-right">
-                        <object type="image/svg+xml" tabindex="-1" role="img" data="../../GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada">
+                        <object type="image/svg+xml" tabindex="-1" role="img" data="../../../GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada">
                         </object>
                     </div>
                 </div>
@@ -372,21 +429,24 @@
     </footer>
 
     <!--[if gte IE 9 | !IE ]><!-->
-    <script src="../../js/jquery/2.2.4/jquery.js"></script>
-    <script src="../../wet-boew/js/wet-boew.min.js"></script>
+    <script src="../../../js/jquery/2.2.4/jquery.js"></script>
+    <script src="../../../wet-boew/js/wet-boew.min.js"></script>
     <!--<![endif]-->
     <!--[if lt IE 9]>
 		<script src="../wet-boew/js/ie8-wet-boew2.min.js"></script>
 		
 		<![endif]-->
-    <script src="../../GCWeb/js/theme.min.js"></script>
+    <script src="../../../GCWeb/js/theme.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
 
     <script>
         $(document).on("wb-ready.wb", function(event) {
 
         });
+
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+
+</html>

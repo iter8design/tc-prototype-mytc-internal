@@ -11,20 +11,20 @@
     <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
 		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
     <!-- InstanceBeginEditable name="PageTitle" -->
-    <title>Add user - myTC Account</title>
+    <title>Error: Add user - myTC Account</title>
     <!-- InstanceEndEditable -->
     <meta content="width=device-width,initial-scale=1" name="viewport">
     <!-- Meta data -->
     <meta name="description" content="">
     <!-- Meta data-->
     <!--[if gte IE 9 | !IE ]><!-->
-    <link href="../../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
-    <link rel="stylesheet" href="../../GCWeb/css/theme.min.css">
-    <link rel="stylesheet" href="../../css/cdtsapps.css">
-    <link rel="stylesheet" href="../../css/fontawesome/css/all.css">
-    <link rel="stylesheet" href="../../css/mytc.css">
-    <link rel="stylesheet" href="../../css/utils.css">
-    <link rel="stylesheet" href="../../css/plugins.css">
+    <link href="../../../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="../../../GCWeb/css/theme.min.css">
+    <link rel="stylesheet" href="../../../css/cdtsapps.css">
+    <link rel="stylesheet" href="../../../css/fontawesome/css/all.css">
+    <link rel="stylesheet" href="../../../css/mytc.css">
+    <link rel="stylesheet" href="../../../css/utils.css">
+    <link rel="stylesheet" href="../../../css/plugins.css">
     <!--<![endif]-->
     <!--[if lt IE 9]>
 		<link href="../GCWeb/assets/favicon.ico" rel="shortcut icon" />
@@ -38,7 +38,7 @@
 		
 		<![endif]-->
     <noscript>
-        <link rel="stylesheet" href="../../wet-boew/css/noscript.min.css" />
+        <link rel="stylesheet" href="../../../wet-boew/css/noscript.min.css" />
     </noscript>
     <!-- InstanceBeginEditable name="CustomJSLibraries" -->
     <!-- InstanceEndEditable -->
@@ -55,7 +55,7 @@
         <div id="wb-bnr" class="container">
             <div class="row">
                 <div class="brand col-xs-9 col-sm-8 col-md-6">
-                    <object type="image/svg+xml" tabindex="-1" data="../../GCWeb/assets/sig-blk-en.svg">
+                    <object type="image/svg+xml" tabindex="-1" data="../../../GCWeb/assets/sig-blk-en.svg">
                     </object>
                     <span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span>
                 </div>
@@ -92,7 +92,7 @@
                 </nav>
             </div>
         </div>
-        <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../../includes/menus/menu-serviceAdministrator.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
+        <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../../../includes/menus/menu-serviceAdministrator.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
 
 
         <nav role="navigation" id="wb-bc" property="breadcrumb">
@@ -115,12 +115,26 @@
     <main role="main" property="mainContentOfPage" class="container">
         <!-- InstanceBeginEditable name="Content" -->
         <h1 property="name" id="wb-cont"><i class="fa-solid fa-user-plus"></i> Add user</h1>
+        <section class="alert alert-danger mrgn-bttm-md">
+            <h2>Attention</h2>
+            <ol class="fa-ul">
+                <li><a href="#email"><i class="fa-solid fa-angle-right"></i>Please enter the email address.</a></li>
+                <li><a href="#email"><i class="fa-solid fa-angle-right"></i>The email address entered is not valid.</a></li>
+                <li><a href="#email"><i class="fa-solid fa-angle-right"></i>The email address entered must exist in Transport Canada's directory and was not found. Please check the spelling and try again.</a></li>
+                <li><i class="fa-solid fa-angle-right"></i>It appears that this user has already been added. Did you want to <a href="editUser.html">review or change their roles?</a></li>
+
+
+            </ol>
+        </section>
+
         <form action="" method="get">
             <p>Enter the following information about the user you wish to add. All fields are mandatory.</p>
 
             <div class="form-group mrgn-tp-md">
-                <label for="email">Email address (username@example.com)<span class="sr-only">(required)</span>: <span class="fld-example">We'll use this email address to send an email invitation to access this application.</span> </label>
-                <input name="email" id="email" type="text" size="50" class="form-control" autocomplete="email" maxlength="150">
+                <label for="email">Email address (username@example.com)<span class="sr-only">(required)</span>: <span class="fld-example">We'll use this email address to send an email invitation to access this application.</span>
+                    <span class="label label-danger">Please enter the email address.</span>
+                </label>
+                <input name="email" id="email" type="text" size="50" class="form-control fieldError" autocomplete="email" maxlength="150">
             </div>
 
             <p class="label-question">What is the primary role for this person? <span class="wb-inv">(required)</span>
@@ -134,8 +148,6 @@
                     <details id="details-panel1" open>
                         <summary data-flow='continue'>
                             Inspector
-
-
                         </summary>
 
                         <div class="row">
@@ -144,11 +156,12 @@
                                 <div class="well">
                                     <p><i class="fa-solid fa-shield-check fa-2xl text-green"></i> This role may:</p>
                                     <ul class="mrgn-lft-md">
-                                        <li>Manage service requests</li>
-                                        <li>Enter service request time</li>
                                         <li>Backdate status changes</li>
-                                        <li>View invoices</li>
+                                        <li>Enter service request time</li>
+                                        <li>Manage service requests</li>
                                         <li>Submit service requests</li>
+                                        <li>View invoices</li>
+
                                     </ul>
                                 </div>
                             </div>
@@ -157,11 +170,10 @@
                                 <div class="well">
                                     <p><i class="fa-solid fa-shield-xmark fa-2xl text-red"></i> This role <strong>may not</strong>:</p>
                                     <ul class="mrgn-lft-md">
-
+                                        <li>Approve remissions</li>
                                         <li>Assign service requests</li>
                                         <li>Generate invoices</li>
                                         <li>View remissions</li>
-                                        <li>Approve remissions</li>
                                     </ul>
                                 </div>
                             </div>
@@ -180,13 +192,13 @@
                                 <div class="well">
                                     <p><i class="fa-solid fa-shield-check fa-2xl text-green"></i> This role may:</p>
                                     <ul class="mrgn-lft-md">
-                                        <li>Manage service requests</li>
-                                        <li>Enter service request time</li>
-                                        <li>Backdate status changes</li>
-                                        <li>View invoices</li>
-                                        <li>Generate invoices</li>
-                                        <li>Submit service requests</li>
                                         <li>Assign service requests</li>
+                                        <li>Backdate status changes</li>
+                                        <li>Generate invoices</li>
+                                        <li>Enter service request time</li>
+                                        <li>Submit service requests</li>
+                                        <li>Manage service requests</li>
+                                        <li>View invoices</li>
                                         <li>View remissions</li>
                                     </ul>
                                 </div>
@@ -217,16 +229,16 @@
                                 <div class="well">
                                     <p><i class="fa-solid fa-shield-check fa-2xl text-green"></i> This role may:</p>
                                     <ul class="mrgn-lft-md">
-                                        <li>Manage service requests</li>
-                                        <li>Enter service request time</li>
-                                        <li>Backdate status changes</li>
-                                        <li>View invoices</li>
-                                        <li>Generate invoices</li>
-                                        <li>Submit service requests</li>
-                                        <li>Assign service requests</li>
-                                        <li>View remissions</li>
                                         <li>Approve/reject invoices</li>
                                         <li>Approve remissions</li>
+                                        <li>Assign service requests</li>
+                                        <li>Backdate status changes</li>
+                                        <li>Enter service request time</li>
+                                        <li>Generate invoices</li>
+                                        <li>Manage service requests</li>
+                                        <li>Submit service requests</li>
+                                        <li>View invoices</li>
+                                        <li>View remissions</li>
                                         <li>View service performance</li>
                                     </ul>
                                 </div>
@@ -247,32 +259,30 @@
                                     <p><i class="fa-solid fa-shield-check fa-2xl text-green"></i> This role may:</p>
                                     <ul class="mrgn-lft-md">
 
-                                        <li>Manage service requests</li>
-                                        <li>Enter service request time</li>
-                                        <li>Backdate status changes</li>
-                                        <li>View invoices</li>
-                                        <li>Generate invoices</li>
-                                        <li>Submit service requests</li>
-                                        <li>Assign service requests</li>
-                                        <li>View remissions</li>
                                         <li>Approve/reject invoices</li>
                                         <li>Approve remissions</li>
+                                        <li>Assign service requests</li>
+                                        <li>Backdate status changes</li>
+                                        <li>Enter service request time</li>
+                                        <li>Generate invoices</li>
+                                        <li>Manage email templates</li>
+                                        <li>Manage notices</li>
+                                        <li>Manage roles & permissions</li>
+                                        <li>Manage service requests</li>
+                                        <li>Manage users</li>
+                                        <li>Submit service requests</li>
+                                        <li>View invoices</li>
+                                        <li>View remissions</li>
                                         <li>View service performance</li>
                                     </ul>
-
-                                    <p><i class="fa-solid fa-shield-plus fa-2xl text-green"></i> For this application, this role may also:</p>
+                                    <!--<p><i class="fa-solid fa-shield-plus fa-2xl text-green"></i> For this application, this role may also:</p>
 
                                     <ul class="mrgn-lft-md">
                                         <li>Manage email templates</li>
                                         <li>Manage notices</li>
                                         <li>Manage roles & permissions</li>
                                         <li>Manage users</li>
-                                    </ul>
-
-
-
-
-
+                                    </ul>  -->
                                 </div>
                             </div>
 
@@ -295,7 +305,7 @@
                 <dt>Date modified:&#32;</dt>
                 <dd>
                     <time property="dateModified">
-                        <!-- #BeginDate format:IS1 -->2022-02-23
+                        <!-- #BeginDate format:IS1 -->2022-03-25
                         <!-- #EndDate -->
                     </time>
                 </dd>
@@ -311,7 +321,7 @@
                     </nav>
                     <div class="col-xs-6 visible-sm visible-xs tofpg"><a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a></div>
                     <div class="col-xs-6 col-md-2 text-right">
-                        <object type="image/svg+xml" tabindex="-1" role="img" data="../../GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada">
+                        <object type="image/svg+xml" tabindex="-1" role="img" data="../../../GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada">
                         </object>
                     </div>
                 </div>
@@ -320,15 +330,15 @@
     </footer>
 
     <!--[if gte IE 9 | !IE ]><!-->
-    <script src="../../js/jquery/2.2.4/jquery.js"></script>
-    <script src="../../wet-boew/js/wet-boew.min.js"></script>
+    <script src="../../../js/jquery/2.2.4/jquery.js"></script>
+    <script src="../../../wet-boew/js/wet-boew.min.js"></script>
     <!--<![endif]-->
     <!--[if lt IE 9]>
 		<script src="../wet-boew/js/ie8-wet-boew2.min.js"></script>
 		
 		<![endif]-->
-    <script src="../../GCWeb/js/theme.min.js"></script>
-    <script src="../../js/tc/isotope/isotope.pkgd.min.js"></script>
+    <script src="../../../GCWeb/js/theme.min.js"></script>
+    <script src="../../../js/tc/isotope/isotope.pkgd.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
 
     <script>
