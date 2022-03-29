@@ -175,6 +175,11 @@ textarea.fieldError,
     box-shadow: 0 0 1px #a00;
 }
 
+.error {
+    display: inline-block;
+    width: 100%;
+}
+
 .fld-example {
     display: block;
     font-size: 84%;
