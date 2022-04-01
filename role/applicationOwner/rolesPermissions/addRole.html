@@ -372,21 +372,25 @@
             });
 
             $("#btnAdd").on('click', function() {
+                $('#availableFilter, #assignedFilter').each(function() {
+                    $(this).val("");
+                    $(this).parent().parent().parent().find("ul li").toggle(true);
+                });
                 var permission = $("ul.cn-available>li input:checked").parent();
-                $(".cn-assigned").append(permission);
+                $(".cn-assigned").append(permission.show());
             });
 
             $("#btnRemove").on('click', function() {
+                $('#availableFilter, #assignedFilter').each(function() {
+                    $(this).val("");
+                    $(this).parent().parent().parent().find("ul li").toggle(true);
+                });
                 var permission = $("ul.cn-assigned>li input:checked").prop("checked", false).parent();
-                $(".cn-available").append(permission);
+                $(".cn-available").append(permission.show());
             });
 
-
         });
-
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd -->
-
-</html>
+<!-- InstanceEnd --></html>
