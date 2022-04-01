@@ -100,7 +100,7 @@
             <div class="container">
                 <div class="row">
                     <ol class="breadcrumb">
-                        <li><a href="home.html">Home</a></li>
+                        <li><a href="../home.html">Home</a></li>
                         <!-- InstanceBeginEditable name="Breadcrumbs" -->
 
                         <li><a href="../dashboards/appDashboard-MITRACK.html">Marine Inspection Tracking (MITRACK)</a></li>
@@ -114,7 +114,7 @@
     </header>
     <main role="main" property="mainContentOfPage" class="container">
         <!-- InstanceBeginEditable name="Content" -->
-        <h1 property="name" id="wb-cont"><i class="fa-solid fa-user-shield"></i> Edit role </h1>
+        <h1 property="name" id="wb-cont"><span class="hd-pre">Marine Inspection Tracking (MITRACK)</span><i class="fa-solid fa-user-shield"></i> Edit role </h1>
 
         <section class="alert alert-danger mrgn-bttm-md">
             <h2>Attention</h2>
@@ -138,10 +138,10 @@
         </div>
         <div class="form-group">
             <label class="sr-only" for="roleNameEng" aria-describedby="nameHelp roleNameEng--error">English role name (required)</label>
-            <div class="label label-danger" id="roleNameEng--error">The English role name entered may not be greater than 100 characters.</div>
+            <div class="label label-danger" id="roleNameEng--error"><span class="prefix sr-only">Error: </span>The English role name entered may not be greater than 100 characters.</div>
             <input class="form-control width30 fieldError" id="roleNameEng" title="English role name" name="roleNameEng" type="text" lang="en" placeholder="English role name" maxlength="100" value="Inspector" />
             <label class="sr-only" for="roleNameFra" aria-describedby="nameHelp roleNameFra--error">French role name (required)</label>
-            <div class="label label-danger" id="roleNameFra--error">The French role name entered may not be greater than 100 characters.</div>
+            <div class="label label-danger" id="roleNameFra--error"><span class="prefix sr-only">Error: </span>The French role name entered may not be greater than 100 characters.</div>
             <input class="form-control width30 fieldError" id="roleNameFra" title="French role name" name="roleNameFra" type="text" lang="fr" placeholder="French role name" maxlength="100" value="Inspecteur" />
         </div>
 
@@ -403,7 +403,10 @@
 
 
         });
+
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+
+</html>

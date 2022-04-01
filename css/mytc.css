@@ -502,6 +502,14 @@ hr {
     margin-bottom: 5px;
 }
 
+.hd-pre {
+    font-size: 14px;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    color: #666;
+    display: block;
+}
+
 .hd-suffix {
     font-size: 16px;
     float: right;

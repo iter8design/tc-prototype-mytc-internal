@@ -114,7 +114,7 @@
     </header>
     <main role="main" property="mainContentOfPage" class="container">
         <!-- InstanceBeginEditable name="Content" -->
-        <h1 property="name" id="wb-cont"><i class="fa-solid fa-user-plus"></i> Add user</h1>
+        <h1 property="name" id="wb-cont"><span class="hd-pre">Marine Inspection Tracking (MITRACK)</span><i class="fa-solid fa-user-plus"></i> Add user</h1>
         <form action="" method="get">
             <p>Enter the following information about the user you wish to add. All fields are mandatory.</p>
 
@@ -133,7 +133,7 @@
                 <div class="tabpanels">
                     <details id="details-panel1" open>
                         <summary data-flow='continue'>
-                            Inspector
+                            <i class="fa-solid fa-circle-dot"></i> Inspector
                         </summary>
 
                         <div class="row">
@@ -142,8 +142,8 @@
                                 <div class="well">
                                     <p><i class="fa-solid fa-shield-check fa-2xl text-green"></i> This role may:</p>
                                     <ul class="mrgn-lft-md">
-                                        
-                                        
+
+
                                         <li>Manage service requests</li>
                                         <li>Submit service requests</li>
                                         <li>View invoices</li>
@@ -170,7 +170,7 @@
                     </details>
                     <details id="details-panel2">
                         <summary data-flow='continue'>
-                            Clerk
+                            <i class="fa-regular fa-circle"></i> Clerk
                         </summary>
 
                         <div class="row">
@@ -179,9 +179,9 @@
                                     <p><i class="fa-solid fa-shield-check fa-2xl text-green"></i> This role may:</p>
                                     <ul class="mrgn-lft-md">
                                         <li>Assign service requests</li>
-                                        
+
                                         <li>Generate invoices</li>
-                                        
+
                                         <li>Submit service requests</li>
                                         <li>Manage service requests</li>
                                         <li>View invoices</li>
@@ -207,7 +207,7 @@
 
                     <details id="details-panel3">
                         <summary data-flow='continue'>
-                            Manager
+                            <i class="fa-regular fa-circle"></i> Manager
                         </summary>
 
                         <div class="row">
@@ -218,8 +218,8 @@
                                         <li>Approve/reject invoices</li>
                                         <li>Approve remissions</li>
                                         <li>Assign service requests</li>
-                                        
-                                        
+
+
                                         <li>Generate invoices</li>
                                         <li>Manage service requests</li>
                                         <li>Submit service requests</li>
@@ -237,7 +237,7 @@
                     </details>
                     <details id="details-panel4">
                         <summary data-flow='end'>
-                            Application Owner
+                            <i class="fa-regular fa-circle"></i> Application Owner
                         </summary>
                         <div class="row">
                             <div class="col-md-12">
@@ -248,8 +248,8 @@
                                         <li>Approve/reject invoices</li>
                                         <li>Approve remissions</li>
                                         <li>Assign service requests</li>
-                                        
-                                        
+
+
                                         <li>Generate invoices</li>
                                         <li>Manage email templates</li>
                                         <li>Manage notices</li>
@@ -330,6 +330,9 @@
     <script>
         $(document).on("wb-ready.wb", function(event) {
 
+        });
+
+        $(document).on("wb-ready.wb-tabs", ".wb-tabs", function(event) {
 
         });
 
@@ -337,6 +340,8 @@
         $(document).on("wb-updated.wb-tabs", ".wb-tabs", function(event, $newPanel) {
             // Set the role of selected
             var flow = $newPanel.find("summary").data("flow");
+            $newPanel.find("summary i").remove(); //Class("fa-regular").addClass("fa-solid");
+            console.log("swap icon");
             if (flow == "end") {
                 $("#btnContinue").attr("href", "users-addConfirmation.html").text("Submit");
             } else {
