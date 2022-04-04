@@ -133,7 +133,7 @@
                 <div class="tabpanels">
                     <details id="details-panel1" open>
                         <summary data-flow='continue'>
-                            <i class="fa-solid fa-circle-dot"></i> Inspector
+                            <i class="fa-regular fa-circle"></i> Inspector
                         </summary>
 
                         <div class="row">
@@ -324,30 +324,35 @@
 		
 		<![endif]-->
     <script src="../../../GCWeb/js/theme.min.js"></script>
-    <script src="../../../js/tc/isotope/isotope.pkgd.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
 
     <script>
         $(document).on("wb-ready.wb", function(event) {
 
+
         });
 
         $(document).on("wb-ready.wb-tabs", ".wb-tabs", function(event) {
-
+            updateSelectedTabIcon();
         });
 
 
         $(document).on("wb-updated.wb-tabs", ".wb-tabs", function(event, $newPanel) {
+            updateSelectedTabIcon();
+
             // Set the role of selected
             var flow = $newPanel.find("summary").data("flow");
-            $newPanel.find("summary i").remove(); //Class("fa-regular").addClass("fa-solid");
-            console.log("swap icon");
             if (flow == "end") {
                 $("#btnContinue").attr("href", "users-addConfirmation.html").text("Submit");
             } else {
                 $("#btnContinue").attr("href", "addUser-step2.html").text("Continue");
             }
         });
+
+        function updateSelectedTabIcon() {
+            $("a[id$='lnk'][aria-selected='true'] i").removeClass('fa-regular fa-circle').addClass("fa-solid fa-circle-dot");
+            $("a[id$='lnk'][aria-selected='false'] i").addClass('fa-regular fa-circle').removeClass("fa-solid fa-circle-dot");
+        }
     </script>
     <!-- InstanceEndEditable -->
 </body>

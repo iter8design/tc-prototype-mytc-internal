@@ -133,7 +133,7 @@
                 <div class="tabpanels">
                     <details id="details-panel1" open>
                         <summary data-flow='continue'>
-                            Platform Manager
+                            <i class="fa-regular fa-circle"></i> Platform Manager
 
 
                         </summary>
@@ -209,7 +209,6 @@
 		
 		<![endif]-->
     <script src="../../../GCWeb/js/theme.min.js"></script>
-    <script src="../../../js/tc/isotope/isotope.pkgd.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
 
     <script>
@@ -217,10 +216,15 @@
 
 
         });
-        tml
+
+        $(document).on("wb-ready.wb-tabs", ".wb-tabs", function(event) {
+            updateSelectedTabIcon();
+        });
 
 
         $(document).on("wb-updated.wb-tabs", ".wb-tabs", function(event, $newPanel) {
+            updateSelectedTabIcon();
+
             // Set the role of selected
             var flow = $newPanel.find("summary").data("flow");
             if (flow == "end") {
@@ -229,6 +233,11 @@
                 $("#btnContinue").attr("href", "addUser-step2.html").text("Continue");
             }
         });
+
+        function updateSelectedTabIcon() {
+            $("a[id$='lnk'][aria-selected='true'] i").removeClass('fa-regular fa-circle').addClass("fa-solid fa-circle-dot");
+            $("a[id$='lnk'][aria-selected='false'] i").addClass('fa-regular fa-circle').removeClass("fa-solid fa-circle-dot");
+        }
     </script>
     <!-- InstanceEndEditable -->
 </body>

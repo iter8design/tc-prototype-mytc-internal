@@ -148,7 +148,7 @@
                 <div class="tabpanels">
                     <details id="details-panel1" open>
                         <summary data-flow='continue'>
-                            Inspector
+                            <i class="fa-regular fa-circle"></i> Inspector
                         </summary>
 
                         <div class="row">
@@ -185,7 +185,7 @@
                     </details>
                     <details id="details-panel2">
                         <summary data-flow='continue'>
-                            Clerk
+                            <i class="fa-regular fa-circle"></i> Clerk
                         </summary>
 
                         <div class="row">
@@ -222,7 +222,7 @@
 
                     <details id="details-panel3">
                         <summary data-flow='continue'>
-                            Manager
+                            <i class="fa-regular fa-circle"></i> Manager
                         </summary>
 
                         <div class="row">
@@ -252,7 +252,7 @@
                     </details>
                     <details id="details-panel4">
                         <summary data-flow='end'>
-                            Application Owner
+                            <i class="fa-regular fa-circle"></i> Application Owner
                         </summary>
                         <div class="row">
                             <div class="col-md-12">
@@ -339,7 +339,6 @@
 		
 		<![endif]-->
     <script src="../../../GCWeb/js/theme.min.js"></script>
-    <script src="../../../js/tc/isotope/isotope.pkgd.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
 
     <script>
@@ -348,8 +347,14 @@
 
         });
 
+        $(document).on("wb-ready.wb-tabs", ".wb-tabs", function(event) {
+            updateSelectedTabIcon();
+        });
+
 
         $(document).on("wb-updated.wb-tabs", ".wb-tabs", function(event, $newPanel) {
+            updateSelectedTabIcon();
+
             // Set the role of selected
             var flow = $newPanel.find("summary").data("flow");
             if (flow == "end") {
@@ -359,9 +364,11 @@
             }
         });
 
+        function updateSelectedTabIcon() {
+            $("a[id$='lnk'][aria-selected='true'] i").removeClass('fa-regular fa-circle').addClass("fa-solid fa-circle-dot");
+            $("a[id$='lnk'][aria-selected='false'] i").addClass('fa-regular fa-circle').removeClass("fa-solid fa-circle-dot");
+        }
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd -->
-
-</html>
+<!-- InstanceEnd --></html>
