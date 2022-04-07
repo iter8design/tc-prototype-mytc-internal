@@ -141,9 +141,11 @@
                     <tr>
                         <th scope="col" class="width2 text-center"><span class="sr-only">Select</span><span class="selectAll"></span></th>
                         <th scope="col" class="width30"><label for="name" class="sr-only">Name or email address</label>
-                            <div class="input-group">
-                                <input name="name" id="name" type="text" size="50" class="form-control" autocomplete="email" maxlength="150" placeholder="Search users...">
-                                <span class="input-group-addon"><i class="fas fa-search"></i></span>
+                            <div id="mltiSlct" aria-live="polite"><label for="name" class="sr-only">Name or email address</label>
+                                <div class="input-group">
+                                    <input name="name" id="name" type="text" size="50" class="form-control" autocomplete="email" maxlength="150" placeholder="Search users...">
+                                    <span class="input-group-addon"><i class="fas fa-search"></i></span>
+                                </div>
                             </div>
                         </th>
                         <th scope="col" class="width15"><label for="status" class="sr-only">Status</label>
@@ -686,17 +688,34 @@
                 fnHighlightSelectedRow($(this));
             });
 
-            // Temporarily hiding checkboxes until bulk actions are ready
-            $("input[type=checkbox]").addClass("sr-only");
+            var bulkActionHtml = "<div id='mltiSlctActions'><a href='switchRole-bulk.html' class='btn btn-default'><i class='fa-solid fa-user-gear'></i> Switch role</a> <a href='remove-bulk.html' class='btn btn-default'><i class='fa-solid fa-user-xmark'></i> Remove</a></div>";
 
-            /* Highlight the row that was checked */
-            function fnHighlightSelectedRow(checkbox) {
-                if (checkbox.prop("checked"))
-                    checkbox.parent("th").addClass("highlight-yellow").nextAll("td").addClass("highlight-yellow");
-                else
-                    checkbox.parent("th").removeClass("highlight-yellow").nextAll("td").removeClass("highlight-yellow");
-            }
+
+            $("#tblUsers, #selectAll").on('click', ":checkbox", function() {
+                if ($("#tblUsers input:checkbox:checked").length > 0) {
+                    // If the buttons aren't already there, add them
+                    if ($("#mltiSlctActions").length == false) {
+                        $("#mltiSlct").hide().after(bulkActionHtml);
+                    }
+                } else {
+                    //If nothing is checked, default back to the search filter
+                    if ($("#mltiSlctActions").length) {
+                        $("#mltiSlctActions").remove();
+                        $("#mltiSlct").fadeIn(500);
+                    }
+                }
+            });
+
+
         });
+
+        /* Highlight the row that was checked */
+        function fnHighlightSelectedRow(checkbox) {
+            if (checkbox.prop("checked"))
+                checkbox.parent("th").addClass("highlight-yellow").nextAll("td").addClass("highlight-yellow");
+            else
+                checkbox.parent("th").removeClass("highlight-yellow").nextAll("td").removeClass("highlight-yellow");
+        }
     </script>
     <!-- InstanceEndEditable -->
 </body>
