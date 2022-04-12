@@ -132,7 +132,7 @@
 				"zeroRecords": "No matching users found. Do you want to <a href=addUser-step1.html>add this user?</a>",
 				"info": "",
 				"lengthMenu" : "Display _MENU_ per page",
-				"emptyTable" : "No users have been added yet."
+				"emptyTable" : "No users have been added yet. Do you want to <a href=addUser-step1.html>add this user?</a>"
 			}
 }'>
                 <caption class="wb-inv">List of users for myTC Account Administration (MYTCAA)</caption>
@@ -140,8 +140,7 @@
                     <tr>
                         <th scope="col" class="width2 text-center"><span class="sr-only">Select</span><span class="selectAll"></span></th>
                         <th scope="col" class="width30">
-                            <div id="mltiSlct" aria-live="polite">
-                                <label for="name" class="sr-only">Name or email address</label>
+                            <div id="mltiSlct" aria-live="polite"><label for="name" class="sr-only">Name or email address</label>
                                 <div class="input-group">
                                     <input name="name" id="name" type="text" size="50" class="form-control" autocomplete="email" maxlength="150" placeholder="Search users...">
                                     <span class="input-group-addon"><i class="fas fa-search"></i></span>
@@ -149,24 +148,27 @@
                             </div>
                         </th>
                         <th scope="col" class="width15"><label for="status" class="sr-only">Status</label>
-                            <!--<select name="status" id="status" class="form-control full-width">
+                            <select name="status" id="status" class="form-control full-width">
                                 <option value="" selected>&lsaquo;&lsaquo;&lsaquo;Status&rsaquo;&rsaquo;&rsaquo;</option>
                                 <option value="Active">Active</option>
-                            </select>-->
+                                <option value="Suspended">Suspended</option>
+                            </select>
                         </th>
                         <th scope="col" class="width10"><label for="role" class="sr-only">Role</label>
-                            <!--<select name="role" id="role" class="form-control full-width">
+                            <select name="role" id="role" class="form-control full-width">
                                 <option value="" selected>&lsaquo;&lsaquo;&lsaquo;Role&rsaquo;&rsaquo;&rsaquo;</option>
+                                <option value="Application Owner">Application Owner</option>
                                 <option value="Platform Manager">Platform Manager</option>
 
 
-                            </select>-->
+                            </select>
                         </th>
-                        <th scope="col" class="width30"><label for="services" class="sr-only">Service</label>
-                            <select name="services" id="services" class="form-control full-width">
-                                <option value="" selected>&lsaquo;&lsaquo;&lsaquo;Service&rsaquo;&rsaquo;&rsaquo;</option>
-                                <option value="">myTC Form Builder</option>
-                                <option value="">myTC Platform Administration</option>
+                        <th scope="col" class="width30"><label for="application" class="sr-only">Application</label>
+                            <select name="application" id="application" class="form-control full-width">
+                                <option value="" selected>&lsaquo;&lsaquo;&lsaquo;Application&rsaquo;&rsaquo;&rsaquo;</option>
+                                <option value="">Manufacturer Import of Small Vessels (MISV)</option>
+                                <option value="">Marine Inspection Tracking (MITRACK)</option>
+                                <option value="">myTC Account Administration (MYTCAA)</option>
 
                             </select>
                         </th>
@@ -178,7 +180,7 @@
                 <tbody>
                     <tr>
                         <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr1"></th>
-                        <td><label for="usr1"><a href="editUser.html">Paul Davies</a><br> <span class="small">paul.davies@tc.gc.ca</span></label></td>
+                        <td><label for="usr1"><a href="../accounts/viewAccount.html">Paul Davies</a><br> <span class="small">paul.davies@tc.gc.ca</span></label></td>
                         <td>
                             <div class="pill-green pill-status">Active</div>
                         </td>
@@ -199,7 +201,7 @@
                     </tr>
                     <tr>
                         <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr2"></th>
-                        <td><label for="usr2"><a href="editUser.html">Linda Fry</a> <br> <span class="small">linda.fry@tc.gc.ca</span></label></td>
+                        <td><label for="usr2"><a href="../accounts/viewAccount.html">Linda Fry</a> <br> <span class="small">linda.fry@tc.gc.ca</span></label></td>
                         <td>
                             <div class="pill-green pill-status">Active</div>
                         </td>
@@ -221,7 +223,7 @@
                     </tr>
                     <tr>
                         <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr3"></th>
-                        <td><label for="usr3"><a href="editUser.html">Norman Gregory</a> <br> <span class="small">norman.gregory@tc.gc.ca</span></label></td>
+                        <td><label for="usr3"><a href="../accounts/viewAccount.html">Norman Gregory</a> <br> <span class="small">norman.gregory@tc.gc.ca</span></label></td>
                         <td>
                             <div class="pill-green pill-status">Active</div>
                         </td>
@@ -244,7 +246,7 @@
                     </tr>
                     <tr>
                         <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr6"></th>
-                        <td><label for="usr6"><a href="editUser.html">Mark Healey</a> <br> <span class="small">mark.healey@tc.gc.ca</span></label></td>
+                        <td><label for="usr6"><a href="../accounts/viewAccount.html">Mark Healey</a> <br> <span class="small">mark.healey@tc.gc.ca</span></label></td>
                         <td>
                             <div class="pill-green pill-status">Active</div>
                         </td>
@@ -265,7 +267,7 @@
                     </tr>
                     <tr>
                         <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr7"></th>
-                        <td><label for="usr7"><a href="editUser.html">Neil Horwath</a> <br> <span class="small">neil.horwath@tc.gc.ca</span></label></td>
+                        <td><label for="usr7"><a href="../accounts/viewAccount.html">Neil Horwath</a> <br> <span class="small">neil.horwath@tc.gc.ca</span></label></td>
                         <td>
                             <div class="pill-green pill-status">Active</div>
                         </td>
@@ -286,7 +288,7 @@
                     </tr>
                     <tr>
                         <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr8"></th>
-                        <td><label for="usr8"><a href="editUser.html">Thomas Jenkins</a> <br> <span class="small">thomas.jenkins@tc.gc.ca</span></label></td>
+                        <td><label for="usr8"><a href="../accounts/viewAccount.html">Thomas Jenkins</a> <br> <span class="small">thomas.jenkins@tc.gc.ca</span></label></td>
                         <td>
                             <div class="pill-green pill-status">Active</div>
                         </td>
@@ -309,7 +311,7 @@
 
                     <tr>
                         <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr9"></th>
-                        <td><label for="usr9"><a href="editUser.html">Tammy Koury</a> <br> <span class="small">tammy.koury@tc.gc.ca</span></label></td>
+                        <td><label for="usr9"><a href="../accounts/viewAccount.html">Tammy Koury</a> <br> <span class="small">tammy.koury@tc.gc.ca</span></label></td>
                         <td>
                             <div class="pill-green pill-status">Active</div>
                         </td>
@@ -331,7 +333,7 @@
                     </tr>
                     <tr>
                         <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr10"></th>
-                        <td><label for="usr10"><a href="editUser.html">Sarah Lovelace</a> <br> <span class="small">sarah.lovelace@tc.gc.ca</span></label></td>
+                        <td><label for="usr10"><a href="../accounts/viewAccount.html">Sarah Lovelace</a> <br> <span class="small">sarah.lovelace@tc.gc.ca</span></label></td>
                         <td>
                             <div class="pill-green pill-status">Active</div>
                         </td>
@@ -353,7 +355,7 @@
                     </tr>
                     <tr>
                         <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr11"></th>
-                        <td><label for="usr11"><a href="editUser.html">Frank O'Neil</a><br> <span class="small">frank.oneil@tc.gc.ca</span></label></td>
+                        <td><label for="usr11"><a href="../accounts/viewAccount.html">Frank O'Neil</a><br> <span class="small">frank.oneil@tc.gc.ca</span></label></td>
                         <td>
                             <div class="pill-green pill-status">Active</div>
                         </td>
@@ -373,33 +375,10 @@
                             </div>
                         </td>
                     </tr>
-                    <tr>
-                        <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr3"></th>
-                        <td><label for="usr3"><a href="editUser.html">Josh Smallwood</a> <br> <span class="small">josh.smallwood@tc.gc.ca</span></label></td>
-                        <td>
-                            <div class="pill-green pill-status">Active</div>
-                        </td>
-                        <td>Platform Manager <a href="#dlg-roleHelp" class="wb-lbx" title="What can an Platform Manager do?"><i class="fa-solid fa-circle-question text-blue"></i></a></td>
-                        <td>All</td>
-                        <td>
-                            <div class="btn-group pull-right">
-                                <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Actions <span class="sr-only">for {First name} {Last name}</span><span class="caret"></span> </button>
-                                <ul class="dropdown-menu">
-
-                                    <li><a href="editUser.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
-                                    <li><a href="suspend.html"><i class="fa-solid fa-user-lock"></i> Suspend access <span class="sr-only">for {First name} {Last name}</span></a></li>
-
-                                    <li><a href="remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>
-                                </ul>
-                            </div>
-                        </td>
-
-                    </tr>
 
                     <tr>
                         <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr12"></th>
-                        <td><label for="usr12"><a href="editUser.html">Jeff Smith</a> <br> <span class="small">jeff.smith@tc.gc.ca</span></label></td>
+                        <td><label for="usr12"><a href="../accounts/viewAccount.html">Jeff Smith</a> <br> <span class="small">jeff.smith@tc.gc.ca</span></label></td>
                         <td>
                             <div class="pill-green pill-status">Active</div>
                         </td>
@@ -423,7 +402,7 @@
 
                     <tr>
                         <th scope="row" class="text-center"><input name="usrs" type="checkbox" value="" id="usr13"></th>
-                        <td><label for="usr13"><a href="editUser.html">Paul Weston</a> <br> <span class="small">paul.weston@tc.gc.ca</span></label></td>
+                        <td><label for="usr13"><a href="../accounts/viewAccount.html">Paul Weston</a> <br> <span class="small">paul.weston@tc.gc.ca</span></label></td>
                         <td>
                             <div class="pill-green pill-status">Active</div>
                         </td>
@@ -436,7 +415,6 @@
                                 <ul class="dropdown-menu">
 
                                     <li><a href="editUser.html"><i class="fa-solid fa-user-pen"></i> Edit access <span class="sr-only">for {First name} {Last name}</span></a></li>
-
                                     <li><a href="suspend.html"><i class="fa-solid fa-user-lock"></i> Suspend access <span class="sr-only">for {First name} {Last name}</span></a></li>
 
                                     <li><a href="remove.html"><i class="fa-solid fa-user-xmark"></i> Remove access <span class="sr-only">for {First name} {Last name}</span></a></li>

@@ -153,7 +153,6 @@
                                     <option value="r1">Clerk</option>
                                     <option value="r2">Inspector</option>
                                     <option value="r3">Manager</option>
-                                    <option value="r4">Application Owner</option>
                                 </select>
                                 <span class="input-group-btn">
                                     <a href="#cn-services" class="btn btn-default" id="btnAssign">Assign</a>
@@ -190,7 +189,7 @@
                                         <h3 class="thumbnail-label mrgn-tp-0"><label for="service1">Request a prewash endorsement/exemption</label></h3>
                                         <div class="thumbnail-description smaller">
 
-                                            <label for="s1-rl">Role: <span class="sr-only"> for {service description} </span></label>
+                                            <label for="s1-rl">Role: <span class="sr-only"> for {service description} </span></label> <a href="#dlg-roleHelp" class="wb-lbx" title="What can this role do?"><i class="fa-solid fa-circle-question text-blue"></i></a>
                                             <select name="role" id="s1-rl" class="form-control full-width">
                                                 <option value="r1">Clerk</option>
                                                 <option value="r2" selected>Inspector</option>
@@ -213,7 +212,7 @@
                                         <h3 class="thumbnail-label mrgn-tp-0"><label for="service2">Request a verification of shipper’s procedures for cargoes that may liquefy</label></h3>
                                         <div class="thumbnail-description smaller">
 
-                                            <label for="s2-rl">Role:<span class="sr-only"> for {service description} </span></label>
+                                            <label for="s2-rl">Role:<span class="sr-only"> for {service description} </span></label> <a href="#dlg-roleHelp" class="wb-lbx" title="What can this role do?"><i class="fa-solid fa-circle-question text-blue"></i></a>
                                             <select name="role" id="s2-rl" class="form-control full-width">
                                                 <option value="r1">Clerk</option>
                                                 <option value="r2" selected>Inspector</option>
@@ -237,7 +236,7 @@
                                         <h3 class="thumbnail-label mrgn-tp-0"><label for="service3">Request concentrates, grains or timber cargo inspection</label></h3>
                                         <div class="thumbnail-description smaller">
 
-                                            <label for="s3-rl">Role: <span class="sr-only"> for {service description} </span></label>
+                                            <label for="s3-rl">Role: <span class="sr-only"> for {service description} </span></label> <a href="#dlg-roleHelp" class="wb-lbx" title="What can this role do?"><i class="fa-solid fa-circle-question text-blue"></i></a>
                                             <select name="role" id="s3-rl" class="form-control full-width">
                                                 <option value="r1">Clerk</option>
                                                 <option value="r2" selected>Inspector</option>
@@ -270,7 +269,7 @@
                                         <h3 class="thumbnail-label mrgn-tp-0"><label for="service4">Request for a follow-up Port State Control inspection to confirm rectification of deficiencies for foreign vessels</label></h3>
                                         <div class="thumbnail-description smaller">
 
-                                            <label for="s1-rl">Role: <span class="sr-only"> for {service description} </span></label>
+                                            <label for="s1-rl">Role: <span class="sr-only"> for {service description} </span></label> <a href="#dlg-roleHelp" class="wb-lbx" title="What can this role do?"><i class="fa-solid fa-circle-question text-blue"></i></a>
                                             <select name="role" id="s4-rl" class="form-control full-width">
                                                 <option value="r1">Clerk</option>
                                                 <option value="r2" selected>Inspector</option>
@@ -293,7 +292,7 @@
                                         <h3 class="thumbnail-label mrgn-tp-0"><label for="service5">Request for a follow-up Port State Control inspection to rescind a detention order for foreign vessels</label></h3>
                                         <div class="thumbnail-description smaller">
 
-                                            <label for="s5-rl">Role: <span class="sr-only"> for {service description} </span></label>
+                                            <label for="s5-rl">Role: <span class="sr-only"> for {service description} </span></label> <a href="#dlg-roleHelp" class="wb-lbx" title="What can this role do?"><i class="fa-solid fa-circle-question text-blue"></i></a>
                                             <select name="role" id="s5-rl" class="form-control full-width">
                                                 <option value="r1">Clerk</option>
                                                 <option value="r2" selected>Inspector</option>
@@ -317,7 +316,7 @@
                                         <h3 class="thumbnail-label mrgn-tp-0"><label for="service6">Request for inspection of a vessel loading, carrying or unloading dangerous goods (Bulk or packaged form)</label></h3>
                                         <div class="thumbnail-description smaller">
 
-                                            <label for="s6-rl">Role: <span class="sr-only"> for {service description} </span></label>
+                                            <label for="s6-rl">Role: <span class="sr-only"> for {service description} </span></label> <a href="#dlg-roleHelp" class="wb-lbx" title="What can this role do?"><i class="fa-solid fa-circle-question text-blue"></i></a>
                                             <select name="role" id="s6-rl" class="form-control full-width">
                                                 <option value="r1">Clerk</option>
                                                 <option value="r2" selected>Inspector</option>
@@ -357,6 +356,32 @@
             </div>
 
         </form>
+
+        <section id="dlg-roleHelp" class="mfp-hide modal-dialog modal-content overlay-def">
+            <header class="modal-header">
+                <h2 class="modal-title">What can this role do?</h2>
+            </header>
+            <div class="modal-body">
+                <h3 class="mrgn-tp-md">{Role name}</h3>
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <div class="well">
+                            <p><i class="fa-solid fa-shield-check fa-2xl text-green "></i> This role may:</p>
+                            <ul class="mrgn-lft-md">
+                                <li>{Permission description}</li>
+                                <li>{Permission description}</li>
+                                <li>{Permission description}</li>
+                                <li>{Permission description}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="modal-footer">
+                <a href="#" class="popup-modal-dismiss btn btn-default pull-left"><i class="fa-solid fa-face-smile-hearts"></i> Got it!</a>
+            </footer>
+        </section>
 
         <!-- InstanceEndEditable -->
         <div class="datemod col-xs-12 mrgn-tp-lg">
@@ -470,23 +495,15 @@
                 var selectedRole = $("#assignRole").val();
 
                 if (selectedRole != "") {
-                    // If Application Owner, all services should be selected and no roles applied to the service level
-                    if (selectedRole == "r4") {
-                        $("select[name^=role]").each(function() {
-                            $(this).hide().parent().append("<div class='slctr-appOwner'>Application Owner</div>");
-                        });
-                        $("input[name=services]").prop("checked", "true").prop("disabled", "true");
-                        $("#lnkSelectAll").addClass("hide");
-                    } else {
 
-                        $("select[name^=role]").each(function() {
-                            $(this).val(selectedRole);
-                            $(this).show().parent().find('.slctr-appOwner').remove();
-                        });
-                        $("input[name=services]").removeAttr("disabled");
-                        $("#lnkSelectAll").removeClass("hide");
-                    }
+                    $("select[name^=role]").each(function() {
+                        $(this).val(selectedRole);
+
+                    });
+                    $("input[name=services]").removeAttr("disabled");
+                    $("#lnkSelectAll").removeClass("hide");
                 }
+
 
             });
 
@@ -519,10 +536,7 @@
                 timeout = setTimeout(delayed, threshold);
             };
         }
-
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd -->
-
-</html>
+<!-- InstanceEnd --></html>

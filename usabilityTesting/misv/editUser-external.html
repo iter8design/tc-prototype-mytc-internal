@@ -102,7 +102,7 @@
                     <ol class="breadcrumb">
                         <li><a href="home.html">Home</a></li>
                         <!-- InstanceBeginEditable name="Breadcrumbs" -->
-                        
+
                         <li><a href="appDashboard.html">Manufacturer Import of Small Vessels (MISV)</a></li>
                         <li><a href="users.html">Users</a></li>
                         <li>Sarah Lovelace</li>
@@ -345,22 +345,14 @@
                 var selectedRole = $("#assignRole").val();
 
                 if (selectedRole != "") {
-                    // If Application Owner, all services should be selected and no roles applied to the service level
-                    if (selectedRole == "r4") {
-                        $("select[name^=role]").each(function() {
-                            $(this).hide().parent().append("<div class='slctr-appOwner'>Application Owner</div>");
-                        });
-                        $("input[name=services]").prop("checked", "true").prop("disabled", "true");
-                        $("#lnkSelectAll").addClass("hide");
-                    } else {
 
-                        $("select[name^=role]").each(function() {
-                            $(this).val(selectedRole);
-                            $(this).show().parent().find('.slctr-appOwner').remove();
-                        });
-                        $("input[name=services]").removeAttr("disabled");
-                        $("#lnkSelectAll").removeClass("hide");
-                    }
+                    $("select[name^=role]").each(function() {
+                        $(this).val(selectedRole);
+
+                    });
+                    $("input[name=services]").removeAttr("disabled");
+                    $("#lnkSelectAll").removeClass("hide");
+
                 }
 
             });

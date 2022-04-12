@@ -127,7 +127,7 @@
 				"zeroRecords": "No matching users found. Do you want to <a href=addUser-step1.html>add this user?</a>",
 				"info": "",
 				"lengthMenu" : "Display _MENU_ per page",
-				"emptyTable" : "No users have been added yet."
+				"emptyTable" : "No users have been added yet. Do you want to <a href=addUser-step1.html>add this user?</a>"
 			}
 }'>
                     <caption class="wb-inv">List of users for myTC Account Administration (MYTCAA)</caption>
@@ -143,24 +143,27 @@
                                 </div>
                             </th>
                             <th scope="col" class="width15"><label for="status" class="sr-only">Status</label>
-                                <!--<select name="status" id="status" class="form-control full-width">
-                                <option value="" selected>&lsaquo;&lsaquo;&lsaquo;Status&rsaquo;&rsaquo;&rsaquo;</option>
-                                <option value="Active">Active</option>
-                            </select>-->
+                                <select name="status" id="status" class="form-control full-width">
+                                    <option value="" selected>&lsaquo;&lsaquo;&lsaquo;Status&rsaquo;&rsaquo;&rsaquo;</option>
+                                    <option value="Active">Active</option>
+                                    <option value="Suspended">Suspended</option>
+                                </select>
                             </th>
                             <th scope="col" class="width10"><label for="role" class="sr-only">Role</label>
-                                <!--<select name="role" id="role" class="form-control full-width">
-                                <option value="" selected>&lsaquo;&lsaquo;&lsaquo;Role&rsaquo;&rsaquo;&rsaquo;</option>
-                                <option value="Platform Manager">Platform Manager</option>
+                                <select name="role" id="role" class="form-control full-width">
+                                    <option value="" selected>&lsaquo;&lsaquo;&lsaquo;Role&rsaquo;&rsaquo;&rsaquo;</option>
+                                    <option value="Application Owner">Application Owner</option>
+                                    <option value="Platform Manager">Platform Manager</option>
 
 
-                            </select>-->
+                                </select>
                             </th>
-                            <th scope="col" class="width30"><label for="services" class="sr-only">Service</label>
-                                <select name="services" id="services" class="form-control full-width">
-                                    <option value="" selected>&lsaquo;&lsaquo;&lsaquo;Service&rsaquo;&rsaquo;&rsaquo;</option>
-                                    <option value="">myTC Form Builder</option>
-                                    <option value="">myTC Platform Administration</option>
+                            <th scope="col" class="width30"><label for="application" class="sr-only">Application</label>
+                                <select name="application" id="application" class="form-control full-width">
+                                    <option value="" selected>&lsaquo;&lsaquo;&lsaquo;Application&rsaquo;&rsaquo;&rsaquo;</option>
+                                    <option value="">Manufacturer Import of Small Vessels (MISV)</option>
+                                    <option value="">Marine Inspection Tracking (MITRACK)</option>
+                                    <option value="">myTC Account Administration (MYTCAA)</option>
 
                                 </select>
                             </th>
@@ -599,7 +602,10 @@
                 checkbox.parent("th").removeClass("highlight-yellow").nextAll("td").removeClass("highlight-yellow");
             }
         }
+
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+
+</html>

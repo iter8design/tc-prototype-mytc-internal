@@ -131,8 +131,9 @@
 
             <div class="wb-tabs wb-tabs-vertical mrgn-tp-md">
                 <div class="tabpanels">
+
                     <details id="details-panel1" open>
-                        <summary data-flow='continue'>
+                        <summary>
                             <i class="fa-regular fa-circle"></i> Platform Manager
 
 
@@ -144,7 +145,7 @@
                                 <div class="well">
                                     <p><i class="fa-solid fa-shield-check fa-2xl text-green"></i> This role may:</p>
                                     <ul class="mrgn-lft-md">
-                                        <li>Manage email templates</li>
+
                                         <li>Manage notices</li>
                                         <li>Manage roles & permissions</li>
                                         <li>Manage users</li>
@@ -158,6 +159,33 @@
                         </div>
 
                     </details>
+
+                    <details id="details-panel4">
+                        <summary>
+                            <i class="fa-regular fa-circle"></i> Application Owner
+                        </summary>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="well">
+                                    <p><i class="fa-solid fa-shield-check fa-2xl text-green"></i> This role may:</p>
+                                    <ul class="mrgn-lft-md">
+
+
+                                        <li>Manage email templates</li>
+                                        <li>Manage notices</li>
+                                        <li>Manage roles & permissions</li>
+
+                                        <li>Manage users</li>
+                                    </ul>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </details>
+
+
 
 
                 </div>
@@ -238,7 +266,10 @@
             $("a[id$='lnk'][aria-selected='true'] i").removeClass('fa-regular fa-circle').addClass("fa-solid fa-circle-dot");
             $("a[id$='lnk'][aria-selected='false'] i").addClass('fa-regular fa-circle').removeClass("fa-solid fa-circle-dot");
         }
+
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+
+</html>
