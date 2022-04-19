@@ -115,6 +115,12 @@
         <!-- InstanceBeginEditable name="Content" -->
         <h1 property="name" id="wb-cont"><span class="hd-pre">myTC Account Administration (MYTCAA)</span><i class="fa-solid fa-user-pen"></i> Jeff Smith</h1>
         <form action="" method="get">
+            <p>Update the person's email address, services they can access, and roles below and press <strong>Submit</strong> when you are done. All fields are mandatory.</p>
+
+            <div class="form-group mrgn-tp-md">
+                <label for="email"> Email address (username@example.com)<span class="wb-inv">(required)</span>:</label>
+                <input name="email" id="email" type="text" size="50" class="form-control" autocomplete="email" maxlength="150" value="jeff.smith@tc.gc.ca">
+            </div>
 
             <h2 class="hd-section">Services</h2>
 
@@ -405,10 +411,7 @@
                 timeout = setTimeout(delayed, threshold);
             };
         }
-
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd -->
-
-</html>
+<!-- InstanceEnd --></html>
