@@ -1,9 +1,9 @@
 /*------------------------------------*\
     PLUGINS
-	
-	Used to override the CSS used in any plugin.  This will keep the main CSS file simpler, and ensure that any plugin CSS 
+
+	Used to override the CSS used in any plugin.  This will keep the main CSS file simpler, and ensure that any plugin CSS
 	customizations are not lost when libraries are upgraded.
-	
+
 \*------------------------------------*/
 
 
@@ -108,7 +108,7 @@ table.dataTable thead .sorting_desc .sorting-icons:after {
 }
 
 /* .dataTables_wrapper a:hover {
-	color: #fff;	
+	color: #fff;
 } */
 
 /* .panel table.dataTable,
@@ -227,7 +227,7 @@ table.dataTable.no-footer {
 
 
 /*------------------------------------*\
-    SELECT 2	
+    SELECT 2
 \*------------------------------------*/
 
 .panel-primary .panel-heading .select2-container .select2-choice > .select2-chosen {
@@ -288,6 +288,10 @@ a.editable-click:hover {
 
 
 .editable-textarea .editableForm .form-control .width100 {
+    width: 100% !important;
+}
+
+.editableform .form-control {
     width: 100% !important;
 }
 
