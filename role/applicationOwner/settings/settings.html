@@ -155,7 +155,8 @@
                                     <th class="width25 text-top" scope="col"><label for="description" class="fnt-wght-bld">Description</label>
 
                                         <textarea name="description" id="description" cols="40" rows="2" class="form-control full-width"></textarea>
-
+                                        <input name="platformUse" id="platformUse" type="checkbox" value="">
+                                    <label for="platformUse">Platform team use only</label>
                                     </th>
 
                                     <th class="width10 text-top text-center" scope="col">Action <br>
@@ -165,16 +166,18 @@
                                         <tr class="textFilter-target">
                                             <td class="textFilter-match text-wordwrap">Key 1</td>
                                             <td><a href="#" data-container="body" class="editable editable-textarea textFilter-match text-wordwrap">English value</a></td>
-                                            <td><a href="#" data-container="body" class="editable editable-textarea textFilter-match text-wordwrap">English description</a></td>
+                                            <td><a href="#" data-container="body" class="editable editable-textarea textFilter-match text-wordwrap">English description</a>
+                                            <div class="mrgn-tp-sm"><i class="fa-solid fa-circle-info"></i> Platform team use only</div>
+                                            </td>
 
-                                            <td class="text-center"><a href="#" class="btn-link"><i class="fa-solid fa-trash mrgn-rght-sm"></i>Delete</a></td>
+                                            <td class="text-center"><i class="fas fa-circle text-green  mrgn-rght-sm"></i><a href="#" data-container="body" class="editable editable-select">Active</a></td>
                                         </tr>
                                         <tr class="textFilter-target">
                                             <td class="textFilter-match text-wordwrap">Key 2</td>
                                             <td><a href="#" data-container="body" class="editable editable-textarea textFilter-match text-wordwrap">English value</a></td>
                                             <td><a href="#" data-container="body" class="editable editable-textarea textFilter-match text-wordwrap">English description</a></td>
 
-                                            <td class="text-center"><a href="#" class="btn-link"><i class="fa-solid fa-trash mrgn-rght-sm"></i>Delete</a></td>
+                                            <td class="text-center"><i class="fas fa-circle text-danger mrgn-rght-sm"></i><a href="#" data-container="body" class="editable editable-select">Inactive</a></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -243,6 +246,19 @@
                 rows: 3
             });
 
+             $('.editable-select').editable({
+                type: 'select',
+
+                showbuttons: true,
+                source: [{
+                    value: 1,
+                    text: 'Active'
+                },{
+                    value: 2,
+                    text: 'Inactive'
+                }],
+            });
+
 
 
             /* Initialize filter inputs */
@@ -282,7 +298,10 @@
             });
 
         });
+
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+
+</html>
