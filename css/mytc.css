@@ -42,7 +42,9 @@ a:visited {
     color: #284162;
 }
 
-
+.app-bar {
+    background-color: #26374a;
+}
 
 details summary {
     border: none;
@@ -130,6 +132,42 @@ thead tr {
     border-color: #d3080c;
     border-image: none;
 }
+
+.alert-floating--warning > :first-child:before {
+    content: "";
+    display: inline-block;
+    font-family: "Glyphicons Halflings";
+    margin-left: -1.3em;
+    position: absolute;
+}
+
+.alert-floating--warning {
+    position: relative;
+    z-index: 101;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    -webkit-box-shadow: 3px 3px 5px #888;
+    -moz-box-shadow: 3px 3px 5px #888;
+    box-shadow: 3px 3px 5px #888;
+    background: #f9f4d4;
+    border-color: #f90;
+    margin-left: 0px;
+}
+
+.alert-floating--warning h2:before {
+    font-family: "Glyphicons Halflings";
+    padding-right: 5px;
+    color: #f90;
+    content: "\e107";
+}
+
+
+.alert-floating--warning .container {
+    width: auto;
+}
+
 
 .alert-info {
     background: #dbedfe;
