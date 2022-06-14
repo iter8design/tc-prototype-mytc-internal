@@ -104,6 +104,7 @@
                         <!-- InstanceBeginEditable name="Breadcrumbs" -->
                         <!-- InstanceEndEditable -->
                         <li><a href="#">Notices</a></li>
+                        <li><a href="#">{Application name}</a></li>
                         <li>Publish a notice</li>
                     </ol>
                 </div>
@@ -114,7 +115,43 @@
         <!-- InstanceBeginEditable name="Content" -->
         <h1 property="name" id="wb-cont"><i class="fa-solid fa-flag-swallowtail"></i> Publish a notice</h1>
 
+        <p>All fields are mandatory.</p>
 
+        <fieldset class="mrgn-tp-sm mrgn-bttm-sm">
+            <legend class="medium">What kind of notice is this? <span class="wb-inv">(required)</span>
+
+            </legend>
+            <div class="radio">
+                <label for="all">
+                    <input type="radio" name="noticeType" value="radio" checked id="information">
+                    Information
+                    <span class="fld-example">Examples include program announcements, instructions or process clarifications, etc...</span>
+                </label>
+            </div>
+            <div class="radio">
+                <label for="all">
+                    <input type="radio" name="noticeType" value="radio" id="planned">
+                    Planned outage
+                    <span class="fld-example">Examples include system patches, powering down of servers or other changes notified in advance</span>
+                </label>
+            </div>
+            <div class="radio">
+                <label for="periodSet">
+                    <input type="radio" name="noticeType" value="radio" id="unplanned">
+                    Unplanned outage
+                    <span class="fld-example">Things aren't working and we don't know when they're coming back yet</span></label>
+
+            </div>
+
+
+        </fieldset>
+
+        <div class="row">
+            <div class="col-md-12">
+                When would you like this notice to be displayed?
+            </div>
+
+        </div>
         <div class="row">
             <div class="col-md-6">
                 <h2 class="hd-section">English notice</h2>
@@ -129,7 +166,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <label for="bodyEnglish"><span class="mandatory" title="This field is mandatory.">*</span><span class="sr-only">English</span> Body <span class="sr-only">(required)</span>:
+                        <label for="bodyEnglish"><span class="sr-only">English</span> Body <span class="sr-only">(required)</span>:
                             <span class="fld-example">{Phasellus ut nibh euismod, pharetra nunc ut, placerat ante. Nulla rhoncus rhoncus porttitor. Suspendisse ultrices molestie faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. }</span>
                         </label>
                         <textarea name="bodyEnglish" id="bodyEnglish" cols="40" rows="3" class="form-control full-width" aria-describedby="bodyEnglish-character-count" data-maxlength="3000"></textarea>
@@ -144,7 +181,7 @@
 
                 <div class="row">
                     <div class="col-md-12">
-                        <label for="titleFrench"><span class="mandatory" title="This field is mandatory.">*</span><span class="sr-only">French</span> Title: <span class="sr-only">(required)</span></label>
+                        <label for="titleFrench"><span class="sr-only">French</span> Title: <span class="sr-only">(required)</span></label>
 
                         <input type="text" class="form-control width100" id="titleFrench" maxlength="200">
 
@@ -153,7 +190,7 @@
 
                 <div class="row">
                     <div class="col-md-12">
-                        <label for="bodyFrench"><span class="mandatory" title="This field is mandatory.">*</span><span class="sr-only">French</span> Body:
+                        <label for="bodyFrench"><span class="sr-only">French</span> Body:
                             <span class="fld-example">{Phasellus ut nibh euismod, pharetra nunc ut, placerat ante. Nulla rhoncus rhoncus porttitor. Suspendisse ultrices molestie faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. }</span><span class="sr-only">(required)</span>
                         </label>
                         <textarea name="bodyFrench" id="bodyFrench" cols="40" rows="3" class="form-control full-width" aria-describedby="bodyFrench-character-count" data-maxlength="3000"></textarea>
@@ -173,6 +210,7 @@
             <div class="col-md-12">
                 <div class="nav-button mrgn-tp-md">
                     <a href="#" class="btn btn-primary">Publish notice</a>
+                    <a href="#" class="btn btn-default">Preview notice</a>
                     <a href="#" class="btn btn-link mrgn-lft-md">Cancel</a>
                 </div>
 
@@ -183,12 +221,9 @@
         <!-- InstanceEndEditable -->
         <div class="datemod col-xs-12 mrgn-tp-lg">
             <dl id="wb-dtmd">
-                <dt>Date modified:&#32;</dt>
+                <dt>Version:&#32;</dt>
                 <dd>
-                    <time property="dateModified">
-                        <!-- #BeginDate format:IS1 -->2022-03-25
-                        <!-- #EndDate -->
-                    </time>
+                    0.0.0
                 </dd>
             </dl>
         </div>

@@ -156,7 +156,7 @@
 
                                         <textarea name="description" id="description" cols="40" rows="2" class="form-control full-width"></textarea>
                                         <input name="platformUse" id="platformUse" type="checkbox" value="">
-                                    <label for="platformUse">Platform team use only</label>
+                                        <label for="platformUse">Platform team use only</label>
                                     </th>
 
                                     <th class="width10 text-top text-center" scope="col">Action <br>
@@ -167,7 +167,7 @@
                                             <td class="textFilter-match text-wordwrap">Key 1</td>
                                             <td><a href="#" data-container="body" class="editable editable-textarea textFilter-match text-wordwrap">English value</a></td>
                                             <td><a href="#" data-container="body" class="editable editable-textarea textFilter-match text-wordwrap">English description</a>
-                                            <div class="mrgn-tp-sm"><i class="fa-solid fa-circle-info"></i> Platform team use only</div>
+                                                <div class="mrgn-tp-sm"><i class="fa-solid fa-circle-info"></i> Platform team use only</div>
                                             </td>
 
                                             <td class="text-center"><i class="fas fa-circle text-green  mrgn-rght-sm"></i><a href="#" data-container="body" class="editable editable-select">Active</a></td>
@@ -193,12 +193,9 @@
         <!-- InstanceEndEditable -->
         <div class="datemod col-xs-12 mrgn-tp-lg">
             <dl id="wb-dtmd">
-                <dt>Date modified:&#32;</dt>
+                <dt>Version:&#32;</dt>
                 <dd>
-                    <time property="dateModified">
-                        <!-- #BeginDate format:IS1 -->2022-05-05
-                        <!-- #EndDate -->
-                    </time>
+                    0.0.0
                 </dd>
             </dl>
         </div>
@@ -246,14 +243,14 @@
                 rows: 3
             });
 
-             $('.editable-select').editable({
+            $('.editable-select').editable({
                 type: 'select',
 
                 showbuttons: true,
                 source: [{
                     value: 1,
                     text: 'Active'
-                },{
+                }, {
                     value: 2,
                     text: 'Inactive'
                 }],
