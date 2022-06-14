@@ -206,8 +206,11 @@ thead tr {
 }
 
 input.fieldError,
+input.input-validation-error,
 select.fieldError,
+select.input-validation-error,
 textarea.fieldError,
+textarea.input-validation-error,
 .has-error .form-control {
     background-color: #faf3f3;
     border-color: #a94442;
