@@ -301,19 +301,25 @@
     <!-- InstanceBeginEditable name="CustomJS" -->
 
     <script>
-        $(document).on("wb-ready.wb", function(event) {
-
-
-        });
-
+        //Desktop view - ready
         $(document).on("wb-ready.wb-tabs", ".wb-tabs", function(event) {
             updateSelectedTabIcon();
         });
 
-
+        //Desktop view - tab change
         $(document).on("wb-updated.wb-tabs", ".wb-tabs", function(event, $newPanel) {
             updateSelectedTabIcon();
         });
+
+        $(".tabpanels details").on('toggle', function() {
+            updateSelectedTabIconMobile($(this));
+        });
+
+        function updateSelectedTabIconMobile(element) {
+            var attr = element.attr('open');
+            element.find('summary i').removeClass('fa-regular fa-circle').addClass("fa-solid fa-circle-dot");
+            $(".tabpanels details").not(element).find('summary i').addClass('fa-regular fa-circle').removeClass("fa-solid fa-circle-dot");
+        }
 
         function updateSelectedTabIcon() {
             $("a[id$='lnk'][aria-selected='true'] i").removeClass('fa-regular fa-circle').addClass("fa-solid fa-circle-dot");
