@@ -240,6 +240,7 @@ textarea.input-validation-error,
 
 .label {
     font-size: 90%;
+    white-space: normal;
 }
 
 .highlight-yellow,
@@ -511,9 +512,18 @@ textarea.input-validation-error,
     margin: 0 3px 0 0;
 }
 
+.wb-tabs .tgl-panel {
+    overflow: hidden;
+}
+
 .wb-tabs .tgl-panel .row {
     margin-left: -10px;
     margin-right: -10px;
+
+}
+
+#wb-info ul {
+    display: none;
 }
 
 /* myTC specific */
