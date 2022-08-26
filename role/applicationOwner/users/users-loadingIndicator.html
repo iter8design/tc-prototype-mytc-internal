@@ -120,16 +120,21 @@
 
         <p>To add a new user, press the <strong>Add user</strong> button. To view or make changes to an existing user, select the person's name or select an action from the menu.</p>
 
+        <div id="cn-spin-wrapper" role="status">
+            <div id="spinner" class="spinner" style="display:none;">
+                <i class="fa fa-spinner fa-lg fa-spin fa-fw mrgn-rght-sm"></i> Please wait...
+            </div>
+        </div>
 
         <section class="panel panel-datatable">
 
 
-            <div id="tblUsers_processing" class="dataTables_processing">
+            <!--<div id="tblUsers_processing" class="dataTables_processing">
                 <div id="loader" role="status">
                     <i class="fa fa-spinner fa-lg fa-spin fa-fw mrgn-rght-sm"></i> Please wait...
 
                 </div>
-            </div>
+            </div> -->
 
             <table id="tblUsers" class="wb-tables table table-striped mrgn-bttm-md" data-wb-tables='{"info" : false, "filter" : true, "paginate" : true, "order" : [],
 
@@ -186,7 +191,7 @@
                             </select>
                         </th>
                         <th scope="col" class="width20"><span class="sr-only">Actions</span>
-                            <a href="addUser-step1.html" class="btn btn-primary pull-right text-nowrap"><i class="fa-solid fa-user-plus"></i> Add user</a>
+                            <a href="addUser-step1.html" class="btn btn-primary pull-right text-nowrap" id="btnAdd"><i class="fa-solid fa-user-plus"></i> Add user</a>
                         </th>
                     </tr>
                 </thead>
@@ -695,6 +700,10 @@
 
             $("#tblUsers_processing").detach().prependTo("#tblUsers_wrapper");
 
+            $("#btnAdd").on("click", function(e) {
+                e.preventDefault();
+                $("#spinner").show();
+            });
         });
 
         $(".wb-tables").on("wb-updated.wb-tables", function(event, settings) {
