@@ -121,8 +121,11 @@
         <p>To add a new user, press the <strong>Add user</strong> button. To view or make changes to an existing user, select the person's name or select an action from the menu.</p>
 
         <div id="cn-spin-wrapper" role="status">
-            <div id="spinner" class="spinner" style="display:none;">
-                <i class="fa fa-spinner fa-lg fa-spin fa-fw mrgn-rght-sm"></i> Please wait...
+            <div id="spin-wrapper" style="display:none;">
+                <div id="spinner" class="spinner">
+                    <i class="fa fa-spinner fa-5x fa-spin fa-fw"></i> <br>
+                    <p class="mrgn-tp-md">Please wait...</p>
+                </div>
             </div>
         </div>
 
@@ -702,7 +705,7 @@
 
             $("#btnAdd").on("click", function(e) {
                 e.preventDefault();
-                $("#spinner").show();
+                $("#spin-wrapper").show();
             });
         });
 
