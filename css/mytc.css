@@ -750,49 +750,43 @@ h3.hd-section {
 }
 
 #spin-wrapper {
-    /* position: fixed;
-    z-index: 3999;
-    height: 82px;
-    width: 82px;
-    overflow: visible;
-    margin: auto;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: #000;
-    opacity: 0.8; */
-
     width: 100%;
-
-    /*-Lets Center the Spinner-*/
     position: fixed;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
-    background-color: rgba(185, 185, 185, 0.7);
+    background-color: rgba(185, 185, 185, 0.8);
     z-index: 9999;
     display: none;
     margin: auto;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
-
 }
 
 #cn-spin-wrapper #spinner {
-    background-color: #f2f2f2;
-    border: 1px solid #ccc;
     border-radius: 10px;
     position: absolute;
-    color: #335075;
-    padding: 20px;
+    color: #F00;
+    padding: 30px;
     text-align: center;
-
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    border: 3px solid #26374A;
+    font-size: 1em;
+    width: 200px;
+    height: 200px;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(38, 55, 74, 1) 80%);
 }
+
+#cn-spin-wrapper #spinner p {
+    color: #fff;
+    font-size: 1.1em;
+    margin-top: 20px;
+    display: block;
+}
+
 
 @media (min-width: 768px) {
     .modal-dialog {

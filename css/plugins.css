@@ -226,21 +226,9 @@ table.dataTable.no-footer {
 }
 
 .dataTables_wrapper .dataTables_processing {
-    position: absolute;
-    top: 25% !important;
-    left: 50% !important;
-    width: 50%;
-    height: 65px;
-    background-color: #5b6677;
-    background-image: none;
-    border-radius: 20px;
-    color: #fff;
-    box-shadow: rgb(0 0 0 / 25%) 0px 14px 28px, rgb(0 0 0 / 22%) 0px 10px 10px;
-    font-size: 1.3em;
-    text-align: center;
-    margin-left: -20%;
-    margin-top: -25px;
-    padding-top: 20px;
+    background: none;
+    font-size: 1em;
+
 }
 
 

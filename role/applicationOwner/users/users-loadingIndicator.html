@@ -120,24 +120,19 @@
 
         <p>To add a new user, press the <strong>Add user</strong> button. To view or make changes to an existing user, select the person's name or select an action from the menu.</p>
 
-        <div id="cn-spin-wrapper" role="status">
-            <div id="spin-wrapper" style="display:none;">
-                <div id="spinner" class="spinner">
-                    <i class="fa fa-spinner fa-5x fa-spin fa-fw"></i> <br>
-                    <p class="mrgn-tp-md">Please wait...</p>
-                </div>
-            </div>
-        </div>
 
         <section class="panel panel-datatable">
-
-
-            <!--<div id="tblUsers_processing" class="dataTables_processing">
-                <div id="loader" role="status">
-                    <i class="fa fa-spinner fa-lg fa-spin fa-fw mrgn-rght-sm"></i> Please wait...
-
+            <div id="tblUsers_processing" class="dataTables_processing">
+                <div id="cn-spin-wrapper" role="status">
+                    <div id="spin-wrapper">
+                        <div id="spinner" class="spinner">
+                            <i class="fa-brands fa-canadian-maple-leaf fa-5x fa-fade fa-fw" style="--fa-animation-duration: 2.5s; --fa-fade-opacity: 0.2;"></i>
+                            <p>Please wait...</p>
+                        </div>
+                    </div>
                 </div>
-            </div> -->
+            </div>
+
 
             <table id="tblUsers" class="wb-tables table table-striped mrgn-bttm-md" data-wb-tables='{"info" : false, "filter" : true, "paginate" : true, "order" : [],
 
@@ -720,7 +715,10 @@
             else
                 checkbox.parent("th").removeClass("highlight-yellow").nextAll("td").removeClass("highlight-yellow");
         }
+
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+
+</html>
