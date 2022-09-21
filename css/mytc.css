@@ -611,6 +611,14 @@ h3.hd-section {
     font-size: 20px;
 }
 
+.thumbnail-label .prefix {
+    display: block;
+    font-size: 65%;
+    font-weight: 400;
+    line-height: 1;
+    color: #6f6f6f;
+}
+
 .thumbnail:hover {
     cursor: pointer;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.7);
