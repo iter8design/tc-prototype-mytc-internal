@@ -122,6 +122,7 @@
                 <li><a href="#email"><i class="fa-solid fa-angle-right"></i>The email address entered is not valid.</a></li>
                 <li><a href="#email"><i class="fa-solid fa-angle-right"></i>The email address entered must exist in Transport Canada's directory and was not found. Please check the spelling and try again.</a></li>
                 <li><i class="fa-solid fa-angle-right"></i>It appears that this user has already been added. Do you want to <a href="editUser.html">review or change their roles?</a></li>
+                <li><i class="fa-solid fa-angle-right"></i>It appears that this user has already been added as a Platform Manager with access to all applications.</li>
                 <li><i class="fa-solid fa-angle-right"></i>It appears that this user has already been added and is currently suspended. Do you want to <a href="reinstate.html">reinstate their access?</a></li>
                 <li><i class="fa-solid fa-angle-right"></i>The selected role may only be assigned to Transport Canada staff with a tc.gc.ca email address.</li>
 
@@ -326,7 +327,10 @@
             $("a[id$='lnk'][aria-selected='true'] i").removeClass('fa-regular fa-circle').addClass("fa-solid fa-circle-dot");
             $("a[id$='lnk'][aria-selected='false'] i").addClass('fa-regular fa-circle').removeClass("fa-solid fa-circle-dot");
         }
+
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+
+</html>
