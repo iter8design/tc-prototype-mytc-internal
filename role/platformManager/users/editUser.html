@@ -116,43 +116,24 @@
         <h1 property="name" id="wb-cont"><span class="hd-pre">myTC Account Administration (MYTCAA)</span><i class="fa-solid fa-user-pen"></i> Jeff Smith</h1>
         <form action="" method="get">
 
-            <h2 class="hd-section">Services</h2>
 
-            <!-- Only display if there is more than 1 service -->
+            <h2 class="hd-section">Applications</h2>
+
             <div class="row">
-
                 <div class="col-md-8">
-                    <div class="mrgn-lft-md"><label for="assignRole">Assign role to selected services:</label>
-                        <div class="form-inline">
-
-                            <div class="input-group">
-
-                                <select name="assignRole" id="assignRole" class="form-control full-width">
-                                    <option value="">&lsaquo;&lsaquo;&lsaquo;Select&rsaquo;&rsaquo;&rsaquo;</option>
-                                    <option value="r2">Developer</option>
-                                    <option value="r1">Platform Manager</option>
-
-                                </select>
-                                <span class="input-group-btn">
-                                    <a href="#cn-services" class="btn btn-default" id="btnAssign">Assign</a>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
+                    <p>Indicate which applications {First name} {Last name}(user@email.com) requires access to. </p>
                 </div>
                 <div class="col-md-4 text-right" id="cn-selectToggle">
-                    <div class="mrgn-rght-md">
-                        <div class="input-group">
-                            <label for="sch-inp-ac" class="sr-only">Enter the name of the services to filter the list:</label>
-                            <input type="text" id="sch-inp-ac" placeholder="Search services..." class="form-control full-width" size="35">
-                            <span class="input-group-addon"><i class="fas fa-search"></i></span>
-                        </div>
-                        <div id="cn-selectSummary" class="mrgn-bttm-md mrgn-tp-sm"><strong><span id="srvcCount"></span> services selected</strong><a href="#" id="lnkSelectAll" data-toggle="0" class="mrgn-lft-md">Deselect all</a></div>
+                    <div class="input-group">
+                        <label for="sch-inp-ac" class="sr-only">Enter the name of the application to filter the list:</label>
+                        <input type="text" id="sch-inp-ac" placeholder="Search applications..." class="form-control full-width" size="35">
+                        <span class="input-group-addon"><i class="fas fa-search"></i></span>
                     </div>
+                    <div id="cn-selectSummary" class="mrgn-bttm-md mrgn-tp-sm"><strong><span id="srvcCount"></span> applications selected</strong><a href="#" id="lnkSelectAll" data-toggle="0" class="mrgn-lft-md">Deselect all</a></div>
                 </div>
             </div>
 
-            <div id="cn-services">
+            <div id="cn-applications">
                 <div class="row">
                     <div class="col-md-4">
                         <div class="thumbnail">
@@ -161,42 +142,56 @@
                                 <div class="row">
                                     <div class="col-md-1">
                                         <div class="checkbox">
-                                            <input type="checkbox" id="service1" name="services" value="" checked />
+                                            <input type="checkbox" id="app1" name="applications" value="" checked />
                                         </div>
                                     </div>
                                     <div class="col-md-11">
-                                        <h3 class="thumbnail-label mrgn-tp-0"><label for="service1"><em>my</em>TC Form Builder</label></h3>
-                                        <div class="thumbnail-description smaller">
+                                        <h3 class="thumbnail-label mrgn-tp-0"><label for="app1">
+                                                <span class="prefix">MITRACK</span>Marine Inspection Tracking
+                                            </label></h3>
 
-                                            <label for="s1-rl">Role: <span class="sr-only"> for {service description} </span></label> <a href="#dlg-roleHelp" class="wb-lbx" title="What can this role do?"><i class="fa-solid fa-circle-question text-blue"></i></a>
-                                            <select name="role" id="s1-rl" class="form-control full-width">
-                                                <option value="r2">Developer</option>
-                                                <option value="r1" selected>Platform Manager</option>
-                                            </select>
-                                        </div>
+                                        <div class="thumbnail-description smaller">Tools to assist marine inspectors in performing port warden inspections.</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
+                        <div class="thumbnail opct-40">
+                            <div class="caption">
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        <input type="checkbox" id="app2" name="applications" value="" />
+                                    </div>
+                                    <div class="col-md-11">
+                                        <h3 class="thumbnail-label mrgn-tp-0"><label for="app2">
+                                                <div class="small">MISV</div>Manufacturer Import of Small Vessels
+                                            </label>
+                                        </h3>
+
+                                        <div class="thumbnail-description smaller">Submit documents of conformity (DoC) and annual production reports (APR) required to import small vessels into Canada.</div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
                         <div class="thumbnail">
                             <div class="caption">
                                 <div class="row">
                                     <div class="col-md-1">
-                                        <input type="checkbox" id="service2" name="services" value="" checked />
+                                        <input type="checkbox" id="app3" name="applications" value="" checked />
                                     </div>
                                     <div class="col-md-11">
-                                        <h3 class="thumbnail-label mrgn-tp-0"><label for="service2"><em>my</em>TC Platform Administration</label></h3>
-                                        <div class="thumbnail-description smaller">
+                                        <h3 class="thumbnail-label mrgn-tp-0"><label for="app3">
+                                                <span class="prefix">MYTCAA</span> <em>my</em>TC Account Administration
+                                            </label>
+                                        </h3>
 
-                                            <label for="s2-rl">Role :<span class="sr-only"> for {service description} </span></label> <a href="#dlg-roleHelp" title="What can this role do?" class="wb-lbx"><i class="fa-solid fa-circle-question text-blue"></i></a>
-                                            <select name="role" id="s2-rl" class="form-control full-width">
-                                                <option value="r2">Developer</option>
-                                                <option value="r1" selected>Platform Manager</option>
+                                        <div class="thumbnail-description smaller">Manage applications hosted on the <em>my</em>TC platform.</div>
 
-                                            </select>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -207,13 +202,11 @@
                 </div>
             </div>
 
-
-
             <div id="cn-search-results-empty">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3 class="mrgn-tp-sm">No services found!</h3>
-                        <p>Sorry, but we couldn't find any services that match what you're looking for. Try a different keyword! </p>
+                        <h3 class="mrgn-tp-sm">No applications found!</h3>
+                        <p>Sorry, but we couldn't find any applications that match the filters selected. Try a different combination! </p>
                     </div>
                 </div>
             </div>
@@ -225,7 +218,6 @@
                 <a href="remove.html" class="btn btn-danger pull-right"><i class="fa-solid fa-user-xmark"></i> Remove access</a>
 
             </div>
-
         </form>
 
         <section id="dlg-roleHelp" class="mfp-hide modal-dialog modal-content overlay-def">
@@ -297,17 +289,18 @@
     <script>
         $(document).on("wb-ready.wb", function(event) {
 
+
             /* Hide the initial set of search options and display them as needed*/
             var hash = window.location.hash.substr(1);
             if (!hash) {
-                $("#cn-search-results-empty").hide();
+                $("#cn-filters, #cn-search-results-empty").hide();
             }
 
             // quick search regex
             var qsRegex;
 
-            //Setup the services filter
-            var $grid = $('#cn-services').isotope({
+            /* Setup the services filter */
+            var $grid = $('#cn-applications').isotope({
                 // options
                 itemSelector: '.col-md-4',
                 layoutMode: 'fitRows',
@@ -323,16 +316,17 @@
                 $grid.isotope();
             }));
 
-            /* $grid.on('arrangeComplete', function() {
-                /* Display a default message when no services match */
-            if ($('#cn-services').find("[class^='col-']:visible").length == 0) {
-                $("#cn-search-results-empty").fadeIn(300);
-            } else {
-                $("#cn-search-results-empty").fadeOut(300);
-            }
+            $grid.on('arrangeComplete', function() {
+                /* Display a default message when no challenges match */
+                if ($('#cn-applications').find("[class^='col-']:visible").length == 0) {
+                    $("#cn-search-results-empty").fadeIn(300);
+                } else {
+                    $("#cn-search-results-empty").fadeOut(300);
+                }
+            });
 
-            $("#srvcCount").text($("input[name=services]:checked").length);
-            $("input[name=services]").on('click', function() {
+            $("#srvcCount").text($("input[name=applications]:checked").length);
+            $("input[name=applications]").on('click', function() {
                 fnSelectService($(this));
             });
 
@@ -342,14 +336,14 @@
                 event.preventDefault();
                 if ($(this).data("toggle") == 0) {
                     $(this).text(selectAll).data("toggle", "1");
-                    $("input[name=services]").each(function() {
+                    $("input[name=applications]").each(function() {
                         $(this).prop("checked", false);
 
                         fnSelectService($(this));
                     });
                 } else {
                     $(this).text(deselectAll).data("toggle", "0")
-                    $("input[name=services]").each(function() {
+                    $("input[name=applications]").each(function() {
                         $(this).prop("checked", true);
                         fnSelectService($(this));
                     });
@@ -359,20 +353,6 @@
             });
 
 
-            $("#btnAssign").on("click", function(event) {
-                event.preventDefault();
-                var selectedRole = $("#assignRole").val();
-
-                if (selectedRole != "") {
-                    $("select[name^=role]").each(function() {
-                        $(this).val(selectedRole);
-                    });
-                    $("input[name=services]").removeAttr("disabled");
-                    $("#lnkSelectAll").removeClass("hide");
-                }
-
-
-            });
 
 
         });
@@ -381,10 +361,10 @@
         function fnSelectService(checkbox) {
             if (checkbox.prop("checked")) {
                 checkbox.closest(".thumbnail").removeClass("opct-40");
-                $("#srvcCount").text($("input[name=services]:checked").length);
+                $("#srvcCount").text($("input[name=applications]:checked").length);
             } else {
                 checkbox.closest(".thumbnail").addClass("opct-40");
-                $("#srvcCount").text($("input[name=services]:checked").length);
+                $("#srvcCount").text($("input[name=applications]:checked").length);
             }
         }
 
@@ -403,10 +383,7 @@
                 timeout = setTimeout(delayed, threshold);
             };
         }
-
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd -->
-
-</html>
+<!-- InstanceEnd --></html>
