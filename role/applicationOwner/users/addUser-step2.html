@@ -145,9 +145,9 @@
                             <div class="caption">
                                 <div class="row">
                                     <div class="col-md-1">
-                                        <div class="checkbox">
-                                            <input type="checkbox" id="service1" name="services" value="" checked />
-                                        </div>
+
+                                        <input type="checkbox" id="service1" name="services" value="" checked />
+
                                     </div>
                                     <div class="col-md-11">
                                         <h3 class="thumbnail-label mrgn-tp-0"><label for="service1">Request a prewash endorsement/exemption</label></h3>
@@ -372,10 +372,10 @@
         $(document).on("wb-ready.wb", function(event) {
 
             /* Hide the initial set of search options and display them as needed*/
-            var hash = window.location.hash.substr(1);
-            if (!hash) {
-                $("#cn-filters, #cn-search-results-empty").hide();
-            }
+            //var hash = window.location.hash.substr(1);
+            //if (!hash) {
+            $("#cn-filters, #cn-search-results-empty").hide();
+            //}
 
             // quick search regex
             var qsRegex;
