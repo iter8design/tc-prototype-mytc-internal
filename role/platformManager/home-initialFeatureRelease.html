@@ -57,12 +57,12 @@
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
             <div class="container">
 
-                <h2>Alpha release</h2>
+                <h2>Notice</h2>
 
 
-                <p>You are currently using the <em>myTC</em> Account ALPHA administration site. Some features may be limited or only available in the full version of <em>myTC</em> Account. You can switch to the full version now by selecting the <strong>Exit Alpha</strong> button.</p>
+                <p>With the current version of the <em>myTC</em> Account administration site, some features may be limited or not available that may have been previously available. You can switch to the previous version now by selecting the <strong>Go to previous version</strong> button to access these features if required.</p>
 
-                <a href="oldHome.html" class="btn btn-primary pull-right"><i class="fa-solid fa-arrow-right-from-bracket"></i> Exit Alpha</a>
+                <a href="oldHome.html" class="btn btn-primary pull-right"><i class="fa-solid fa-arrow-right-from-bracket"></i> Go to previous version</a>
 
 
             </div>
@@ -88,7 +88,7 @@
                     <section class="col-xs-12 col-sm-12">
                         <h2 class="wb-inv">Transport Canada myTC Account</h2>
                         <a class="app-name" href="#">Transport Canada <br>
-                            <em>my</em>TC Account <span class="label label-warning small">ALPHA</span></a>
+                            <!--<em>my</em>TC Account <span class="label label-warning small">ALPHA</span></a> -->
 
                     </section>
                 </div>
@@ -108,7 +108,7 @@
                 </nav>
             </div>
         </div>
-        <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../../includes/menus/menu-applicationOwner.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
+        <!--<nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../../includes/menus/menu-applicationOwner.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav> -->
 
 
         <nav role="navigation" id="wb-bc" property="breadcrumb">
@@ -132,26 +132,81 @@
 
 
         <h2>Your applications</h2>
-        <p>Select an application to add a user. Note: only internal-facing applications are currently available: </p>
+        <p>
+            <label for="sch-inp-ac" class="wb-inv">Enter the name of the application to filter the list:</label>
+        </p>
+        <div class="input-group">
+            <input type="text" id="sch-inp-ac" placeholder="Search applications..." class="form-control full-width" size="35">
+            <span class="input-group-addon"><i class="fas fa-search"></i></span>
+        </div>
+        <hr>
+        <div id="cn-applications">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="thumbnail">
 
-        <ul>
-            <li>
-                <a href="users/addUser-step1.html">Aeronautical Products Service Delivery (<span class="small">APSD</span>)</a>
-            </li>
-            <li>
-                <a href="users/addUser-step1.html">Incentives for Zero-Emission Vehicles Program Administration (<span class="small">ZEV-PRGM-ADMN</span>)</a>
-            </li>
-            <li>
-                <a href="users/addUser-step1.html">Incentives for Zero-Emission Vehicles Rebate Administration (<span class="small">ZEV-R-ADMN</span>)</a>
-            </li>
-            <li>
-                <a href="users/addUser-step1.html">Marine Inspection Tracking (<span class="small">MITRACK</span>)</a>
-            </li>
-            <li>
-                <a href="users/addUser-step1.html">Manufacturers and Importers of Small Vessels Administration (<span class="small">MISV-ADMN</span>)</a>
-            </li>
+                        <div class="caption">
 
-        </ul>
+                            <h3 class="thumbnail-label">
+                                <span class="prefix">MITRACK</span><a href="dashboards/appDashboard-MITRACK.html">Marine Inspection Tracking </a>
+                            </h3>
+
+                            <div class="thumbnail-description smaller">Tools to assist marine inspectors in performing port warden inspections.</div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="thumbnail">
+
+                        <div class="caption">
+
+                            <h3 class="thumbnail-label">
+                                <span class="prefix">MISV</span> <a href="dashboards/appDashboard-MISV.html">Manufacturer Import of Small Vessels </a>
+                            </h3>
+
+
+
+                            <div class="thumbnail-description smaller">Submit documents of conformity (DoC) and annual production reports (APR) required to import small vessels into Canada.</div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="thumbnail">
+
+                        <div class="caption">
+
+                            <h3 class="thumbnail-label">
+                                <span class="prefix">MYTCAA</span> <a href="dashboards/appDashboard-MYTCAA.html"><em>my</em>TC Account Administration </a>
+                            </h3>
+
+
+
+                            <div class="thumbnail-description smaller">Manage applications hosted on the <em>my</em>TC platform.</div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+        </div>
+
+        <div id="cn-search-results-empty">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="mrgn-tp-sm">No applications found!</h3>
+                    <p>Sorry, but we couldn't find any applications that match the filters selected. Try a different combination! </p>
+                </div>
+            </div>
+        </div>
 
 
         <!-- InstanceEndEditable -->
@@ -197,16 +252,67 @@
     <script src="../../js/tc/bootstrap/alert.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
 
+    <script src="../../js/tc/isotope/isotope.pkgd.min.js"></script>
+    <!-- InstanceBeginEditable name="CustomJS" -->
+
     <script>
         $(document).on("wb-ready.wb", function(event) {
+
+            /* Hide the initial set of search options and display them as needed*/
+            var hash = window.location.hash.substr(1);
+            if (!hash) {
+                $("#cn-search-results-empty").hide();
+            }
+
+            // quick search regex
+            var qsRegex;
+
+            /* Setup the services filter */
+            var $grid = $('#cn-applications').isotope({
+                // options
+                itemSelector: '.col-md-4',
+                layoutMode: 'fitRows',
+                filter: function() {
+                    var $this = $(this);
+                    var searchResult = qsRegex ? $this.text().match(qsRegex) : true;
+                    return searchResult;
+                }
+            });
+
+            var $quicksearch = $('#sch-inp-ac').keyup(debounce(function() {
+                qsRegex = new RegExp($quicksearch.val(), 'gi');
+                $grid.isotope();
+            }));
+
+            $grid.on('arrangeComplete', function() {
+                /* Display a default message when no challenges match */
+                if ($('#cn-applications').find("[class^='col-']:visible").length == 0) {
+                    $("#cn-search-results-empty").fadeIn(300);
+                } else {
+                    $("#cn-search-results-empty").fadeOut(300);
+                }
+            });
 
 
 
         });
 
+        // Debounce so filtering doesn't happen every millisecond
+        function debounce(fn, threshold) {
+            var timeout;
+            threshold = threshold || 100;
+            return function debounced() {
+                clearTimeout(timeout);
+                var args = arguments;
+                var _this = this;
+
+                function delayed() {
+                    fn.apply(_this, args);
+                }
+                timeout = setTimeout(delayed, threshold);
+            };
+        }
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd -->
-
-</html>
+<!-- InstanceEnd --></html>
